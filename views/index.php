@@ -3,11 +3,11 @@
     <main>
     <section class="main-banner">
         <img class="main-banner-img" id="slider" src="app/public/img/1.jpg" />
-    </section>
-    <section>
-        <div class="main-banner-button" onclick="setSlide(1)"></div>
-        <div class="main-banner-button" onclick="setSlide(2)"></div>
-        <div class="main-banner-button" onclick="setSlide(3)"></div>
+        <div class="main-banner-buttons">
+            <i class="fas fa-circle main-banner-button" onclick="setSlide(1)"></i>
+            <i class="fas fa-circle main-banner-button" onclick="setSlide(2)"></i>
+            <i class="fas fa-circle main-banner-button" onclick="setSlide(3)"></i>
+        </div>  
     </section>
         <div class="main-container">
             <div class="container-offers">
