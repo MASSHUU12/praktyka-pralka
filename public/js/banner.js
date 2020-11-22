@@ -16,6 +16,8 @@ function setSlide(nr)
 
     slider.src = images[nr - 1];
 
+    changeColor(nr);
+
     timer2 = setTimeout("changeSlide()", 5000);
 }
 
@@ -27,5 +29,30 @@ function changeSlide()
         num = 1;
 
     slider.src = images[num-1];
+
+    changeColor(num);
+
     timer1 = setTimeout("changeSlide()", 5000);
+}
+
+function changeColor(number)
+{
+    if (number == 1)
+    {
+        document.getElementById("main-banner-button1").style.color = "#386863"; 
+        document.getElementById("main-banner-button2").style.color = "#c5eae6";   
+        document.getElementById("main-banner-button3").style.color = "#c5eae6";      
+    }
+    else if (number == 2)
+    {
+        document.getElementById("main-banner-button1").style.color = "#c5eae6"; 
+        document.getElementById("main-banner-button2").style.color = "#386863";   
+        document.getElementById("main-banner-button3").style.color = "#c5eae6";   
+    }
+    else
+    {
+        document.getElementById("main-banner-button1").style.color = "#c5eae6"; 
+        document.getElementById("main-banner-button2").style.color = "#c5eae6";   
+        document.getElementById("main-banner-button3").style.color = "#386863";   
+    }
 }
