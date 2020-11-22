@@ -115,3 +115,28 @@ main {
     background-color: white;
     cursor: pointer;
 }
+
+.main-banner {
+    min-height: 250px;
+}
+
+.main-banner-button {
+    -webkit-border-radius: 20;
+    -moz-border-radius: 20;
+    border-radius: 20px;
+
+    background: #d1dde6;
+    padding: 10px 30px 10px 30px;
+    text-decoration: none;
+}
+
+.main-banner-button:hover {
+    background: #d9e4eb;
+    text-decoration: none;
+}
+
+.main-banner-img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
