@@ -6,7 +6,7 @@
             <div class="container-offers">
                 <div class="container-offers-element">
                     <div class="element-img">
-                        <img class="product-img" src="../public/element.jpg">
+                        <img class="product-img" src="/app/public/element.jpg">
                     </div>
                     <div class="element-bottom">
                         <div class="element-title"><h2>
@@ -20,7 +20,7 @@
 
                 <div class="container-offers-element">
                     <div class="element-img">
-                        <img class="product-img" src="../public/element.jpg">
+                        <img class="product-img" src="/app/public/element.jpg">
                     </div>
                     <div class="element-bottom">
                         <div class="element-title"><h2>Gucci Gucci</h2></div>
@@ -33,7 +33,7 @@
 
                 <div class="container-offers-element">
                     <div class="element-img">
-                        <img class="product-img" src="../public/element.jpg">
+                        <img class="product-img" src="/app/public/element.jpg">
                     </div>
                     <div class="element-bottom">
                         <div class="element-title"><h2>Gucci Gucci</h2></div>
@@ -46,7 +46,7 @@
 
                 <div class="container-offers-element">
                     <div class="element-img">
-                        <img class="product-img" src="../public/element.jpg">
+                        <img class="product-img" src="/app/public/element.jpg">
                     </div>
                     <div class="element-bottom">
                         <div class="element-title"><h2>Gucci Gucci</h2></div>
@@ -59,7 +59,7 @@
 
                 <div class="container-offers-element">
                     <div class="element-img">
-                        <img class="product-img" src="../public/element.jpg">
+                        <img class="product-img" src="/app/public/element.jpg">
                     </div>
                     <div class="element-bottom">
                         <div class="element-title"><h2>Gucci Gucci</h2></div>
