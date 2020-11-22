@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+li, a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header-search-container {
+    display: inline-flex;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.searchbar {
+    width: 450px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding-left: 20px;
+    font-size: larger;
+    font-weight: bold;
+
+}
+
+.searchbar-button {
+    border-radius: 0 15px 15px 0;
+    width: 50px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+.fxver {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+main {
+    margin: 25px 0;
+}
+
+.banner {
+    width: 100%;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+}
+
+.container-offers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    width: 80%;
+}
+
+.container-offers-element {
+    padding-top: 30px;
+    margin-bottom: 100px;
+    justify-content: center;
+    box-shadow: 0 0 5px black;
+    border-radius: 20px;
+    width: 400px;
+}
+
+.element-img {
+    display: flex;
+    justify-content: center;
+}
+
+.product-img {
+    height: 300px;
+}
+
+.element-bottom {
+    padding: 40px 50px;
+}
+
+.element-cart {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 30px 20px 0;
+}
+
+.element-cart-button {
+    padding: 20px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
