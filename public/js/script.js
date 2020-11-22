@@ -28,7 +28,7 @@ function changeSlide()
     if (number > 5)
         number = 1;
     
-    var image = '<img class="banner" src="../public/img/' + number + '.jpg" />';
+    var image = '<img class="banner" src="/app/public/img/' + number + '.jpg" />';
 
     document.getElementById("slider").innerHTML = image;
     $("#slider").fadeIn(500);
