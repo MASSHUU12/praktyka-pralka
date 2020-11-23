@@ -6,10 +6,27 @@
 }
 
 header {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    top: 0;
+    z-index: 10;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 20px 0;
+    transition: all 0.3s ease-out;
+}
+
+.active {
+    background-color: black;
+    color: white;
+    
+}
+
+.active-links {
+    color: white;
 }
 
 li, a {
@@ -41,14 +58,18 @@ header ul li {
     cursor: pointer;
 }
 
-.searchbar {
-    width: 450px;
+input {
     height: 40px;
+    background-color: white;
     border: none;
     outline: none;
-    border-radius: 20px;
-    padding-left: 20px;
-    font-size: larger;
+    padding: 0 20px;
+}
+
+.searchbar {
+    width: 450px; 
+    border-radius: 20px 0 0 20px;
+    font-size: large;
     font-weight: bold;
 
 }
@@ -58,7 +79,7 @@ header ul li {
     width: 50px;
     background-color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
     outline: none;
     cursor: pointer;
 }
@@ -111,7 +132,7 @@ main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
     width: 95%;
-    max-width: 1700px;
+    max-width: 1300px;
 }
 
 .container-offers-element {
@@ -120,7 +141,7 @@ main {
     justify-content: center;
     box-shadow: 0 0 5px black;
     border-radius: 20px;
-    width: 350px;
+    width: 300px;
 }
 
 .element-img {
@@ -129,11 +150,12 @@ main {
 }
 
 .product-img {
-    height: 220px;
+    height: 200px;
 }
 
 .element-bottom {
-    padding: 40px 50px;
+    padding: 30px 20px;
+    height: 130px;
 }
 
 .element-cart {
@@ -150,7 +172,43 @@ main {
 }
 
 .container-login-whole {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 140px;
+    padding-top: 40px;
+    height: 500px;
+    width: 80%;
+    max-width: 1300px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.container-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 50px;
+}
+
+.container-login input {
+    width: 250px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.container-login input[type="submit"] {
+    width: 180px;
+    transition: all 0.3s ease-out;
+}
+
+.container-login input[type="submit"]:hover {
+    background-color: black;
+    color: white;
+    width: 180px;
+    cursor: pointer;
 }
 
 footer {
