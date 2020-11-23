@@ -1,0 +1,26 @@
+[33m9ed5887[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;32mchanges[m[33m)[m HEAD@{0}: checkout: moving from folder-redesign to master
+[33mae3c3db[m[33m ([m[1;31mproject1/folder-redesign[m[33m, [m[1;32mfolder-redesign[m[33m)[m HEAD@{1}: checkout: moving from 1b598ec1c65cab7b0297c40eada1462d669ebc5f to folder-redesign
+[33m1b598ec[m HEAD@{2}: commit: login logout new styling
+[33m2df3a32[m HEAD@{3}: commit: login logout new styling
+[33m1219048[m HEAD@{4}: commit: login logout new styling
+[33mc3fce3f[m HEAD@{5}: commit: added new fixed header
+[33m0d3724e[m[33m ([m[1;31mproject1/master[m[33m)[m HEAD@{6}: checkout: moving from folder-redesign to project1/master
+[33mae3c3db[m[33m ([m[1;31mproject1/folder-redesign[m[33m, [m[1;32mfolder-redesign[m[33m)[m HEAD@{7}: commit (merge): a
+[33m732bad4[m HEAD@{8}: commit (merge): changes
+[33m733ecc2[m HEAD@{9}: commit: new styling
+[33m9191746[m HEAD@{10}: commit: changed banner dots
+[33m5024213[m HEAD@{11}: pull project1 master: Fast-forward
+[33ma55533f[m HEAD@{12}: commit: removed script.js
+[33m249f809[m HEAD@{13}: pull project1 master: Fast-forward
+[33m4e6155f[m HEAD@{14}: commit: removed img
+[33m9ed5887[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;32mchanges[m[33m)[m HEAD@{15}: checkout: moving from changes to folder-redesign
+[33m9ed5887[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;32mchanges[m[33m)[m HEAD@{16}: checkout: moving from master to changes
+[33m9ed5887[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;32mchanges[m[33m)[m HEAD@{17}: checkout: moving from folder-redesign to master
+[33m9ed5887[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;32mchanges[m[33m)[m HEAD@{18}: checkout: moving from master to folder-redesign
+[33m9ed5887[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;32mchanges[m[33m)[m HEAD@{19}: merge folder-redesign: Fast-forward
+[33m552eae8[m HEAD@{20}: checkout: moving from folder-redesign to master
+[33m9ed5887[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;32mchanges[m[33m)[m HEAD@{21}: checkout: moving from folder-redesign to folder-redesign
+[33m9ed5887[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;32mchanges[m[33m)[m HEAD@{22}: commit: fixed links
+[33mcd9bc4a[m HEAD@{23}: commit: removed unwanted file
+[33m552eae8[m HEAD@{24}: checkout: moving from new to folder-redesign
+[33m552eae8[m HEAD@{25}: commit (initial): init
