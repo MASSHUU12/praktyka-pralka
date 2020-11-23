@@ -63,7 +63,7 @@ header ul li {
     height: 40px;
     border: none;
     outline: none;
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
     padding-left: 20px;
     font-size: large;
     font-weight: bold;
@@ -75,7 +75,7 @@ header ul li {
     width: 50px;
     background-color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
     outline: none;
     cursor: pointer;
 }
