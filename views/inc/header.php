@@ -29,8 +29,20 @@
         </div>
         <div class="header-text fxver">
             <ul>
-                <a href="login"><li class="header-links">Login</li></a>
-                <a href="signup"><li class="header-links">Sign up</li></a>
+                <?php if (isset($_SESSION['username'])) {
+                    echo '
+                    <a href=""><li class="header-links">'.$_SESSION['username'].'</li></a>
+                    <a href="logout"><li class="header-links">Log out</li></a>
+                    ';
+                    }
+                    else {
+                        echo '
+                        <a href="login"><li class="header-links">Login</li></a>
+                        <a href="signup"><li class="header-links">Sign up</li></a>
+                        ';
+                    }
+                ?>
+                
             </ul>
         </div>
         <div class="header-icons fxver">
