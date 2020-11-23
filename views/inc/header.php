@@ -27,8 +27,8 @@
         </div>
         <div class="header-text fxver">
             <ul>
-                <a href="#"><li>Login</li></a>
-                <a href="#"><li>Sign in</li></a>
+                <a href="login"><li>Login</li></a>
+                <a href="signup"><li>Sign up</li></a>
             </ul>
         </div>
         <div class="header-icons fxver">
