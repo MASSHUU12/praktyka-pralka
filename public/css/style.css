@@ -210,6 +210,14 @@ main {
     cursor: pointer;
 }
 
+.fourofour {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding-top: 100px;   
+}
+
 footer {
     width: 100%;
     height: 300px;
