@@ -13,7 +13,7 @@ switch ($request) {
     case '/login' :
             require __DIR__ . '/../views/login.php';
             break;
-    case '/siginup' :
+    case '/signup' :
         require __DIR__ . '/../views/signup.php';
         break;
     default:
