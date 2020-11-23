@@ -13,22 +13,24 @@
     <!-- jquery and js -->
     <script src="/app/public/js/banner.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- header js -->
+    <script src="/app/public/js/header.js"></script>
     <!-- php config -->
     <?php require_once '../config/config.php'; ?> 
 
 </head>
 <body onload="changeSlide()">
-    <header>
+    <header class="header" id="header">
         <div class="logo"><h2>Logo</h2></div>
-        <a href="site.php">categories</a>
+        <a class="header-links" href="site.php">categories</a>
         <div class="header-search-container">
             <input class="searchbar" type="text" placeholder="Search">
             <button class="searchbar-button"><i class="fas fa-search"></i></button>
         </div>
         <div class="header-text fxver">
             <ul>
-                <a href="login"><li>Login</li></a>
-                <a href="signup"><li>Sign up</li></a>
+                <a href="login"><li class="header-links">Login</li></a>
+                <a href="signup"><li class="header-links">Sign up</li></a>
             </ul>
         </div>
         <div class="header-icons fxver">
