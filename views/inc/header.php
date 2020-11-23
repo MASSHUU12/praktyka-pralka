@@ -21,7 +21,7 @@
 </head>
 <body onload="changeSlide()">
     <header class="header" id="header">
-        <div class="logo"><h2>Logo</h2></div>
+        <div class="logo"><a class="header-links" href="/"><h2>Logo</h2></a></div>
         <a class="header-links" href="site.php">categories</a>
         <div class="header-search-container">
             <input class="searchbar" type="text" placeholder="Search">

@@ -58,13 +58,17 @@ header ul li {
     cursor: pointer;
 }
 
-.searchbar {
-    width: 450px;
+input {
     height: 40px;
+    background-color: white;
     border: none;
     outline: none;
+    padding: 0 20px;
+}
+
+.searchbar {
+    width: 450px; 
     border-radius: 20px 0 0 20px;
-    padding-left: 20px;
     font-size: large;
     font-weight: bold;
 
@@ -168,7 +172,43 @@ main {
 }
 
 .container-login-whole {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 140px;
+    padding-top: 40px;
+    height: 500px;
+    width: 80%;
+    max-width: 1300px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.container-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 50px;
+}
+
+.container-login input {
+    width: 250px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.container-login input[type="submit"] {
+    width: 180px;
+    transition: all 0.3s ease-out;
+}
+
+.container-login input[type="submit"]:hover {
+    background-color: black;
+    color: white;
+    width: 180px;
+    cursor: pointer;
 }
 
 footer {
