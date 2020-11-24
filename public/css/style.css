@@ -218,7 +218,7 @@ footer {
 }
 
 /* Dropdown Button */
-.header-hamburger-dropdown-button {
+#header-hamburger-dropdown-button {
     background-color: #ffffff;
     color: black;
     padding: 16px;

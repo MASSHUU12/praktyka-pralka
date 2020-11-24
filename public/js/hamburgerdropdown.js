@@ -8,7 +8,7 @@ function headerHamburger()
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) 
 {
-  if (!event.target.matches('.header-hamburger-dropdown-button')) 
+  if (!event.target.matches("#header-hamburger-dropdown-button")) 
   {
     var dropdowns = document.getElementsByClassName("header-hamburger-dropdown-content");
     var i;
