@@ -13,8 +13,8 @@
     <!-- jquery and js -->
     <script src="/app/public/js/banner.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- header js -->
     <script src="/app/public/js/header.js"></script>
+    <script src="/app/public/js/hamburgerdropdown.js"></script>
     <!-- php config -->
     <?php require_once '../config/config.php'; ?> 
 
@@ -35,6 +35,14 @@
         </div>
         <div class="header-icons fxver">
             <i class="fas fa-shopping-cart fa-lg"></i>
-            <i class="fas fa-bars fa-lg"></i>
+        </div>
+        <div class="header-hamburger-dropdown">
+            <i onclick="headerHamburger()" class="header-hamburger-dropdown-button">Dropdown</i>
+            <div id="header-hamburger-dropdown-id" class="header-hamburger-dropdown-content">
+                <p>Profile</p>
+                <p>Orders</p>
+                <p>Menu</p>
+                <p>Contact</p>
+            </div>
         </div>
     </header>
