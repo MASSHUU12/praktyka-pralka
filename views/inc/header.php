@@ -37,7 +37,7 @@
             <i class="fas fa-shopping-cart fa-lg"></i>
         </div>
         <div class="header-hamburger-dropdown">
-            <i onclick="headerHamburger()" class="header-hamburger-dropdown-button">Dropdown</i>
+            <i onclick="headerHamburger()" class="header-hamburger-dropdown-button">dropdown</i>
             <div id="header-hamburger-dropdown-id" class="header-hamburger-dropdown-content">
                 <p>Profile</p>
                 <p>Orders</p>

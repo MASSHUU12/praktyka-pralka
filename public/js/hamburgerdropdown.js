@@ -12,7 +12,7 @@ window.onclick = function(event)
   {
     var dropdowns = document.getElementsByClassName("header-hamburger-dropdown-content");
     var i;
-    
+
     for (i = 0; i < dropdowns.length; i++) 
     {
       var openDropdown = dropdowns[i];
