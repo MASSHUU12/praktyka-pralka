@@ -22,20 +22,15 @@
 </head>
 <body onload="changeSlide()">
     <header class="header" id="header">
-<<<<<<< HEAD
-        <div class="logo"><a class="header-links" href="/"><h2>Pralka.pl</h2></a></div>
-        <a class="header-links" href="site.php">categories</a>
-=======
         <div class="logo"><a class="header-links" href="/"><h2>Logo</h2></a></div>
         <i class="header-links" id="header-hamburger-dropdown-button" onclick="headerCategories()">categories</i>
-        <div id="header-categories-dropdown-id" class="header-hamburger-dropdown-content">
+        <div id="header-categories-dropdown-id" class="header-categories-dropdown-content">
             <p>Kuchenki mikrofalowe</p>
             <p>Lodówki i zamrażarki</p>  
             <p>Pralki i suszarki</p>  
             <p>Roboty kuchenne</p>       
             <p>Zmywarki</p>                                     
         </div>
->>>>>>> 3cb24218bf2cdc37a56998f391a0138323beb124
         <div class="header-search-container">
             <input class="searchbar" type="text" placeholder="Search">
             <button class="searchbar-button"><i class="fas fa-search"></i></button>
