@@ -48,8 +48,7 @@
         </div>
         <div class="header-icons fxver">
             <i class="fas fa-shopping-cart fa-lg"></i>
-        </div>
-        <div class="header-hamburger-dropdown">
+            <div class="header-hamburger-dropdown">
             <i class="fas fa-bars" onclick="headerHamburger()" id="header-hamburger-dropdown-button"></i>
             <div id="header-hamburger-dropdown-id" class="header-hamburger-dropdown-content">
                 <p>Profile</p>
@@ -58,4 +57,6 @@
                 <p>Contact</p>
             </div>
         </div>
+        </div>
+        
     </header>
