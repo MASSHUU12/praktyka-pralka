@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
+    <title>Sklep internetowy pralka</title>
+    <!-- bar graphic -->
+    <link rel="shortcut icon" href="app/public/img/barxd.png" width="80%" height="90%">
     <link rel="stylesheet" href="app/public/css/style.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -21,7 +23,8 @@
 </head>
 <body onload="changeSlide()">
     <header class="header" id="header">
-        <div class="logo"><a class="header-links" href="/"><h2>Projekt edukacyjny</h2></a></div>
+        <!-- logo -->
+        <div class="logo"><img src="app/public/img/logoxd.png" width="160px" height="60px" aling="left" alt="logo"></div>
         <a class="header-links" href="site.php">categories</a>
         <div class="header-search-container">
             <input class="searchbar" type="text" placeholder="Search">
