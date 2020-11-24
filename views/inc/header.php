@@ -15,14 +15,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/app/public/js/header.js"></script>
     <script src="/app/public/js/hamburgerdropdown.js"></script>
+    <script src="/app/public/js/headerCategories.js"></script>
     <!-- php config -->
     <?php require_once '../config/config.php'; ?> 
 
 </head>
 <body onload="changeSlide()">
     <header class="header" id="header">
+<<<<<<< HEAD
         <div class="logo"><a class="header-links" href="/"><h2>Pralka.pl</h2></a></div>
         <a class="header-links" href="site.php">categories</a>
+=======
+        <div class="logo"><a class="header-links" href="/"><h2>Logo</h2></a></div>
+        <i class="header-links" id="header-hamburger-dropdown-button" onclick="headerCategories()">categories</i>
+        <div id="header-categories-dropdown-id" class="header-hamburger-dropdown-content">
+            <p>Kuchenki mikrofalowe</p>
+            <p>Lodówki i zamrażarki</p>  
+            <p>Pralki i suszarki</p>  
+            <p>Roboty kuchenne</p>       
+            <p>Zmywarki</p>                                     
+        </div>
+>>>>>>> 3cb24218bf2cdc37a56998f391a0138323beb124
         <div class="header-search-container">
             <input class="searchbar" type="text" placeholder="Search">
             <button class="searchbar-button"><i class="fas fa-search"></i></button>
@@ -48,8 +61,9 @@
         </div>
         <div class="header-icons fxver">
             <i class="fas fa-shopping-cart fa-lg"></i>
-            <div class="header-hamburger-dropdown">
-            <i class="fas fa-bars" onclick="headerHamburger()" id="header-hamburger-dropdown-button"></i>
+        </div>
+        <div class="header-hamburger-dropdown">
+            <i class="fas fa-bars fa-lg" onclick="headerHamburger()" id="header-hamburger-dropdown-button"></i>
             <div id="header-hamburger-dropdown-id" class="header-hamburger-dropdown-content">
                 <p>Profile</p>
                 <p>Orders</p>

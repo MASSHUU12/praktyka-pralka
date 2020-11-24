@@ -285,8 +285,11 @@ main {
     height: 600px;
 }
 
-.container-offer input {
-    width: 400px;
+/* Dropdown Button */
+#header-hamburger-dropdown-button {
+    padding: 16px;
+    border: none;
+    cursor: pointer;
 }
 
 #offer-buttons {
