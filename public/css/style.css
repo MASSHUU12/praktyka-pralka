@@ -234,6 +234,24 @@ main {
     cursor: pointer;
 }
 
+.container-offer {
+    height: 700px;
+}
+
+.container-offer input {
+    width: 400px;
+}
+
+#offer-buttons {
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.container-offer input[type="file"], .container-offer input[type="number"]{
+    width: 200px;
+}
+
 .fourofour {
     display: flex;
     flex-direction: column;

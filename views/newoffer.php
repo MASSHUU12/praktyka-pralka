@@ -5,7 +5,7 @@ require 'inc/notauthorized.php';
 
     <main>
         <div class="main-container">
-            <div class="container-login-whole">
+            <div class="container-login-whole container-offer">
                 <h1>Dodaj oferte</h1>
                 <form action="#" method="POST" enctype="multipart/form-data">
                     <div class="container-login">
@@ -18,8 +18,10 @@ require 'inc/notauthorized.php';
                             <option value="average">przeciętny</option>
                         </select>
                         <textarea name="description" cols="30" rows="5" placeholder="Opis"></textarea>
+                        <div id="offer-buttons">
                         <input type="file" name="image">
                         <input type="number" name="price" min="1" step="any" placeholder="cena">
+                        </div>
                         <input type="submit" name="offer-submit" value="Dodaj">
                     </div>
                 </form> 
