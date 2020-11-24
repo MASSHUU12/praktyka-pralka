@@ -31,6 +31,7 @@
             <ul>
                 <?php if (isset($_SESSION['username'])) {
                     echo '
+                    <a href="newoffer"><li class="header-links">Dodaj ogloszenie</li></a>
                     <a href=""><li class="header-links">'.$_SESSION['username'].'</li></a>
                     <a href="logout"><li class="header-links">Log out</li></a>
                     ';

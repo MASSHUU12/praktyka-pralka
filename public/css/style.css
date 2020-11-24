@@ -66,6 +66,30 @@ input {
     padding: 0 20px;
 }
 
+textarea {
+    border: none;
+    outline: none;
+    width: 400px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 0 20px;
+    resize: none;
+    font-size: larger;
+}
+
+select {
+    border: none;
+    outline: none;
+    width: 400px;
+    height: 40px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 0 20px;
+    font-size: larger;
+}
+
 .searchbar {
     width: 450px; 
     border-radius: 20px 0 0 20px;
