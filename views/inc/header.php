@@ -21,7 +21,7 @@
 </head>
 <body onload="changeSlide()">
     <header class="header" id="header">
-        <div class="logo"><a class="header-links" href="/"><h2>Projekt edukacyjny</h2></a></div>
+        <div class="logo"><a class="header-links" href="/"><h2>Pralka.pl</h2></a></div>
         <a class="header-links" href="site.php">categories</a>
         <div class="header-search-container">
             <input class="searchbar" type="text" placeholder="Search">
