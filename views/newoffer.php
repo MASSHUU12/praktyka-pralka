@@ -30,9 +30,10 @@ require 'inc/notauthorized.php';
                     $condition = $_POST['condition'];
                     $image = $_FILES['image'];
                     $price = $_POST['price'];
+                    $uploader = $_SESSION['username'];
 
                     $object = new SubmitOffer();
-                    $object->getOfferInfo($title, $description, $condition, $image, $price);
+                    $object->getOfferInfo($title, $description, $condition, $image, $price, $uploader);
                 }
                 ?>
             </div>

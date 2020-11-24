@@ -39,13 +39,13 @@ class SubmitOffer extends SubmitOfferModel {
         }
 
 
-    public function getOfferInfo($title, $description, $condition, $image, $price) {
+    public function getOfferInfo($title, $description, $condition, $image, $price, $uploader) {
         if (empty($title) || empty($description) || empty($condition) || empty($image || empty($price))) {
             echo 'Uzupełni puste pola';
         }
         else {
             $imageDestination = $this->ImgCheck($image);
-            $this->submitOfferInfo($title, $description, $condition, $imageDestination, $price);
+            $this->submitOfferInfo($title, $description, $condition, $imageDestination, $price, $uploader);
         }
     }
 }
