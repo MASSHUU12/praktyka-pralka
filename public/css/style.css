@@ -311,13 +311,6 @@ main {
     margin-bottom: 300px;
 }
 
-/* Dropdown Button */
-#header-hamburger-dropdown-button {
-    padding: 16px;
-    border: none;
-    cursor: pointer;
-}
-
 #offer-buttons {
     height: 45px;
     display: flex;
