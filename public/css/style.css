@@ -74,8 +74,6 @@ header ul li {
 
 /* Dropdown Button */
 #header-hamburger-dropdown-button, #header-categories-dropdown-button{
-    background-color: #ffffff;
-    color: black;
     padding: 16px;
     border: none;
     cursor: pointer;
@@ -141,8 +139,7 @@ header ul li {
 
 .active {
     background-color: black;
-    color: white;
-    
+    color: white; 
 }
 
 .active-links {
@@ -332,13 +329,6 @@ main {
     height: 600px;
     width: 800px;
     margin-bottom: 300px;
-}
-
-/* Dropdown Button */
-#header-hamburger-dropdown-button {
-    padding: 16px;
-    border: none;
-    cursor: pointer;
 }
 
 #offer-buttons {
