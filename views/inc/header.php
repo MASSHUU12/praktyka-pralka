@@ -22,8 +22,8 @@
 </head>
 <body onload="changeSlide()">
     <header class="header" id="header">
-        <div class="logo"><a class="header-links" href="/"><h2>Logo</h2></a></div>
-        <i class="header-links" id="header-hamburger-dropdown-button" onclick="headerCategories()">categories</i>
+        <div><a class="header-links" href="/"><img  class="logo"src="app/public/img/logo.png" alt=""></a></div>
+        <i class="header-links" id="header-categories-dropdown-button" onclick="headerCategories()">categories</i>
         <div id="header-categories-dropdown-id" class="header-categories-dropdown-content">
             <p>Kuchenki mikrofalowe</p>
             <p>Lodówki i zamrażarki</p>  

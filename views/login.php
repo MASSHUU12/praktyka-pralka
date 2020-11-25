@@ -1,7 +1,7 @@
 <?php require 'inc/header.php'; ?>
 
     <main>
-        <div class="main-container">
+        <div class="main-container background">
             <div class="container-login-whole">
                 <h1>Login</h1>
                 <form action="#" method="POST">
@@ -20,7 +20,7 @@
                     $object->getUser($username, $password);
                 }
                 ?>
-            </div>
+            </div>  
         </div>
     </main>
 <?php require 'inc/footer.php'; ?>

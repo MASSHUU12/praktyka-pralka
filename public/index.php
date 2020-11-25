@@ -2,8 +2,10 @@
 
 $request = $_SERVER['REQUEST_URI'];
 
+$actual = explode('?', $request);
+$actualRequest = reset($actual);
 
-switch ($request) {
+switch ($actualRequest) {
     case '/' :
         require __DIR__ . '/../views/index.php';
         break;

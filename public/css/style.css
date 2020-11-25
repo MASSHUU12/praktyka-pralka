@@ -27,6 +27,11 @@ li, a {
 
 .logo {
     cursor: pointer;
+    height: 50px; 
+}
+
+.logo-active {
+    filter: invert(100%);
 }
 
 header ul {
@@ -44,9 +49,8 @@ header ul li {
     border-radius: 20px;
 }
 
-
 /* Dropdown Button */
-#header-hamburger-dropdown-button {
+#header-hamburger-dropdown-button, #header-categories-dropdown-button{
     background-color: #ffffff;
     color: black;
     padding: 16px;
@@ -75,13 +79,16 @@ header ul li {
 .header-categories-dropdown-content {
     display: none;
     position: absolute;
-    width: 500px;
+    width: 30%;
+    min-width: 600px;
+    max-width: 1000px;
+    align-self: center;
     background-color: #ffffff;
     box-shadow: 1px 10px 11px 5px rgba(0, 0, 0, 0.15);
     z-index: 10;
     border-radius: 14px;
     top: 80px;
-    transform: translateX(-110%);
+    transform: translateX(-50%);
 }
   
 /* Links inside the dropdown */
@@ -102,6 +109,11 @@ header ul li {
 /* Show the dropdown menu via JS */
 .header-hamburger-dropdown-show {
     display:block;
+}
+
+.header-categories-dropdown-show {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .active {
@@ -175,7 +187,7 @@ select {
 }
 
 main {
-    margin: 90px 0;
+    margin: 90px 0 0 0;
 }
 
 .main-banner {
@@ -225,8 +237,7 @@ main {
     padding-top: 30px;
     margin-bottom: 100px;
     justify-content: center;
-    box-shadow: 0 0 5px black;
-    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     width: 300px;
 }
 
@@ -262,12 +273,12 @@ main {
     flex-direction: column;
     align-items: center;
     margin-top: 140px;
+    margin-bottom: 300px;
     padding-top: 40px;
     height: 500px;
-    width: 80%;
-    max-width: 1300px;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    width: 400px;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.25);
+    background-color: white;
 }
 
 .container-login {
@@ -299,6 +310,8 @@ main {
 
 .container-offer {
     height: 600px;
+    width: 800px;
+    margin-bottom: 300px;
 }
 
 /* Dropdown Button */
@@ -316,6 +329,11 @@ main {
 
 .container-offer input[type="file"], .container-offer input[type="number"]{
     width: 200px;
+}
+
+.background {
+    background-image: url("../img/background.png");
+    background-size: cover;
 }
 
 .fourofour {

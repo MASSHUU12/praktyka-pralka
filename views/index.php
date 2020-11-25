@@ -12,7 +12,7 @@
         <div class="main-container">
             <div class="container-offers">
                 <?php 
-                $object = new offers;
+                $object = new Offers;
                 $object->showOffers();
                 ?>
             </div>

@@ -11,12 +11,11 @@ class Login extends LoginModel {
         else if ($passwordCheck == true) {
             $_SESSION['userId'] = $results[0]['Id'];
             $_SESSION['username'] = $results[0]['usernameUsers'];
+            header("Location: /?login=success");
         }
         else 
             echo 'Some error occured. Please try again';
-        
-
-       
+              
     }
 
 }

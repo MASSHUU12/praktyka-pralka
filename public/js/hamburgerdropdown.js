@@ -10,7 +10,7 @@ window.onclick = function(event)
 {
   if (!event.target.matches("#header-hamburger-dropdown-button")) 
   {
-    var dropdowns = document.getElementsByClassName("header-categories-dropdown-content");
+    var dropdowns = document.getElementsByClassName("header-hamburger-dropdown-content");
     var i;
 
     for (i = 0; i < dropdowns.length; i++) 
