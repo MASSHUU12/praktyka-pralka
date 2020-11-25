@@ -24,6 +24,9 @@ switch ($actualRequest) {
     case '/newoffer' :
         require __DIR__ . '/../views/newoffer.php';
         break;
+    case '/user' :
+        require __DIR__ . '/../views/user.php';
+        break;
     default:
         http_response_code(404);
         require __DIR__ . '/../views/404.php';

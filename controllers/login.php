@@ -1,6 +1,6 @@
 <?php
 
-class Login extends LoginModel {
+class Login extends SignupLoginModel {
     
     public function getUser($username, $password) {
        $results = $this->checkUser($username);

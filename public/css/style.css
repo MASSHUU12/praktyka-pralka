@@ -34,6 +34,29 @@ li, a {
     filter: invert(100%);
 }
 
+input, button {
+    height: 40px;
+    background-color: white;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+button, input[type="submit"] {
+    width: fit-content;
+    transition: all 0.3s ease-out;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+
 header ul {
     list-style: none;
 }
@@ -130,14 +153,6 @@ header ul li {
     cursor: pointer;
 }
 
-input {
-    height: 40px;
-    background-color: white;
-    border: none;
-    outline: none;
-    padding: 0 20px;
-}
-
 textarea {
     border: none;
     outline: none;
@@ -167,6 +182,8 @@ select {
     border-radius: 20px 0 0 20px;
     font-size: large;
     font-weight: bold;
+    border: none;
+    box-shadow: none;
 
 }
 
@@ -178,12 +195,20 @@ select {
     border-radius: 0 20px 20px 0;
     outline: none;
     cursor: pointer;
+    box-shadow: none;
 }
 
 .fxver {
     display: flex;
     align-items: center;
     gap: 30px;
+}
+
+.fxcol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 main {
@@ -258,7 +283,7 @@ main {
 .element-cart {
     display: flex;
     justify-content: flex-end;
-    padding: 0 30px 20px 0;
+    padding: 0px 30px 40px 0;
 }
 
 .element-cart-button {
@@ -266,6 +291,12 @@ main {
     border: none;
     background-color: white;
     cursor: pointer;
+    box-shadow: none;
+}
+
+.element-cart-button:hover {
+    background-color: white;
+    color: black;
 }
 
 .container-login-whole {
@@ -291,21 +322,10 @@ main {
 
 .container-login input {
     width: 250px;
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    border: 1px solid black;
 }
 
 .container-login input[type="submit"] {
     width: 180px;
-    transition: all 0.3s ease-out;
-}
-
-.container-login input[type="submit"]:hover {
-    background-color: black;
-    color: white;
-    width: 180px;
-    cursor: pointer;
 }
 
 .container-offer {
@@ -331,9 +351,74 @@ main {
     width: 200px;
 }
 
+.container-user {
+    margin-bottom: 200px;
+    background-color: white;
+    width: 90%;
+    max-width: 1400px;
+    height: 800px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.container-user-top {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: rgb(250, 250, 250);
+    width: 100%;
+    height: 240px;
+    position: relative;
+}
+
+.container-user-top-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transform: translateY(-72px)
+}
+
+.container-user-top-left .image {
+    width: 150px;
+    height: 150px;
+}
+
+.container-user-top-left .image img {
+    width: 150px;
+    border-radius: 100%;
+}
+
+.container-user-top-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 150px;
+}
+
+.container-user-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 150px;
+    padding-top: 20px;
+}
+
+#changepwd {
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    
+}
+
 .background {
     background-image: url("../img/background.png");
     background-size: cover;
+}
+
+.background-user {
+    width: 100%;
+    height: 400px;
 }
 
 .fourofour {

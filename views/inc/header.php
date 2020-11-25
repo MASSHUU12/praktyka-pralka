@@ -22,7 +22,7 @@
 </head>
 <body onload="changeSlide()">
     <header class="header" id="header">
-        <div><a class="header-links" href="/"><img  class="logo"src="app/public/img/logo.png" alt=""></a></div>
+        <div><a class="header-links" href="/"><img  class="logo" src="app/public/img/logo.png" alt=""></a></div>
         <i class="header-links" id="header-categories-dropdown-button" onclick="headerCategories()">categories</i>
         <div id="header-categories-dropdown-id" class="header-categories-dropdown-content">
             <p>Kuchenki mikrofalowe</p>
@@ -40,7 +40,7 @@
                 <?php if (isset($_SESSION['username'])) {
                     echo '
                     <a href="newoffer"><li class="header-links">Dodaj ogloszenie</li></a>
-                    <a href=""><li class="header-links">'.$_SESSION['username'].'</li></a>
+                    <a href="user"><li class="header-links">'.$_SESSION['username'].'</li></a>
                     <a href="logout"><li class="header-links">Log out</li></a>
                     ';
                     }
