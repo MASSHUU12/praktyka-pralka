@@ -1,5 +1,4 @@
 <?php require 'inc/header.php'; ?>
-
     <main>
     <section class="main-banner">
         <img class="main-banner-img" id="slider" src="app/public/img/1.jpg" />
@@ -12,7 +11,7 @@
         <div class="main-container">
             <div class="container-offers">
                 <?php 
-                $object = new offers;
+                $object = new Offers;
                 $object->showOffers();
                 ?>
             </div>

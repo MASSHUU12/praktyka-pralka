@@ -24,6 +24,7 @@ require 'inc/notauthorized.php';
                         </div>
                         <input type="submit" name="offer-submit" value="Dodaj">
                     </div>
+                    
                 </form> 
                 <?php 
                 if (isset($_POST['offer-submit'])) {

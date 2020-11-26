@@ -2,8 +2,10 @@
 
 $request = $_SERVER['REQUEST_URI'];
 
+$actual = explode('?', $request);
+$actualRequest = reset($actual);
 
-switch ($request) {
+switch ($actualRequest) {
     case '/' :
         require __DIR__ . '/../views/index.php';
         break;
@@ -21,6 +23,9 @@ switch ($request) {
         break;
     case '/newoffer' :
         require __DIR__ . '/../views/newoffer.php';
+        break;
+    case '/user' :
+        require __DIR__ . '/../views/user.php';
         break;
     default:
         http_response_code(404);

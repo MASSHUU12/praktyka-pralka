@@ -8,7 +8,7 @@
 header {
     position: fixed;
     width: 100%;
-    height: 90px;
+    height: 80px;
     background-color: white;
     top: 0;
     z-index: 10;
@@ -20,16 +20,6 @@ header {
     
 }
 
-.active {
-    background-color: black;
-    color: white;
-    
-}
-
-.active-links {
-    color: white;
-}
-
 li, a {
     text-decoration: none;
     color: black;
@@ -38,9 +28,35 @@ li, a {
 
 .logo {
     cursor: pointer;
-    float: left;
-
+    height: 45px; 
 }
+
+.logo-active {
+    filter: invert(100%);
+}
+
+input, button {
+    height: 40px;
+    background-color: white;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+button, input[type="submit"] {
+    width: fit-content;
+    transition: all 0.3s ease-out;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
 
 header ul {
     list-style: none;
@@ -57,16 +73,98 @@ header ul li {
     border-radius: 20px;
 }
 
-.fas {
+/* Dropdown Button */
+#header-hamburger-dropdown-button, #header-categories-dropdown-button, #header-searchbar-dropdown-button{
+    padding: 16px;
+    border: none;
     cursor: pointer;
+
+    font-weight: bold;
+}
+  
+/* The container needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+/* Dropdown Content (Hidden by Default) */
+.header-hamburger-dropdown-content {
+    display: none;
+    position: absolute;
+    transform: translate(-35%, 2%);
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 1px 10px 11px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    z-index: 10;
 }
 
-input {
-    height: 40px;
-    background-color: white;
-    border: none;
-    outline: none;
-    padding: 0 20px;
+.header-categories-dropdown-content {
+    display: none;
+    position: absolute;
+    width: 30%;
+    min-width: 600px;
+    max-width: 1000px;
+    align-self: center;
+    background-color: #ffffff;
+    box-shadow: 1px 10px 11px 5px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    border-radius: 8px;
+    top: 80px;
+    transform: translateX(-50%);
+}
+
+.header-searchbar-dropdown-content {
+    display: none;
+    position: absolute;
+    width: 30%;
+    min-width: 600px;
+    max-width: 1000px;
+    align-self: center;
+    background-color: #ffffff;
+    box-shadow: 1px 10px 11px 5px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    border-radius: 8px;
+    top: 80px;
+}
+  
+/* Links inside the dropdown */
+.header-hamburger-dropdown-content p, .header-categories-dropdown-content p, .header-searchbar-dropdown-content p {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+  
+/* Change color of dropdown links on hover */
+.header-hamburger-dropdown-content p:hover, .header-categories-dropdown-content p:hover, .header-searchbar-dropdown-content p:hover {
+    background-color: rgb(245, 245, 245);
+    border-radius: 14px;
+}
+  
+/* Show the dropdown menu via JS */
+.header-hamburger-dropdown-show, .header-searchbar-dropdown-show {
+    display:block;
+}
+
+.header-categories-dropdown-show {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.active {
+    background-color: black;
+    color: white; 
+}
+
+.active-links {
+    color: white;
+}
+
+.fas {
+    cursor: pointer;
 }
 
 textarea {
@@ -98,6 +196,8 @@ select {
     border-radius: 20px 0 0 20px;
     font-size: large;
     font-weight: bold;
+    border: none;
+    box-shadow: none;
 
 }
 
@@ -109,6 +209,7 @@ select {
     border-radius: 0 20px 20px 0;
     outline: none;
     cursor: pointer;
+    box-shadow: none;
 }
 
 .fxver {
@@ -117,8 +218,15 @@ select {
     gap: 30px;
 }
 
+.fxcol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
 main {
-    margin: 90px 0;
+    margin: 90px 0 0 0;
 }
 
 .main-banner {
@@ -126,10 +234,13 @@ main {
     width: 100%;
     margin-bottom: 50px;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .main-banner-img {
     width: 100%;
+    max-width: 1700px;
     display: block;
 }
 
@@ -165,8 +276,7 @@ main {
     padding-top: 30px;
     margin-bottom: 100px;
     justify-content: center;
-    box-shadow: 0 0 5px black;
-    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     width: 300px;
 }
 
@@ -187,7 +297,7 @@ main {
 .element-cart {
     display: flex;
     justify-content: flex-end;
-    padding: 0 30px 20px 0;
+    padding: 0px 30px 40px 0;
 }
 
 .element-cart-button {
@@ -195,6 +305,12 @@ main {
     border: none;
     background-color: white;
     cursor: pointer;
+    box-shadow: none;
+}
+
+.element-cart-button:hover {
+    background-color: white;
+    color: black;
 }
 
 .container-login-whole {
@@ -202,12 +318,12 @@ main {
     flex-direction: column;
     align-items: center;
     margin-top: 140px;
+    margin-bottom: 300px;
     padding-top: 40px;
     height: 500px;
-    width: 80%;
-    max-width: 1300px;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    width: 400px;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.25);
+    background-color: white;
 }
 
 .container-login {
@@ -220,29 +336,16 @@ main {
 
 .container-login input {
     width: 250px;
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    border: 1px solid black;
 }
 
 .container-login input[type="submit"] {
     width: 180px;
-    transition: all 0.3s ease-out;
-}
-
-.container-login input[type="submit"]:hover {
-    background-color: black;
-    color: white;
-    width: 180px;
-    cursor: pointer;
 }
 
 .container-offer {
     height: 600px;
-}
-
-.container-offer input {
-    width: 400px;
+    width: 800px;
+    margin-bottom: 300px;
 }
 
 #offer-buttons {
@@ -253,6 +356,76 @@ main {
 
 .container-offer input[type="file"], .container-offer input[type="number"]{
     width: 200px;
+}
+
+.container-user {
+    margin-bottom: 200px;
+    background-color: white;
+    width: 90%;
+    max-width: 1400px;
+    height: 800px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.container-user-top {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: rgb(250, 250, 250);
+    width: 100%;
+    height: 240px;
+    position: relative;
+}
+
+.container-user-top-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transform: translateY(-72px)
+}
+
+.container-user-top-left .image {
+    width: 150px;
+    height: 150px;
+}
+
+.container-user-top-left .image img {
+    width: 150px;
+    border-radius: 100%;
+}
+
+.container-user-top-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 150px;
+}
+
+.container-user-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 150px;
+    padding-top: 20px;
+}
+
+#changepwd {
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    
+}
+
+.background {
+    background-image: url("../img/background.png");
+    background-size: cover;
+}
+
+.background-user {
+    width: 100%;
+    height: 400px;
 }
 
 .fourofour {
