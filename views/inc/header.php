@@ -16,6 +16,7 @@
     <script src="/app/public/js/header.js"></script>
     <script src="/app/public/js/hamburgerdropdown.js"></script>
     <script src="/app/public/js/headerCategories.js"></script>
+    <script src="/app/public/js/headerSearchbar.js"></script>
     <!-- php config -->
     <?php require_once '../config/config.php'; ?> 
 
@@ -32,8 +33,15 @@
             <p>Zmywarki</p>                                     
         </div>
         <div class="header-search-container">
-            <input class="searchbar" type="text" placeholder="Search">
+            <input class="searchbar" id="header-searchbar-dropdown-button" type="text" placeholder="Search" onclick="headerSearchbar()">
             <button class="searchbar-button"><i class="fas fa-search"></i></button>
+            <div id="header-searchbar-dropdown-id" class="header-searchbar-dropdown-content">
+                <p>Wynik 1</p>
+                <p>Wynik 2</p>
+                <p>Wynik 3</p>
+                <p>Wynik 4</p>
+                <p>Wynik 5</p>
+            </div>
         </div>
         <div class="header-text fxver">
             <ul>
