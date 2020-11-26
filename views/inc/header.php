@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
+    <title>Sklep internetowy pralka</title>
+    <!-- bar graphic -->
+    <link rel="shortcut icon" href="app/public/img/barxd.png" width="80%" height="90%">
     <link rel="stylesheet" href="app/public/css/style.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,6 +18,7 @@
     <script src="/app/public/js/header.js"></script>
     <script src="/app/public/js/hamburgerdropdown.js"></script>
     <script src="/app/public/js/headerCategories.js"></script>
+    <script src="/app/public/js/headerSearchbar.js"></script>
     <!-- php config -->
     <?php require_once '../config/config.php'; ?> 
 
@@ -32,8 +35,15 @@
             <p>Zmywarki</p>                                     
         </div>
         <div class="header-search-container">
-            <input class="searchbar" type="text" placeholder="Szukaj">
+            <input class="searchbar" id="header-searchbar-dropdown-button" type="text" placeholder="Szukaj" onclick="headerSearchbar()">
             <button class="searchbar-button"><i class="fas fa-search"></i></button>
+            <div id="header-searchbar-dropdown-id" class="header-searchbar-dropdown-content">
+                <p>Wynik 1</p>
+                <p>Wynik 2</p>
+                <p>Wynik 3</p>
+                <p>Wynik 4</p>
+                <p>Wynik 5</p>
+            </div>
         </div>
         <div class="header-text fxver">
             <ul>
@@ -50,8 +60,7 @@
                         <a href="signup"><li class="header-links">Rejestracja</li></a>
                         ';
                     }
-                ?>
-                
+                ?>     
             </ul>
         </div>
         <div class="header-icons fxver">
