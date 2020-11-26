@@ -3,12 +3,12 @@
     <main>
         <div class="main-container background">
             <div class="container-login-whole">
-                <h1>Login</h1>
+                <h1>Zaloguj się</h1>
                 <form action="#" method="POST">
                     <div class="container-login">
                         <input type="email" name="email" placeholder="email">
                         <input type="password" name="password" placeholder="hasło">
-                        <input type="submit" name="login-submit" value="Login">
+                        <input type="submit" name="login-submit" value="Zaloguj się">
                     </div>
                 </form> 
                 <?php 

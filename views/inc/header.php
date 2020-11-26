@@ -24,7 +24,7 @@
 <body onload="changeSlide()">
     <header class="header" id="header">
         <div><a class="header-links" href="/"><img  class="logo" src="app/public/img/logo.png" alt=""></a></div>
-        <i class="header-links" id="header-categories-dropdown-button" onclick="headerCategories()">categories</i>
+        <i class="header-links" id="header-categories-dropdown-button" onclick="headerCategories()">Kategorie</i>
         <div id="header-categories-dropdown-id" class="header-categories-dropdown-content">
             <p>Kuchenki mikrofalowe</p>
             <p>Lodówki i zamrażarki</p>  
@@ -33,7 +33,7 @@
             <p>Zmywarki</p>                                     
         </div>
         <div class="header-search-container">
-            <input class="searchbar" type="text" placeholder="Search">
+            <input class="searchbar" type="text" placeholder="Szukaj">
             <button class="searchbar-button"><i class="fas fa-search"></i></button>
         </div>
         <div class="header-text fxver">
@@ -42,13 +42,13 @@
                     echo '
                     <a href="newoffer"><li class="header-links">Dodaj ogloszenie</li></a>
                     <a href="user"><li class="header-links">'.$_SESSION['username'].'</li></a>
-                    <a href="logout"><li class="header-links">Log out</li></a>
+                    <a href="logout"><li class="header-links">Wyloguj się</li></a>
                     ';
                     }
                     else {
                         echo '
-                        <a href="login"><li class="header-links">Login</li></a>
-                        <a href="signup"><li class="header-links">Sign up</li></a>
+                        <a href="login"><li class="header-links">Zaloguj się</li></a>
+                        <a href="signup"><li class="header-links">Rejestracja</li></a>
                         ';
                     }
                 ?>
@@ -61,10 +61,10 @@
         <div class="header-hamburger-dropdown">
             <i class="fas fa-bars fa-lg" onclick="headerHamburger()" id="header-hamburger-dropdown-button"></i>
             <div id="header-hamburger-dropdown-id" class="header-hamburger-dropdown-content">
-                <p>Profile</p>
-                <p>Orders</p>
+                <p>Profil</p>
+                <p>Zamówienia</p>
                 <p>Menu</p>
-                <p>Contact</p>
+                <p>Kontakt</p>
             </div>
         </div>
         </div>
