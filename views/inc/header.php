@@ -18,6 +18,7 @@
     <script src="/app/public/js/header.js"></script>
     <script src="/app/public/js/hamburgerdropdown.js"></script>
     <script src="/app/public/js/headerCategories.js"></script>
+    <script src="/app/public/js/scrollToTop.js"></script>
     <script src="/app/public/js/headerSearchbar.js"></script>
     <!-- php config -->
     <?php require_once '../config/config.php'; ?> 
