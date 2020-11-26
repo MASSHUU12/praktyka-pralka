@@ -73,11 +73,15 @@ header ul li {
 }
 
 /* Dropdown Button */
-#header-hamburger-dropdown-button, #header-categories-dropdown-button, #header-searchbar-dropdown-button{
+#header-hamburger-dropdown-button, #header-categories-dropdown-button{
     padding: 16px;
     border: none;
     cursor: pointer;
+}
 
+#header-searchbar-dropdown-button {
+    padding: 16px;
+    border: none;
     font-weight: bold;
 }
   
@@ -207,7 +211,6 @@ select {
     border: none;
     border-radius: 0 20px 20px 0;
     outline: none;
-    cursor: pointer;
     box-shadow: none;
 }
 
