@@ -77,6 +77,8 @@ header ul li {
     padding: 16px;
     border: none;
     cursor: pointer;
+
+    font-weight: bold;
 }
   
 /* The container needed to position the dropdown content */

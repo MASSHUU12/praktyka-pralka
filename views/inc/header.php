@@ -24,7 +24,7 @@
 <body onload="changeSlide()">
     <header class="header" id="header">
         <div><a class="header-links" href="/"><img  class="logo" src="app/public/img/logo.png" alt=""></a></div>
-        <i class="header-links" id="header-categories-dropdown-button" onclick="headerCategories()">categories</i>
+        <i class="header-links" id="header-categories-dropdown-button" onclick="headerCategories()">Categories</i>
         <div id="header-categories-dropdown-id" class="header-categories-dropdown-content">
             <p>Kuchenki mikrofalowe</p>
             <p>Lodówki i zamrażarki</p>  
@@ -58,8 +58,7 @@
                         <a href="signup"><li class="header-links">Sign up</li></a>
                         ';
                     }
-                ?>
-                
+                ?>     
             </ul>
         </div>
         <div class="header-icons fxver">
