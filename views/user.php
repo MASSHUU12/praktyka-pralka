@@ -1,7 +1,6 @@
 <?php 
 require 'inc/header.php'; 
 require 'inc/notauthorized.php';
-echo '<br><br><br><br>';
 $object = new Login;
 $result = $object->showUser($_SESSION['email'])
 ?>
