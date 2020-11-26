@@ -468,3 +468,10 @@ footer {
   text-align: left;
   padding: 50px 50px;
 }
+
+#footer-goback-button {
+  position: fixed;
+  
+  bottom: 50px;
+  right: 50px;
+}
