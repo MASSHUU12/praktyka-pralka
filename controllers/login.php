@@ -8,7 +8,7 @@ class Login extends SignupLoginModel {
             $remotePassword = $results[0]['passwordUsers'];
             $passwordCheck = password_verify($password, $remotePassword);
             if ($passwordCheck == false) 
-                echo 'Wrong password';
+                echo 'Dane logowania są niepoprawne';
             else if ($passwordCheck == true) {
                 $_SESSION['userId'] = $results[0]['Id'];
                 $_SESSION['username'] = $results[0]['usernameUsers'];
@@ -16,7 +16,7 @@ class Login extends SignupLoginModel {
                 header("Location: /?login=success");
             }
             else 
-                echo 'Some error occured. Please try again';
+                echo 'Wystąpił problem, spróbuj ponownie';
               
         }
         else
