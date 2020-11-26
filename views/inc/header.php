@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
+    <title>Sklep internetowy pralka</title>
+    <!-- bar graphic -->
+    <link rel="shortcut icon" href="app/public/img/barxd.png" width="80%" height="90%">
     <link rel="stylesheet" href="app/public/css/style.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
