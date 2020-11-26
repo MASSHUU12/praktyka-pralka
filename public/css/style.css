@@ -81,8 +81,6 @@ header ul li {
 #header-searchbar-dropdown-button {
   padding: 16px;
   border: none;
-  cursor: pointer;
-
   font-weight: bold;
 }
 
@@ -174,28 +172,24 @@ header ul li {
   cursor: pointer;
 }
 
-textarea {
-  border: none;
-  outline: none;
-  width: 400px;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  border: 1px solid black;
-  padding: 0 20px;
-  resize: none;
-  font-size: larger;
-}
-
+textarea,
 select {
   border: none;
   outline: none;
   width: 400px;
-  height: 40px;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   border: 1px solid black;
-  padding: 0 20px;
   font-size: larger;
+  padding: 0 20px;
+}
+
+textarea {
+  resize: none;
+}
+
+select {
+  height: 40px;
 }
 
 .searchbar {
@@ -216,6 +210,11 @@ select {
   outline: none;
   cursor: pointer;
   box-shadow: none;
+}
+
+.searchbar-button:hover {
+  background-color: white;
+  color: black;
 }
 
 .fxver {
@@ -364,6 +363,10 @@ main {
 .container-offer input[type="file"],
 .container-offer input[type="number"] {
   width: 200px;
+}
+
+.container-offer input {
+  width: 400px;
 }
 
 .container-user {
