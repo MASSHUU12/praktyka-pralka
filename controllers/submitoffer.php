@@ -30,7 +30,7 @@ class SubmitOffer extends SubmitOfferModel {
                     }
                 }
                 else {
-                    echo 'Błąd';
+                    echo 'Błąd przesyłania zdjęcia';
                 }   
             }
             else{
