@@ -205,14 +205,13 @@ header ul li {
 }
 
 .searchbar-button {
-  border-radius: 0 15px 15px 0;
-  width: 50px;
-  background-color: white;
-  border: none;
-  border-radius: 0 20px 20px 0;
-  outline: none;
-  cursor: pointer;
-  box-shadow: none;
+    border-radius: 0 15px 15px 0;
+    width: 50px;
+    background-color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    outline: none;
+    box-shadow: none;
 }
 
 .searchbar-button:hover {
@@ -473,4 +472,19 @@ footer {
   gap: 10px;
   text-align: left;
   padding: 50px 50px;
+}
+
+#footer-goback-button {
+  position: fixed;
+  
+  bottom: 50px;
+  right: 50px;
+}
+
+.body-img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+.body-img-hover-zoom:hover img {
+  transform: scale(1.1);
 }
