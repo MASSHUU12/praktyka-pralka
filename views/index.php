@@ -17,7 +17,7 @@
                 foreach ($results as $result) {
                     echo '
                     <div class="container-offers-element">
-                                <div class="element-img">
+                                <div class="element-img body-img-hover-zoom">
                                     <img class="product-img" src="'.$result['ImgOffers'].'">
                                 </div>
                                 <div class="element-bottom">
