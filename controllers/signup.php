@@ -19,6 +19,7 @@ class Signup extends SignupLoginModel {
         }
         else {
             $this->sendUser($username, $email, $password);
+            echo 'Rejestracja przebiegła pomyślnie';
         }
     }
 }

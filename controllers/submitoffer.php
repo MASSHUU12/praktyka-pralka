@@ -46,6 +46,7 @@ class SubmitOffer extends SubmitOfferModel {
         else {
             $imageDestination = $this->ImgCheck($image);
             $this->submitOfferInfo($title, $description, $condition, $imageDestination, $price, $uploader);
+            echo 'Dodanie aukcji przebiegło pomyślnie. Jeśli chcesz możesz dodać kolejną';
         }
     }
 }
