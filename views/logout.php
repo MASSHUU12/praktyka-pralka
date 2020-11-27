@@ -9,7 +9,7 @@ session_destroy();
         <div class="main-container">
             <div class="container-login-whole">
                 <div class="container-login">
-                    <h1>Zostales wylogowany</h1>
+                    <h1>Zostaleś wylogowany</h1>
                 </div>
             </div>
         </div>
