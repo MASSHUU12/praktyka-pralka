@@ -21,7 +21,6 @@
                 <h5>Pralka.pl</h5>
             </div>
         </section>
-        <div class="fas fa-chevron-up fa-3x" id="footer-goback-button" onclick="scrollToTop()"></div>
     </footer>
 </body>
 </html>
