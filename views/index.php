@@ -11,7 +11,7 @@
         <div class="main-container">
             <div class="container-offers">
                 <?php 
-                $object = new Offers;
+                $object = new Offers();
                 $results = $object->showOffers();
 
                 foreach ($results as $result) {

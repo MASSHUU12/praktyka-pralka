@@ -12,8 +12,8 @@
         <main>
             <div class="main-container">
                 <div class="fourofour">
-                    <h1>404 Page not found</h1>
-                    <a href="/"><h2>Take me out of here</h2></a>
+                    <h1>404 Strona nie istnieje</h1>
+                    <a href="/"><h2>Zabierz mnie stąd</h2></a>
                 </div>
             </div>
         </main>

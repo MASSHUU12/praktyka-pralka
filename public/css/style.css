@@ -36,28 +36,42 @@ a {
 }
 
 input,
-button {
+button,
+textarea,
+select {
   height: 40px;
-  background-color: white;
+  background-color: rgb(250, 250, 250);
   border: none;
   outline: none;
   padding: 0 20px;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  border: 1px solid black;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 button,
 input[type="submit"] {
   width: fit-content;
   transition: all 0.3s ease-out;
+  background-color: rgb(255, 255, 255);
 }
 
 input[type="submit"]:hover,
 button:hover {
-  background-color: black;
+  background-color: rgb(43, 120, 151);
   color: white;
   cursor: pointer;
+}
+
+textarea,
+select {
+  outline: none;
+  width: 500px;
+  font-size: larger;
+}
+
+textarea {
+  resize: none;
+  height: 200px;
 }
 
 header ul {
@@ -76,16 +90,17 @@ header ul li {
 }
 
 /* Dropdown Button */
-#header-hamburger-dropdown-button, #header-categories-dropdown-button{
-    padding: 16px;
-    border: none;
-    cursor: pointer;
+#header-hamburger-dropdown-button,
+#header-categories-dropdown-button,
+#header-searchbar-dropdown-button {
+  padding: 16px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 #header-searchbar-dropdown-button {
-    padding: 16px;
-    border: none;
-    font-weight: bold;
+  cursor: auto;
 }
 
 /* The container needed to position the dropdown content */
@@ -109,7 +124,7 @@ header ul li {
 .header-categories-dropdown-content {
   display: none;
   position: absolute;
-  width: 30%;
+  width: 35%;
   min-width: 600px;
   max-width: 1000px;
   align-self: center;
@@ -139,6 +154,7 @@ header ul li {
 .header-searchbar-dropdown-content p {
   color: black;
   padding: 12px 16px;
+  font-weight: bold;
   text-decoration: none;
   display: block;
   cursor: pointer;
@@ -156,11 +172,13 @@ header ul li {
 .header-hamburger-dropdown-show,
 .header-searchbar-dropdown-show {
   display: block;
+  z-index: 11;
 }
 
 .header-categories-dropdown-show {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  z-index: 11;
 }
 
 .active {
@@ -176,30 +194,6 @@ header ul li {
   cursor: pointer;
 }
 
-textarea {
-  border: none;
-  outline: none;
-  width: 400px;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  border: 1px solid black;
-  padding: 0 20px;
-  resize: none;
-  font-size: larger;
-}
-
-select {
-  border: none;
-  outline: none;
-  width: 400px;
-  height: 40px;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  border: 1px solid black;
-  padding: 0 20px;
-  font-size: larger;
-}
-
 .searchbar {
   width: 450px;
   border-radius: 20px 0 0 20px;
@@ -207,6 +201,7 @@ select {
   font-weight: bold;
   border: none;
   box-shadow: none;
+  background-color: white;
 }
 
 .searchbar-button {
@@ -217,6 +212,11 @@ select {
     border-radius: 0 20px 20px 0;
     outline: none;
     box-shadow: none;
+}
+
+.searchbar-button:hover {
+  background-color: white;
+  color: black;
 }
 
 .fxver {
@@ -294,7 +294,7 @@ main {
 
 .product-img {
   height: 200px;
-  max-width: 300px;
+  max-width: 270px;
 }
 
 .element-bottom {
@@ -364,7 +364,12 @@ main {
 
 .container-offer input[type="file"],
 .container-offer input[type="number"] {
-  width: 200px;
+  width: 250px;
+}
+
+.container-offer input[type="text"] {
+  width: 500px;
+  font-size: larger;
 }
 
 .container-user {

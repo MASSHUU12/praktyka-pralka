@@ -39,20 +39,20 @@ function changeColor(number)
 {
     if (number == 1)
     {
-        document.getElementById("main-banner-button1").style.color = "#386863"; 
-        document.getElementById("main-banner-button2").style.color = "#c5eae6";   
-        document.getElementById("main-banner-button3").style.color = "#c5eae6";      
+        document.getElementById("main-banner-button1").style.color = "#000000"; 
+        document.getElementById("main-banner-button2").style.color = "#ffffff";   
+        document.getElementById("main-banner-button3").style.color = "#ffffff";      
     }
     else if (number == 2)
     {
-        document.getElementById("main-banner-button1").style.color = "#c5eae6"; 
-        document.getElementById("main-banner-button2").style.color = "#386863";   
-        document.getElementById("main-banner-button3").style.color = "#c5eae6";   
+        document.getElementById("main-banner-button1").style.color = "#ffffff"; 
+        document.getElementById("main-banner-button2").style.color = "#000000";   
+        document.getElementById("main-banner-button3").style.color = "#ffffff";   
     }
     else
     {
-        document.getElementById("main-banner-button1").style.color = "#c5eae6"; 
-        document.getElementById("main-banner-button2").style.color = "#c5eae6";   
-        document.getElementById("main-banner-button3").style.color = "#386863";   
+        document.getElementById("main-banner-button1").style.color = "#ffffff"; 
+        document.getElementById("main-banner-button2").style.color = "#ffffff";   
+        document.getElementById("main-banner-button3").style.color = "#000000";   
     }
 }
