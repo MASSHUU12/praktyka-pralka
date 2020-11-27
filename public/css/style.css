@@ -44,7 +44,7 @@ select {
   border: none;
   outline: none;
   padding: 0 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
@@ -178,6 +178,7 @@ header ul li {
 .header-categories-dropdown-show {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  z-index: 11;
 }
 
 .active {
