@@ -271,6 +271,7 @@ main {
   display: flex;
   justify-content: center;
   background-color: rgb(245, 245, 245);
+  min-height: 400px;
 }
 
 .container-offers {
