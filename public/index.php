@@ -28,6 +28,14 @@ switch ($actualRequest) {
         require __DIR__ . '/../views/user.php';
         break;
     default:
+    case '/search' :
+        require __DIR__ . '/../views/search.php';
+        break;
+    default:
+    case '/offer' :
+        require __DIR__ . '/../views/offer.php';
+        break;
+    default:
         http_response_code(404);
         require __DIR__ . '/../views/404.php';
         break;

@@ -11,11 +11,11 @@ require 'inc/notauthorized.php';
                     <div class="container-login">
                         <input type="text" name="title" placeholder="Tytuł">
                         <select name="condition">
-                            <option value="null">wybierz stan</option>
-                            <option value="likeNew">jak nowy</option>
-                            <option value="veryGood">bardzo dobry</option>
-                            <option value="good">dobry</option>
-                            <option value="average">przeciętny</option>
+                            <option value="Nie podano">wybierz stan</option>
+                            <option value="jak nowy">jak nowy</option>
+                            <option value="bardzo dobry">bardzo dobry</option>
+                            <option value="dobry">dobry</option>
+                            <option value="przeciętny">przeciętny</option>
                         </select>
                         <textarea name="description" cols="30" rows="5" placeholder="Opis"></textarea>
                         <div id="offer-buttons">

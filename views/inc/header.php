@@ -34,8 +34,10 @@
             <p>Zmywarki</p>                                     
         </div>
         <div class="header-search-container">
-            <input class="searchbar" id="header-searchbar-dropdown-button" type="text" placeholder="Szukaj" onclick="headerSearchbar()">
-            <button class="searchbar-button"><i class="fas fa-search"></i></button>
+            <form action="search" method="GET" autocomplete="off">
+            <input class="searchbar" id="header-searchbar-dropdown-button" type="text" name="search" placeholder="Szukaj" onclick="headerSearchbar()">
+            <button type="submit" class="searchbar-button"><i class="fas fa-search"></i></button>
+            </form>
             <div id="header-searchbar-dropdown-id" class="header-searchbar-dropdown-content">
 
             </div>

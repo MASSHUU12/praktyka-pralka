@@ -18,11 +18,11 @@
                     echo '
                     <div class="container-offers-element">
                                 <div class="element-img body-img-hover-zoom">
-                                    <img class="product-img" src="'.$result['ImgOffers'].'">
+                                    <a href="offer?id='.$result['UniqueOffers'].'"><img class="product-img" src="'.$result['ImgOffers'].'"></a>
                                 </div>
                                 <div class="element-bottom">
-                                    <div class="element-title"><h3>'.$result['TitleOffers'].'</h3></div>
-                                    <div class="element-desc"><p>'.$result['DescOffers'].'</p><h2>'.$result['PriceOffers'].' koron</h2></div>
+                                        <div class="element-title"><a href="offer?id='.$result['UniqueOffers'].'"><h3>'.$result['TitleOffers'].'</h3></a></div>
+                                    <div class="element-desc"><p>Stan: '.$result['CondOffers'].'</p><h2>'.$result['PriceOffers'].' koron</h2></div>
                                 </div>
                                 <div class="element-cart">
                                     <button class="element-cart-button"><i class="fas fa-shopping-cart fa-2x"></i></button>

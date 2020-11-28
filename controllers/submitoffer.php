@@ -49,4 +49,5 @@ class SubmitOffer extends SubmitOfferModel {
             echo 'Dodanie aukcji przebiegło pomyślnie. Jeśli chcesz możesz dodać kolejną';
         }
     }
+
 }
