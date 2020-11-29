@@ -27,11 +27,9 @@ switch ($actualRequest) {
     case '/user' :
         require __DIR__ . '/../views/user.php';
         break;
-    default:
     case '/search' :
         require __DIR__ . '/../views/search.php';
         break;
-    default:
     case '/offer' :
         require __DIR__ . '/../views/offer.php';
         break;

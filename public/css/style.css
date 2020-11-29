@@ -87,6 +87,7 @@ header ul li {
   display: inline-flex;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
+  background: white;
 }
 
 /* Dropdown Button */
