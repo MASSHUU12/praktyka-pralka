@@ -659,10 +659,6 @@ footer {
   box-sizing: inherit;
 }
 
-.lightbox-preview {
-  width: 100%;
-}
-
 .lightbox-row {
   display: flex;
   flex-direction: row;
@@ -706,11 +702,9 @@ footer {
   display: none;
 }
 
-.lightbox-image-slide {
-  width: 100%;
-}
-
-.lightbox-modal-preview {
+.lightbox-image-slide,
+.lightbox-modal-preview,
+.lightbox-preview {
   width: 100%;
 }
 
