@@ -20,9 +20,9 @@
                                     </div>
                                     <div class="single-middle"><h4>email: '.$results[0]['UploaderOffers'].'</h4><h4>numer telefonu: nie podano</h4><h4>adres: nie podano</h4></div>
                                     <div class="single-bottom">
-                                        <img src="app/public/img/default.jpg" onclick="openLightbox();toSlideLightbox(2) class="lightbox-hover-shadow preview" alt="">
-                                        <img src="app/public/img/default.jpg" onclick="openLightbox();toSlideLightbox(3) class="lightbox-hover-shadow preview" alt="">
-                                        <img src="app/public/img/default.jpg" onclick="openLightbox();toSlideLightbox(4) class="lightbox-hover-shadow preview" alt="">
+                                        <img src="app/public/img/default.jpg" onclick="openLightbox();toSlideLightbox(2)" class="lightbox-hover-shadow preview" alt="">
+                                        <img src="app/public/img/default.jpg" onclick="openLightbox();toSlideLightbox(3)" class="lightbox-hover-shadow preview" alt="">
+                                        <img src="app/public/img/default.jpg" onclick="openLightbox();toSlideLightbox(4)" class="lightbox-hover-shadow preview" alt="">
                                     </div>
                                 </div>
                                 <div class="container-single-alike"></div>
