@@ -33,6 +33,12 @@ switch ($actualRequest) {
     case '/offer' :
         require __DIR__ . '/../views/offer.php';
         break;
+    case '/change' :
+        require __DIR__ . '/../views/change.php';
+        break;
+    case '/changepwd' :
+        require __DIR__ . '/../views/changepwd.php';
+        break;
     default:
         http_response_code(404);
         require __DIR__ . '/../views/404.php';

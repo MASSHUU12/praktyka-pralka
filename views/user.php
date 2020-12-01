@@ -2,11 +2,12 @@
 require 'inc/header.php'; 
 require 'inc/notauthorized.php';
 $object = new Login;
-$result = $object->showUser($_SESSION['email'])
+$result = $object->showUser($_SESSION['email']);
 ?>
     <main>
         <div class="main-container fxcol">
-            <div class="background-user background"></div>
+            <div class="background-user background">
+            </div>
             <div class="container-user">
                 <div class="container-user-top">
                     <div class="container-user-top-left">
@@ -14,14 +15,14 @@ $result = $object->showUser($_SESSION['email'])
                             <img src="app/public/img/user.jpg">
                         </div>
                     <h3><?php echo $result[0]['usernameUsers']; ?></h3>
-                    <button><h4>zmień hasło</h4></button>
+                    <button onclick="location.href='changepwd'"><h4>zmień hasło</h4></button>
                     </div>
                     <div class="container-user-top-right">
-                    <h2>email: <?php echo $result[0]['emailUsers']; ?></h2>
-                    <h2>adres:</h2>
-                    <h2>numer telefonu:</h2>
+                    <div class="fxver"><i class="fas fa-envelope fa-lg"></i><h3><?php echo $result[0]['emailUsers']; ?></h3></div>
+                    <div class="fxver"><i class="fas fa-mobile-alt fa-lg"></i><h3><?php echo $result[0]['numberUsers']; ?></h3></div>
+                    <div class="fxver"><i class="fas fa-map-marker fa-lg"></i><h3><?php echo $result[0]['addressUsers']; ?></h3></div>
                     </div>
-                    <button id="changepwd"><h4>zmień dane</h4></button>
+                    <button onclick="location.href='change'" id="changepwd"><h4>zmień dane</h4></button>
                 </div>
                 <div class="container-user-bottom">
                     <h1>Twoje ogłoszenia</h1> 
@@ -34,17 +35,17 @@ $result = $object->showUser($_SESSION['email'])
                                 if ($result['UploaderOffers'] == $_SESSION['email']) {
                                     echo '
                                     <div class="container-offers-element">
-                                                <div class="element-img">
-                                                    <img class="product-img" src="'.$result['ImgOffers'].'">
-                                                </div>
-                                                <div class="element-bottom">
-                                                    <div class="element-title"><h3>'.$result['TitleOffers'].'</h3></div>
-                                                    <div class="element-desc"><p>Stan: '.$result['CondOffers'].'</p><h2>'.$result['PriceOffers'].' koron</h2></div>
-                                                </div>
-                                                <div class="element-cart">
-                                                    <button class="element-cart-button"><i class="fas fa-shopping-cart fa-2x"></i></button>
-                                                </div>
-                                            </div>
+                                        <div class="element-img body-img-hover-zoom">
+                                            <a href="offer?id='.$result['UniqueOffers'].'"><img class="product-img" src="'.$result['ImgOffers'].'"></a>
+                                        </div>
+                                        <div class="element-bottom">
+                                                <div class="element-title"><a href="offer?id='.$result['UniqueOffers'].'"><h3>'.$result['TitleOffers'].'</h3></a></div>
+                                            <div class="element-desc"><p>Stan: '.$result['CondOffers'].'</p></div>
+                                        </div>
+                                        <div class="element-price">
+                                            <h2>'.$result['PriceOffers'].' koron</h2>
+                                        </div>
+                                    </div>
                                     ';
                                     $number++;
                                 }

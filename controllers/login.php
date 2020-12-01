@@ -27,6 +27,47 @@ class Login extends SignupLoginModel {
         $results = $this->checkUser($email);
         return $results;
     }
+
+    public function updateUser($email, $username, $number, $address) {
+        $user = $this->showUser($email);
+        if ($user[0]['usernameUsers'] != $username)
+            $this->updateUserDb($email, 'usernameUsers', $username);
+        if ($user[0]['numberUsers'] != $number) 
+            $this->updateUserDb($email, 'numberUsers', $number);
+        if ($user[0]['addressUsers'] != $address) 
+            $this->updateUserDb($email, 'addressUsers', $address);
+
+        header("Location: user");
+    }
+
+    public function changePwd($email, $passwordOld, $password, $passwordRepeat) {
+        if (empty($email) || empty($passwordOld) || empty($password) || empty($passwordRepeat)) {
+            echo 'Pola nie mogą być puste';
+        }
+        else {
+            $user = $this->showUser($email);
+            $remotePassword = $user[0]['passwordUsers'];
+            $passwordCheck = password_verify($passwordOld, $remotePassword);
+            
+            if ($passwordCheck == false) 
+                echo 'Hasło jest niepoprawne';
+            else if ($passwordCheck == true) {
+                if ($password !== $passwordRepeat) {
+                    echo 'Hasła nie zgadzają się';
+                }
+                else if ($password == $passwordRepeat) {
+                    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+                    $this->updateUserDb($email, 'passwordUsers', $hashedPassword);
+
+                    header("Location: user");
+                }
+                else 
+                    echo 'Wystąpił problem, spróbuj ponownie';
+            }
+            else 
+                echo 'Wystąpił problem, spróbuj ponownie';
+        }
         
+    }
 
 }

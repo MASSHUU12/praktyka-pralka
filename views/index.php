@@ -22,10 +22,10 @@
                                 </div>
                                 <div class="element-bottom">
                                         <div class="element-title"><a href="offer?id='.$result['UniqueOffers'].'"><h3>'.$result['TitleOffers'].'</h3></a></div>
-                                    <div class="element-desc"><p>Stan: '.$result['CondOffers'].'</p><h2>'.$result['PriceOffers'].' koron</h2></div>
+                                    <div class="element-desc"><p>Stan: '.$result['CondOffers'].'</p></div>
                                 </div>
-                                <div class="element-cart">
-                                    <button class="element-cart-button"><i class="fas fa-shopping-cart fa-2x"></i></button>
+                                <div class="element-price">
+                                    <h2>'.$result['PriceOffers'].' koron</h2>
                                 </div>
                             </div>
                     ';

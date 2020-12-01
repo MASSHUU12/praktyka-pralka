@@ -16,7 +16,14 @@
                                 <div class="container-single-main">
                                     <div class="single-top">
                                         <div class="single-top-left"><img src="'.$results[0]['ImgOffers'].'" onclick="openLightbox();toSlideLightbox(1)" class="lightbox-hover-shadow preview" alt=""></div>
-                                        <div class="single-top-right"><div id="single-title"><h2>'.$results[0]['TitleOffers'].'</h2></div><h3>'.$results[0]['DescOffers'].'</h3><h1>'.$results[0]['PriceOffers'].' Koron</h1><button id="single-button">Do koszyka</button></div>
+                                        <div class="single-top-right">
+                                            <div id="single-title">
+                                                <h2>'.$results[0]['TitleOffers'].'</h2>
+                                            </div>
+                                            <h3>'.$results[0]['DescOffers'].'</h3>
+                                            <h1>'.$results[0]['PriceOffers'].' Koron</h1>
+                                            <button id="single-button">Kup Teraz</button>
+                                        </div>
                                     </div>
                                     <div class="single-middle"><h4>email: '.$results[0]['UploaderOffers'].'</h4><h4>numer telefonu: nie podano</h4><h4>adres: nie podano</h4></div>
                                     <div class="single-bottom">

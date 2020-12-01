@@ -17,4 +17,12 @@ class SignupLoginModel extends Dbh {
         $results = $stmt->fetchAll();
         return $results;
     }
+
+    protected function updateUserDb($email, $row, $rowValue) {
+        $sql = "UPDATE users SET $row = ? WHERE emailUsers = ?;";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$rowValue, $email]);
+    }
+
+
 }
