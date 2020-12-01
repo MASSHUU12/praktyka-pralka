@@ -2,11 +2,11 @@ let slideIndex = 1;
 showSlideLightbox(slideIndex);
 
 function openLightbox() {
-  document.getElementById('Lightbox').style.display = 'block';
+  document.getElementById('lightbox').style.display = 'block';
 };
 
 function closeLightbox() {
-  document.getElementById('Lightbox').style.display = 'none';
+  document.getElementById('lightbox').style.display = 'none';
 };
 
 function changeSlideLightbox(n) {

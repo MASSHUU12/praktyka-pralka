@@ -28,7 +28,7 @@
                                 <div class="container-single-alike"></div>
                             </div>
 
-                            <div id="Lightbox" class="lightbox-modal">
+                            <div id="lightbox" class="lightbox-modal">
                                 <span class="lightbox-close pointer" onclick="closeLightbox()">&times;</span>
                                 <div class="lightbox-modal-content">
                                     <div class="lightbox-slide">
