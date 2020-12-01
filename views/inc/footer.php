@@ -22,5 +22,6 @@
             </div>
         </section>
     </footer>
+    <script src="https://skrypt-cookies.pl/id/e48b8a310ce11684.js"></script>
 </body>
 </html>
