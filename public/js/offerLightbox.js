@@ -40,3 +40,11 @@ function showSlideLightbox(n) {
   slides[slideIndex - 1].style.display = 'block';
   modalPreviews[slideIndex - 1].className += 'active';
 };
+
+$(document).on(
+  'keydown',
+  function(event) {
+    if(event.key == "Escape") {
+      closeLightbox();
+    }
+  });
