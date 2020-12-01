@@ -5,6 +5,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  box-sizing: border-box;  
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -648,50 +652,33 @@ footer {
 }
 
 /*
-* lightbox, bedzie edytowane itd
+* lightbox
 */
 
-/* Here you provide a best practice's "reset", read more about it at the bottom! :) */
-
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
+*:before, *:after {
   box-sizing: inherit;
 }
 
-body {
-  margin: 0;
-}
-
-/* You define the style of our previews here, you are using flex to display the images 
-   "responsively". */
-
-.preview {
+.lightbox-preview {
   width: 100%;
 }
 
-.row {
+.lightbox-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.row > .col {
+.lightbox-row > .lightbox-col {
   padding: 0 8px;
 }
 
-.col {
+.lightbox-col {
   float: left;
   width: 25%;
 }
-
-/* Now you want to define what the lightbox will look like. Note that you have the display
-   as none. You don't want it to show until the user clicks on one of the previews. 
-   You will change this display property with JavaScript below. */
    
-.modal {
+.lightbox-modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -704,7 +691,7 @@ body {
   background-color: black;
 }
 
-.modal-content {
+.lightbox-modal-content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -715,39 +702,31 @@ body {
   max-width: 1200px;
 }
 
-/* Same with your slides, you set the display to none, because you want to choose which 
-   one is shown at a time. */
-
-.slide {
+.lightbox-slide {
   display: none;
 }
 
-.image-slide {
+.lightbox-image-slide {
   width: 100%;
 }
 
-.modal-preview {
+.lightbox-modal-preview {
   width: 100%;
 }
 
-.dots {
+.lightbox-dots {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-/* You want the previews a little transparent to show that they are "inactive". 
-   You then add an .active or :hover class to animate the selections for your user when
-   they interact with your controls and clickable content.
- */
-
 img.preview, img.modal-preview {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 img.active,
-.preview:hover,
-.modal-preview:hover {
+.lightbox-preview:hover,
+.lightbox-modal-preview:hover {
   opacity: 1;
 }
 
@@ -755,11 +734,11 @@ img.hover-shadow {
   transition: 0.3s;
 }
 
-.hover-shadow:hover {
+.lightbox-hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 } 
 
-.close {
+.lightbox-close {
   color: white;
   position: absolute;
   top: 10px;
@@ -768,15 +747,15 @@ img.hover-shadow {
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.lightbox-close:hover,
+.lightbox-close:focus {
   color: #999;
   text-decoration: none;
   cursor: pointer;
 }
 
-.previous,
-.next {
+.lightbox-previous,
+.lightbox-next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -784,6 +763,7 @@ img.hover-shadow {
   padding: 16px;
   margin-top: -50px;
   color: white;
+  background-color: rgb(185, 185, 185);
   font-weight: bold;
   font-size: 20px;
   transition: 0.6s ease;
@@ -792,12 +772,16 @@ img.hover-shadow {
   -webkit-user-select: none;
 }
 
-.next {
+.lightbox-next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-.previous:hover,
-.next:hover {
+.lightbox-previous:hover,
+.lightbox-next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+/*
+* end of lightbox
+*/

@@ -1,5 +1,5 @@
 let slideIndex = 1;
-showSlide(slideIndex);
+showSlideLightbox(slideIndex);
 
 function openLightbox() {
   document.getElementById('Lightbox').style.display = 'block';
@@ -9,17 +9,17 @@ function closeLightbox() {
   document.getElementById('Lightbox').style.display = 'none';
 };
 
-function changeSlide(n) {
-  showSlide(slideIndex += n);
+function changeSlideLightbox(n) {
+  showSlideLightbox(slideIndex += n);
 };
 
-function toSlide(n) {
-  showSlide(slideIndex = n);
+function toSlideLightbox(n) {
+  showSlideLightbox(slideIndex = n);
 };
 
-function showSlide(n) {
-  const slides = document.getElementsByClassName('slide');
-  let modalPreviews = document.getElementsByClassName('modal-preview');
+function showSlideLightbox(n) {
+  const slides = document.getElementsByClassName('lightbox-slide');
+  let modalPreviews = document.getElementsByClassName('lightbox-modal-preview');
 
   if (n > slides.length) {
     slideIndex = 1;	
@@ -34,9 +34,9 @@ function showSlide(n) {
   };
   
   for (let i = 0; i < modalPreviews.length; i++) {
-    modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+    modalPreviews[i].className = modalPreviews[i].className.replace('active', '');
   };
   
   slides[slideIndex - 1].style.display = 'block';
-  modalPreviews[slideIndex - 1].className += ' active';
+  modalPreviews[slideIndex - 1].className += 'active';
 };
