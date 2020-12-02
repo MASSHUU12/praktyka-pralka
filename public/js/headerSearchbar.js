@@ -41,7 +41,7 @@ function showSuggestions(list){
     listData = list.join('');
   }
   searchbarResults.innerHTML = listData;
-  completeSearch(listData);
+  completeSearch();
 }
 
 function completeSearch()
