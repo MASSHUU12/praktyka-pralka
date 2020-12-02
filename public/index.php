@@ -39,6 +39,9 @@ switch ($actualRequest) {
     case '/changepwd' :
         require __DIR__ . '/../views/changepwd.php';
         break;
+    case '/checkout' :
+        require __DIR__ . '/../views/checkout.php';
+        break;
     default:
         http_response_code(404);
         require __DIR__ . '/../views/404.php';

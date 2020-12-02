@@ -34,7 +34,14 @@
                 <div class="container-search-right">
                     <?php 
                     $object = new Offers();
-                    $results = $object->showOffers();
+                    if (isset($_GET['search']) && $_GET['search'] !== '') {
+                        $results = $object->searchOffers($_GET['search']);
+                        if (empty($results)) {
+                            echo '<h1>Nie znaleziono rezultatów dla &#39;'.$_GET['search'].'&#39; </h1>';
+                        }
+                    }
+                    else
+                        $results = $object->showOffers();
                     
                     foreach ($results as $result) {
                         echo '
@@ -42,10 +49,11 @@
                             <a href="offer?id='.$result['UniqueOffers'].'"><img src="'.$result['ImgOffers'].'" alt=""></a>
                             <div class="search-element-right">
                                 <div class="element-right-top">
-                                    <div class="right-top-element"><a href="offer?id='.$result['UniqueOffers'].'"><h2>'.$result['TitleOffers'].'</h2></a></div>
-                                    <div class="right-top-element"><h2>'.$result['PriceOffers'].' Koron</h2></div>
+                                    <div><a href="offer?id='.$result['UniqueOffers'].'"><h2>'.$result['TitleOffers'].'</h2></a></div>
+                                    <div><p>'.$result['DateOffers'].'<p></div>
                                 </div>
-                                <div class="element-right-desc">Stan: '.$result['CondOffers'].'</div>
+                                <div class="element-right-desc"><h5>Stan: '.$result['CondOffers'].'</h5></div>
+                                <div><h4><span>'.$result['PriceOffers'].'</span> Koron</h4></div>
                             </div>
                         </div>
                         ';

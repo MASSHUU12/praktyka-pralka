@@ -1,7 +1,7 @@
 <?php
 
 class SubmitOffer extends SubmitOfferModel {
-    
+ 
     protected function ImgCheck($image) {       
             $fileName = $image['name'];
             $fileTmpName = $image['tmp_name'];
@@ -23,7 +23,6 @@ class SubmitOffer extends SubmitOfferModel {
                         $fileDestinationActual = 'app/public/offers/'.$fileNameNew;
 
                         return $fileDestinationActual;
-                        
                     }
                     else {
                         echo 'Plik jest za duży';
@@ -45,8 +44,10 @@ class SubmitOffer extends SubmitOfferModel {
         }
         else {
             $imageDestination = $this->ImgCheck($image);
-            $this->submitOfferInfo($title, $description, $condition, $imageDestination, $price, $uploader);
-            echo '<h3 class="success">Dodanie aukcji przebiegło pomyślnie. Jeśli chcesz możesz dodać kolejną</3>';
+                if (isset($imageDestination)) {
+                    $this->submitOfferInfo($title, $description, $condition, $imageDestination, $price, $uploader);
+                     echo '<h3 class="success">Dodanie aukcji przebiegło pomyślnie. Jeśli chcesz możesz dodać kolejną</3>';
+                }
         }
     }
 

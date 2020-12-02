@@ -1,4 +1,7 @@
-<?php require 'inc/header.php'; ?>
+<?php 
+require 'inc/header.php';
+require 'inc/notauthorized.php';
+?>
 
     <main>
         <div class="main-container background">

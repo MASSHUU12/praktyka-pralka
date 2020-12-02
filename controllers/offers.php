@@ -14,13 +14,21 @@ class Offers extends OffersModel {
         return $results;
     }
 
+    public function searchOffers($value) {
+        $results = $this->searchOffersDb($value);
+        $results = array_reverse($results);
+        return $results;
+    }
+
     public function deleteOffer($uniqueId, $email) {
         $column = 'UniqueOffers';
         $check = $this->showOffersParam($column, $uniqueId);
-        if ($check[0]['UploaderOffers'] == $email) 
+        if ($check[0]['UploaderOffers'] == $email) {
             $this->deleteOfferDb($uniqueId);
+            header('Location: user?success=true');
+        }
         else 
-            header('Location: /error=true');
+            header('Location: /?error=true');
     }
 
 }
