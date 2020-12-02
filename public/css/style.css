@@ -101,8 +101,8 @@ header ul li {
 
 .header-search-container {
   display: inline-flex;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
   background: white;
 }
 
@@ -133,7 +133,7 @@ header ul li {
   transform: translate(-35%, 2%);
   background-color: #ffffff;
   min-width: 160px;
-  box-shadow: 1px 10px 11px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   z-index: 10;
 }
@@ -146,7 +146,7 @@ header ul li {
   max-width: 1000px;
   align-self: center;
   background-color: #ffffff;
-  box-shadow: 1px 10px 11px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
   z-index: 10;
   border-radius: 8px;
   top: 80px;
@@ -159,7 +159,7 @@ header ul li {
   width: 500px;
   align-self: center;
   background-color: #ffffff;
-  box-shadow: 1px 10px 11px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
   z-index: 10;
   border-radius: 8px;
   top: 80px;
@@ -212,7 +212,7 @@ header ul li {
 
 .searchbar {
   width: 450px;
-  border-radius: 20px 0 0 20px;
+  border-radius: 15px 0 0 15px;
   font-size: large;
   font-weight: bold;
   border: none;
@@ -225,7 +225,7 @@ header ul li {
   width: 50px;
   background-color: white;
   border: none;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 15px 15px 0;
   outline: none;
   cursor: pointer;
   box-shadow: none;
@@ -292,6 +292,7 @@ main {
   justify-content: center;
   background-color: rgb(245, 245, 245);
   min-height: 400px;
+  padding-top: 10px;
 }
 
 .container-offers {
@@ -300,12 +301,12 @@ main {
   justify-items: center;
   width: 95%;
   max-width: 1300px;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 .container-offers-element {
-  padding-top: 30px;
-  margin-bottom: 50px;
+  padding-top: 20px;
+  margin-bottom: 40px;
   justify-content: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   width: 300px;

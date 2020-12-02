@@ -8,7 +8,8 @@
             <i class="fas fa-circle main-banner-button" id="main-banner-button3" onclick="setSlide(3)"></i>
         </div>  
     </section>
-        <div class="main-container">
+        <div class="main-container fxcol">
+            <h1>Ostatnio dodane</h1>
             <div class="container-offers">
                 <?php 
                 $object = new Offers();
