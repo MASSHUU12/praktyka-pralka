@@ -17,6 +17,9 @@ const searchbarResults = container.querySelector(".header-searchbar-dropdown-con
 searchbarInput.onkeyup = (e)=>{
   let inputValue = e.target.value;
   let searchArray = [];
+
+  document.getElementById("header-searchbar-dropdown-id").style.display = "block"; //to jest aby znowu się wyswietlily wyniki gdy wczesniej klikniesz jakis
+
     if(inputValue) {
       var num = 0;
       searchArray = suggestions.filter((data)=> {
@@ -60,29 +63,38 @@ function completeSearch()
 
   r1.onclick = function() {
     searchbar.value = r1.innerHTML;
+    document.getElementById("header-searchbar-dropdown-id").style.display = "none" //super to nie dziala ale innego pomyslu nie mam aktualnie
   }
   r2.onclick = function() {
     searchbar.value = r2.innerHTML;
+    document.getElementById("header-searchbar-dropdown-id").style.display = "none";
   }
   r3.onclick = function() {
     searchbar.value = r3.innerHTML;
+    document.getElementById("header-searchbar-dropdown-id").style.display = "none";
   }
   r4.onclick = function() {
     searchbar.value = r4.innerHTML;
+    document.getElementById("header-searchbar-dropdown-id").style.display = "none";
   }
   r5.onclick = function() {
     searchbar.value = r5.innerHTML;
+    document.getElementById("header-searchbar-dropdown-id").style.display = "none";
   }
   r6.onclick = function() {
     searchbar.value = r6.innerHTML;
+    document.getElementById("header-searchbar-dropdown-id").style.display = "none";
   }
   r7.onclick = function() {
     searchbar.value = r7.innerHTML;
+    document.getElementById("header-searchbar-dropdown-id").style.display = "none";
   }
   r8.onclick = function() {
     searchbar.value = r8.innerHTML;
+    document.getElementById("header-searchbar-dropdown-id").style.display = "none";
   }
   r9.onclick = function() {
     searchbar.value = r9.innerHTML;
+    document.getElementById("header-searchbar-dropdown-id").style.display = "none";
   }
 }
