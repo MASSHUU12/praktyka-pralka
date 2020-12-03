@@ -689,6 +689,12 @@ footer {
   padding: 50px 50px;
 }
 
+#footer-scroll-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+}
+
 /* lightbox */
 *:before,
 *:after {

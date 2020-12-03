@@ -21,6 +21,7 @@
                 <h5>Pralka.pl</h5>
             </div>
         </section>
+        <i class="fas fa-angle-up fa-3x" id="footer-scroll-to-top" onclick="scrollToTop()"></i>
     </footer>
     
     <!-- information about cookies -->
