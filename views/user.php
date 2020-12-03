@@ -29,10 +29,9 @@ $result = $object->showUser($_SESSION['email']);
                     <div class="container-offers">
                         <?php 
                             $object = new Offers;
-                            $results = $object->showOffers();
+                            $results = $object->showOffersParam('UploaderOffers', $_SESSION['email']);
                             $number = 0;
                             foreach ($results as $result) {
-                                if ($result['UploaderOffers'] == $_SESSION['email']) {
                                     echo '
                                     <div class="container-offers-element">
                                         <div class="element-img body-img-hover-zoom">
@@ -48,7 +47,6 @@ $result = $object->showUser($_SESSION['email']);
                                     </div>
                                     ';
                                     $number++;
-                                }
                             }
                             echo '</div>';
                             if ($number == 0) {

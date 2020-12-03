@@ -1,5 +1,4 @@
 <?php
-
 class Offers extends OffersModel {
  
     public function showOffers() {
@@ -14,8 +13,8 @@ class Offers extends OffersModel {
         return $results;
     }
 
-    public function searchOffers($value) {
-        $results = $this->searchOffersDb($value);
+    public function searchOffers($value, $cond) {
+        $results = $this->searchOffersDb($value, $cond);
         $results = array_reverse($results);
         return $results;
     }
@@ -24,11 +23,16 @@ class Offers extends OffersModel {
         $column = 'UniqueOffers';
         $check = $this->showOffersParam($column, $uniqueId);
         if ($check[0]['UploaderOffers'] == $email) {
+            $path = explode('s/',$check[0]['ImgOffers']);
+            $img = end($path);
+            unlink('../public/offers/'.$img);
+            $path = explode('/',$img);
+            $dir = reset($path);
+            rmdir('../public/offers/'.$dir);
             $this->deleteOfferDb($uniqueId);
-            header('Location: user?success=true');
+            echo '<h3 class="success">Oferta usunięta pomyśnie</h3>';
         }
         else 
             header('Location: /?error=true');
     }
-
 }

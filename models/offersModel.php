@@ -1,5 +1,4 @@
 <?php
-
 class OffersModel extends Dbh {
 
     protected function getOffers() {
@@ -12,7 +11,7 @@ class OffersModel extends Dbh {
     }
 
     protected function getOffersParam($column, $value) {
-        $sql = "SELECT * FROM offers WHERE ". $column ."= ". $value ." ";
+        $sql = "SELECT * FROM offers WHERE ". $column ."= '". $value ."' ";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute();
 
@@ -20,8 +19,8 @@ class OffersModel extends Dbh {
         return $results;
     }
 
-    protected function searchOffersDb($value) {
-        $sql = "SELECT * FROM offers WHERE titleOffers LIKE '%". $value ."%' ";
+    protected function searchOffersDb($value, $cond) {
+        $sql = "SELECT * FROM offers WHERE titleOffers LIKE '%". $value ."%' AND CondOffers LIKE '%". $cond ."%'";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute();
 
@@ -34,5 +33,4 @@ class OffersModel extends Dbh {
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute();
     }
-
 }

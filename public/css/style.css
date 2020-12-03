@@ -292,7 +292,7 @@ main {
   justify-content: center;
   background-color: rgb(245, 245, 245);
   min-height: 400px;
-  padding-top: 10px;
+  padding-top: 30px;
 }
 
 .container-offers {
@@ -316,6 +316,7 @@ main {
 .element-img {
   display: flex;
   justify-content: center;
+  min-height: 210px;
 }
 
 .body-img-hover-zoom img {
@@ -323,7 +324,7 @@ main {
 }
 
 .body-img-hover-zoom:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .product-img {
@@ -485,7 +486,13 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  padding: 20px 0;
   background-color: white;
+}
+
+.fxver a span {
+  color: green;
+  font-size: 120%;
 }
 
 .container-search-element {
@@ -499,6 +506,7 @@ main {
 }
 
 .container-search-element img {
+  padding-top: 4px;
   max-width: 220px;
   height: 158px;
   cursor: pointer;
