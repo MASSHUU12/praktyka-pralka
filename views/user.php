@@ -45,7 +45,7 @@ $result = $object->showUser($_SESSION['email']);
 
                                     OfferView::showPagination();
                                     
-                                    echo '</div>';
+                                    
                                     if ($resultCount == 0) {
                                         echo '
                                         <div class="fxcol">
@@ -71,6 +71,7 @@ $result = $object->showUser($_SESSION['email']);
                                         echo 'Kupujący: '.$offer['BuyerOrders'].'<br>';
                                         echo ' Tytuł: '.$toShow[0]['TitleOffers'];
                                         echo '<br> Adres do wysyłki: '.$offer['AddressOrders'];
+                                        echo '<br> numer zamówienia: '.$offer['Id'];
                                         echo '<br>';
                                         echo '<br>';
                                     }
@@ -103,6 +104,7 @@ $result = $object->showUser($_SESSION['email']);
                                         echo 'Sprzedający: '.$offer['SellerOrders'].'<br>';
                                         echo ' Tytuł: '.$toShow[0]['TitleOffers'];
                                         echo '<br> zapłaciłes: '.$offer['AmountOrders'];
+                                        echo '<br> numer zamówienia: '.$offer['Id'];
                                         echo '<br>';
                                         echo '<br>';
                                     }
