@@ -16,13 +16,11 @@
                 <h5>Pralka.pl</h5>
             </div>
             <div class="footer-element">
-                <h4>Dane kontaktowe</h4>
-                <h5>Nr. tel: 692 137 420</h5>
-                <h5>Email: pralkapl@protonmail.com</h5>
+                <h4>Lorem ipsum dolor sit.</h4>
+                <h5>Lorem ipsum is dolore rem eveniet minus quasi aspernatur iure quam natus. Beatae, alias?</h5>
                 <h5>Pralka.pl</h5>
             </div>
         </section>
-        <i class="fas fa-angle-up fa-3x" id="footer-scroll-to-top" onclick="scrollToTop()"></i>
     </footer>
     
     <!-- information about cookies -->

@@ -3,31 +3,43 @@ require 'inc/header.php';
 require 'inc/notauthorized.php';
 ?>
 
+<?php 
+$object = new Login;
+$object->changePwd();
+                
+?>
+
     <main>
         <div class="main-container background">
             <div class="container-login-whole">
+            <div class="container-login-left">
+                <div class="container-login-left-inner">
                 <h1>Zmień hasło</h1>
-                <form action="" method="POST">
+                <form method="POST">
                     <div class="container-login">
-                        <h3>Obecne hasło</h3>
-                        <input type="password" name="old-password" placeholder="obecne hasło">
-                        <h3>Nowe hasło</h3>
-                        <input type="password" minlength="8" name="new-password" placeholder="nowe hasło">
-                        <input type="password" minlength="8" name="new-password-repeat" placeholder="powtórz nowe hasło">
+                    <div class="container-login-element">
+                        <label for="old-password">obecne hasło</label>
+                        <input type="password" name="old-password">
+                        </div>
+                        <div class="container-login-element">
+                        <label for="new-password">nowe hasło</label>
+                        <input type="password" minlength="8" name="new-password">
+                        </div>
+                        <div class="container-login-element">
+                        <label for="new-password-repeat">powtórz nowe hasło</label>
+                        <input type="password" minlength="8" name="new-password-repeat">
+                        </div>
                         <input type="submit" name="signup-submit" value="Zmień hasło">
-                     </div>
+                    </div>
                 </form>
-                <?php 
-                if (isset($_POST['signup-submit'])) {
-                    $email = $_SESSION['email'];
-                    $passwordOld = $_POST['old-password'];
-                    $password = $_POST['new-password'];
-                    $passwordRepeat = $_POST['new-password-repeat'];
-
-                    $object = new Login;
-                    $object->changePwd($email, $passwordOld, $password, $passwordRepeat);
-                }
-                ?>
+                <h3><?php echo Signup::$message;?></h3>
+            </div>
+            </div>
+            <div class="container-login-right">
+                <h2>Dołącz do nas już dzisiaj</h2>
+                <h4>Sprzedawaj i kupuj używany</h4>
+                <h4>sprzęt AGD</h4>
+            </div>
             </div>
         </div>
     </main>

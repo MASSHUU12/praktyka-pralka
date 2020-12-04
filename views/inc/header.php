@@ -19,7 +19,6 @@
     <script src="/app/public/js/hamburgerdropdown.js"></script>
     <script src="/app/public/js/headerCategories.js"></script>
     <script src="/app/public/js/userTabs.js" defer></script>
-    <script src="/app/public/js/scrollToTop.js"></script>
     <!-- php config -->
     <?php require_once '../config/config.php'; ?> 
 
