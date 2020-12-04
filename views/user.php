@@ -95,9 +95,10 @@ $result = $object->showUser($_SESSION['email']);
                             <div id="orders" data-tab-content>
                             <div class="container-search-right container-user-offers">
                                 <?php 
-                                    $boughtCheck = $object->showOrdersSold('BuyerOrders', $_SESSION['email']);
+                                    $bought = new Offers();
+                                    $boughtCheck = $bought->showOrdersSold('BuyerOrders', $_SESSION['email']);
                                     $showBought = new Offers; 
-                                    foreach ($soldCheck as $offer) {
+                                    foreach ($boughtCheck as $offer) {
                                         $toShow = $show->showOffersParam('UniqueOffers', $offer['UniqueOrders']);
                                         echo 'Sprzedający: '.$offer['SellerOrders'].'<br>';
                                         echo ' Tytuł: '.$toShow[0]['TitleOffers'];
