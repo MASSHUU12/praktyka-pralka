@@ -19,7 +19,7 @@
 ?>
 
     <main>
-        <div class="main-container background">
+        <div class="main-container">
             <div class="container-login-whole">
             <div class="container-login-left">
                 <div class="container-login-left-inner">
@@ -52,7 +52,7 @@
                 <h2>Ustaw swoje dane</h2>
                 <h4>Twój numer oraz adres są</h4>
                 <h4>widoczne dla innych</h4>
-                <img src="app/public/img/logos.png" id="login-logo">
+                <img src="app/public/img/card1.png" id="change-logo">
             </div>
             </div>
         </div>

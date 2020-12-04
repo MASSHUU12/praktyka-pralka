@@ -17,7 +17,7 @@ session_destroy();
                     <h2>Żegnaj</h2>
                     <h4>Mamy nadzieje do niedługo</h4>
                     <h4>do nas wrócisz</h4>
-                    <img src="app/public/img/logos.png" id="login-logo">
+                    <img src="app/public/img/logos.png" id="standard-logo">
                 </div>
             </div>  
         </div>

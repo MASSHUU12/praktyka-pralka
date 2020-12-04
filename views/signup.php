@@ -32,7 +32,7 @@ $object->getSignupInfo();
                 <h2>Dołącz do nas już dzisiaj</h2>
                 <h4>Sprzedawaj i kupuj używany</h4>
                 <h4>sprzęt AGD</h4>
-                <img src="app/public/img/logos.png" id="login-logo">
+                <img src="app/public/img/logos.png" id="standard-logo">
             </div>
             </div>
         </div>

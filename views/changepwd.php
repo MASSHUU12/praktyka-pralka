@@ -8,7 +8,7 @@ $object->changePwd();
 ?>
 
     <main>
-        <div class="main-container background">
+        <div class="main-container">
             <div class="container-login-whole">
             <div class="container-login-left">
                 <div class="container-login-left-inner">
@@ -38,7 +38,7 @@ $object->changePwd();
                 <h4>-conajmniej 8 znaków</h4>
                 <h4>-unikaj używania wyrazów słownikowych</h4>
                 <h4>-korzystaj ze znaków specjalnych</h4>
-                <img src="app/public/img/logos.png" id="login-logo">
+                <img src="app/public/img/hash1.png" id="pwd-logo">
             </div>
             </div>
         </div>

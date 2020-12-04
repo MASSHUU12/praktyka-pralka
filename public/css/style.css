@@ -401,7 +401,7 @@ main {
   flex-direction: column;
   align-items: flex-start;
   color: white;
-  padding: 170px 0 0 40px;
+  padding: 150px 0 0 40px;
   font-size: 110%;
   overflow: hidden;
   border-radius: 15px;
@@ -443,9 +443,28 @@ main {
   max-width: 250px;
 }
 
-.container-login-right img {
+img#standard-logo {
+  max-height: 320px;
+  transform: translate(-55%, 35%);
+}
+img#login-logo {
+  max-height: 320px;
+  transform: translate(0, 2%);
+}
+
+img#payment-logo {
+  max-height: 400px;
+  transform: translate(-9%, 15%);
+}
+
+img#pwd-logo {
   max-height: 300px;
-  transform: translate(-65%, 5%);
+  transform: translate(0, 7%);
+}
+
+img#change-logo {
+  max-height: 310px;
+  transform: translate(-8%, 30%);
 }
 
 .container-login label {

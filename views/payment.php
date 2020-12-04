@@ -52,7 +52,7 @@ if (!isset($_SESSION['email']))
                     <h2>Już prawie gotowe!</h2>
                     <h4>Wybierz jedną z opcji płatności</h4>
                     <h5>Pomoc</h5>
-                    <img src="app/public/img/logos.png" id="login-logo">
+                    <img src="app/public/img/credit1.png" id="payment-logo">
                 </div>
             </div>  
         </div>

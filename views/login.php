@@ -32,7 +32,7 @@ $object->getUser();
                 <h2>Miło cię znowu widzieć</h2>
                 <h4>Nie masz jeszcze konta?</h4>
                 <h5>Zarejestruj się</h5>
-                <img src="app/public/img/logos.png" id="login-logo">
+                <img src="app/public/img/password1.png" id="login-logo">
             </div>
             </div>  
         </div>
