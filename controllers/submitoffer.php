@@ -2,7 +2,7 @@
 
 class SubmitOffer extends SubmitOfferModel {
  
-    protected function ImgCheck($image) {       
+    protected function ImgCheck($image, $uniqueId) {       
             $fileName = $image['name'];
             $fileTmpName = $image['tmp_name'];
             $fileSize = $image['size'];
@@ -18,9 +18,10 @@ class SubmitOffer extends SubmitOfferModel {
                 if ($fileError === 0) {
                     if ($fileSize < 10000000) {
                         $fileNameNew = uniqid('', true).".".$fileActalExt;
-                        $fileDestination = '../public/offers/'.$fileNameNew;
+                        mkdir('offers/'.$uniqueId);
+                        $fileDestination = '../public/offers/'.$uniqueId.'/'.$fileNameNew;
                         move_uploaded_file($fileTmpName, $fileDestination);
-                        $fileDestinationActual = 'app/public/offers/'.$fileNameNew;
+                        $fileDestinationActual = 'app/public/offers/'.$uniqueId.'/'.$fileNameNew;
 
                         return $fileDestinationActual;
                     }
@@ -38,17 +39,22 @@ class SubmitOffer extends SubmitOfferModel {
         }
 
 
-    public function getOfferInfo($title, $description, $condition, $image, $price, $uploader) {
-        if (empty($title) || empty($description) || empty($condition) || empty($image || empty($price))) {
+    public function getOfferInfo($title, $description, $condition, $category, $image, $price, $uploader) {
+        if (empty($title) || empty($description) || empty($condition) || empty($category) || empty($image || empty($price))) {
             echo 'Uzupełni puste pola';
         }
         else {
-            $imageDestination = $this->ImgCheck($image);
+            $uniqueId = mt_rand().mt_rand();
+            $imageDestination = $this->ImgCheck($image, $uniqueId);
                 if (isset($imageDestination)) {
-                    $this->submitOfferInfo($title, $description, $condition, $imageDestination, $price, $uploader);
-                     echo '<h3 class="success">Dodanie aukcji przebiegło pomyślnie. Jeśli chcesz możesz dodać kolejną</3>';
+                    $this->submitOfferInfo($uniqueId, $title, $description, $condition, $category, $imageDestination, $price, $uploader);
+                     echo '<h3 class="success">Dodanie aukcji przebiegło pomyślnie. Jeśli chcesz możesz dodać kolejną</h3>';
                 }
         }
+    }
+
+    public function getOrderInfo($paypalId, $uniqueId, $buyer, $seller, $amount, $address, $title, $description, $condition, $category, $image, $date) {
+        $this->submitOrderInfo($paypalId, $uniqueId, $buyer, $seller, $amount, $address, $title, $description, $condition, $category, $image, $date);
     }
 
 }

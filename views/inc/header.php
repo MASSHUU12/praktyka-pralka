@@ -18,6 +18,7 @@
     <script src="/app/public/js/header.js"></script>
     <script src="/app/public/js/hamburgerdropdown.js"></script>
     <script src="/app/public/js/headerCategories.js"></script>
+    <script src="/app/public/js/userTabs.js" defer></script>
     <script src="/app/public/js/scrollToTop.js"></script>
     <!-- php config -->
     <?php require_once '../config/config.php'; ?> 
@@ -36,7 +37,7 @@
         </div>
         <div class="header-search-container">
             <form action="search" method="GET" autocomplete="off">
-            <input class="searchbar" id="header-searchbar-dropdown-button" type="text" name="search" placeholder="Szukaj" onclick="headerSearchbar()">
+            <input class="searchbar" id="header-searchbar-dropdown-button" type="text" name="search" placeholder="Czego dzisiaj szukasz?" onclick="headerSearchbar()">
             <button type="submit" class="searchbar-button"><i class="fas fa-search"></i></button>
             </form>
             <div id="header-searchbar-dropdown-id" class="header-searchbar-dropdown-content">
@@ -65,9 +66,8 @@
             <i class="fas fa-bars fa-lg" onclick="headerHamburger()" id="header-hamburger-dropdown-button"></i>
             <div id="header-hamburger-dropdown-id" class="header-hamburger-dropdown-content">
                 <p>Profil</p>
+                <p>Sprzedaż</p>
                 <p>Zamówienia</p>
-                <p>Menu</p>
-                <p>Kontakt</p>
             </div>
         </div>
         </div>

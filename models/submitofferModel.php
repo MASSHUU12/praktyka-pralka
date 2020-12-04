@@ -2,12 +2,17 @@
 
 class SubmitOfferModel extends Dbh {
 
-    protected function submitOfferInfo($title, $description, $condition, $image, $price, $uploader) {
-        $sql = "INSERT INTO offers (UniqueOffers, titleOffers, DescOffers, CondOffers, ImgOffers, PriceOffers, UploaderOffers, DateOffers) values(?, ?, ?, ?, ?, ?, ?, ?)";
+    protected function submitOfferInfo($uniqueId, $title, $description, $condition, $category, $image, $price, $uploader) {
+        $sql = "INSERT INTO offers (UniqueOffers, titleOffers, DescOffers, CondOffers, CategoryOffers, ImgOffers, PriceOffers, UploaderOffers, DateOffers) values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->connect()->prepare($sql);
-        $uniqueId = mt_rand().mt_rand();
-        $date = date("H:i j-m-y");
-        $stmt->execute([$uniqueId, $title, $description, $condition, $image , $price, $uploader, $date]);
+        $date = date("H:i j/m/y");
+        $stmt->execute([$uniqueId, $title, $description, $condition, $category, $image , $price, $uploader, $date]);
+    }
+
+    protected function submitOrderInfo($paypalId, $uniqueId, $buyer, $seller, $amount, $address, $title, $description, $condition, $category, $image, $date) {
+        $sql = "INSERT INTO orders (IdOrders, UniqueOrders, BuyerOrders, SellerOrders, AmountOrders, AddressOrders, TitleOrders, DescOrders, CondOrders, CategoryOrders, ImgOrders, DateOrders) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$paypalId, $uniqueId, $buyer, $seller, $amount, $address, $title, $description, $condition, $category, $image, $date]);
     }
 
 }

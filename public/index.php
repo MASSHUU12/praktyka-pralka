@@ -39,8 +39,14 @@ switch ($actualRequest) {
     case '/changepwd' :
         require __DIR__ . '/../views/changepwd.php';
         break;
-    case '/checkout' :
-        require __DIR__ . '/../views/checkout.php';
+    case '/paymentsuccess' :
+        require __DIR__ . '/../views/paymentsuccess.php';
+        break;
+    case '/payment' :
+        require __DIR__ . '/../views/payment.php';
+        break;
+    case '/status' :
+        require __DIR__ . '/../views/status.php';
         break;
     default:
         http_response_code(404);

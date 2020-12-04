@@ -9,6 +9,7 @@
                         <input type="email" name="email" placeholder="email">
                         <input type="password" name="password" placeholder="hasło">
                         <input type="submit" name="login-submit" value="Zaloguj się">
+                        
                     </div>
                 </form> 
                 <?php 

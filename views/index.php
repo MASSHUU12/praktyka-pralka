@@ -8,24 +8,25 @@
             <i class="fas fa-circle main-banner-button" id="main-banner-button3" onclick="setSlide(3)"></i>
         </div>  
     </section>
-        <div class="main-container">
+        <div class="main-container fxcol">
+            <h1>Ostatnio dodane</h1>
             <div class="container-offers">
                 <?php 
                 $object = new Offers();
                 $results = $object->showOffers();
-
-                foreach ($results as $result) {
+                $limit = 8;
+                for ($num = 0; $num < $limit; $num++) {
                     echo '
                     <div class="container-offers-element">
                                 <div class="element-img body-img-hover-zoom">
-                                    <a href="offer?id='.$result['UniqueOffers'].'"><img class="product-img" src="'.$result['ImgOffers'].'"></a>
+                                    <a href="offer?id='.$results[$num]['UniqueOffers'].'"><img class="product-img" src="'.$results[$num]['ImgOffers'].'"></a>
                                 </div>
                                 <div class="element-bottom">
-                                        <div class="element-title"><a href="offer?id='.$result['UniqueOffers'].'"><h3>'.$result['TitleOffers'].'</h3></a></div>
-                                    <div class="element-desc"><p>Stan: '.$result['CondOffers'].'</p></div>
+                                        <div class="element-title"><a href="offer?id='.$results[$num]['UniqueOffers'].'"><h3>'.$results[$num]['TitleOffers'].'</h3></a></div>
+                                    <div class="element-desc"><p>Stan: '.$results[$num]['CondOffers'].'</p></div>
                                 </div>
                                 <div class="element-price">
-                                    <h2>'.$result['PriceOffers'].' koron</h2>
+                                    <h2>'.$results[$num]['PriceOffers'].' zł</h2>
                                 </div>
                             </div>
                     ';
