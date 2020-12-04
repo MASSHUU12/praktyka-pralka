@@ -23,6 +23,6 @@ paypal.Buttons({
         })
     },
     onCancel: function (data) {
-        window.location.href = "/user?payment=cancelled";
+        window.location.href = "/status?success=false";
     }
 }).render('#paypal-payment-button');

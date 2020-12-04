@@ -45,7 +45,7 @@ class GetOrder
     $delete = new \Offers();
     $delete->deleteOffer($_GET['offerID'], $seller);
     
-    header("Location: user?success=true");
+    header("Location: status?success=true");
     
   }
 }

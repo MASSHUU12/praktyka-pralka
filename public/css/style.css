@@ -367,12 +367,36 @@ main {
   background-color: white;
 }
 
+.payment {
+  width: 800px;
+}
+
+.payment-inner {
+  width: 100%;
+}
+
+#paypal-payment-button {
+  width: 400px;
+}
+
 .container-login {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  padding-top: 50px;
+  padding: 50px 40px 0 40px;
+}
+
+.container-login img {
+  max-width: 250px;
+}
+
+.container-login label {
+  font-size: 70%;
+}
+
+.payment-inner label {
+  font-size: 100%;
 }
 
 #price {
@@ -386,6 +410,18 @@ main {
 
 .container-login input[type="submit"] {
   width: 180px;
+}
+
+.checkbox {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  justify-items: center;
+  width: 270px;
+}
+
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
 }
 
 .container-user {

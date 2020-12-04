@@ -4,20 +4,24 @@ $value = $_GET['id'];
 $object = new Offers();
 $results = $object->showOffersParam($column, $value);
 
-if (!isset($_SESSION['email'])) {
+if (empty($results)) 
+    header("Location: user");
+
+
+if (!isset($_SESSION['email'])) 
     header("Location: login");
-}
+
 
 ?>
 
     <main>
         <div class="main-container">
-            <div class="container-login-whole">
-                <div class="container-login">
-                    <h2>Potwierdzenie zakupu</h2>
+            <div class="container-login-whole payment">
+                <div class="container-login payment-inner">
+                    <h1>Potwierdzenie zakupu</h1>
                     <h3>Dla oferty: <span id="offer"><?php echo $results[0]['UniqueOffers']; ?></span></h3>
                     <h3>Kupujesz: <?php echo $results[0]['TitleOffers']; ?></h3>
-                    <h3>Email sprzedawcy: <span id="seller"><?php echo $results[0]['UploaderOffers']; ?></span></h3>
+                    <h3>Sprzedawca: <span id="seller"><?php echo $results[0]['UploaderOffers']; ?></span></h3>
                         <ul>
                             <li>
                                 <label for="price">Cena przedmiotu: </label>
@@ -29,7 +33,7 @@ if (!isset($_SESSION['email'])) {
                             </li>
                             <hr>
                             <li>
-                                <h4><label for="price">Do zapłaty </label><span id="price" class="text-red font-title"><?php echo $results[0]['PriceOffers']; ?></span>zł</h4>
+                                <h4><label for="price">Do zapłaty </label><span id="price"><?php echo $results[0]['PriceOffers']; ?></span>zł</h4>
                             </li>
                         </ul>
                         <div id="paypal-payment-button"></div>

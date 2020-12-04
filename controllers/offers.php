@@ -30,7 +30,7 @@ class Offers extends OffersModel {
             $dir = reset($path);
             rmdir('../public/offers/'.$dir);
             $this->deleteOfferDb($uniqueId);
-            echo '<h3 class="success">Oferta usunięta pomyśnie</h3>';
+            echo '<h3 class="success">Zlecono usunięcie oferty</h3>';
         }
         else 
             header('Location: /?error=true');

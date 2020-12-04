@@ -10,6 +10,10 @@
                         <input type="email" name="email" placeholder="email">
                         <input type="password" minlength="8" name="password" placeholder="haslo">
                         <input type="password" name="password-repeat" placeholder="powtórz hasło">
+                        <div class="checkbox">
+                        <input type="checkbox" required='required' name="agree">
+                        <label for="agree">Wyrażam zgode na przetwarzanie moich danych osobowych oraz akceptuje regulamin serwisu. Zdaję sobie sprawę, że serwis pralka jest tylko projektem edukacyjnym.</label>
+                        </div>
                         <input type="submit" name="signup-submit" value="Zarejestruj się">
                      </div>
                 </form>
