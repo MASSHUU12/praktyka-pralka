@@ -44,8 +44,7 @@ $result = $object->showUser($_SESSION['email']);
                                     OfferView::showOffers($results);
 
                                     OfferView::showPagination();
-                                    
-                                    
+
                                     if ($resultCount == 0) {
                                         echo '
                                         <div class="fxcol">
@@ -56,6 +55,9 @@ $result = $object->showUser($_SESSION['email']);
                                         ';
                                     
                                     }
+                                    
+                                    echo '</div>';
+                                    
                                         
                                 ?>
 
