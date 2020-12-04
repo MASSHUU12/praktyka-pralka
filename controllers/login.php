@@ -35,16 +35,24 @@ class Login extends SignupLoginModel {
         return $results;
     }
 
-    public function updateUser($email, $username, $number, $address) {
-        $user = $this->showUser($email);
-        if ($user[0]['usernameUsers'] != $username)
-            $this->updateUserDb($email, 'usernameUsers', $username);
-        if ($user[0]['numberUsers'] != $number) 
-            $this->updateUserDb($email, 'numberUsers', $number);
-        if ($user[0]['addressUsers'] != $address) 
-            $this->updateUserDb($email, 'addressUsers', $address);
+    public function updateUser() {
+        if (isset($_POST['change-submit'])) {
+                $email = $result[0]['emailUsers'];
+                $username = $_POST['username'];
+                $number = $_POST['number'];
+                $city = $_POST['city'];
+                $region = $_POST['region'];
+                $address = $city. ', ' .$region;
+            $user = $this->showUser($email);
+            if ($user[0]['usernameUsers'] != $username)
+                $this->updateUserDb($email, 'usernameUsers', $username);
+            if ($user[0]['numberUsers'] != $number) 
+                $this->updateUserDb($email, 'numberUsers', $number);
+            if ($user[0]['addressUsers'] != $address) 
+                $this->updateUserDb($email, 'addressUsers', $address);
 
-        header("Location: user");
+            header("Location: user");
+        }
     }
 
     public function changePwd() {

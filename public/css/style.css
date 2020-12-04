@@ -94,7 +94,7 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-header ul {
+ul {
   list-style: none;
 }
 
@@ -108,6 +108,10 @@ header ul li {
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   background: white;
+}
+
+.header-search-container input:focus {
+  background-color: white;
 }
 
 /* Dropdown Button */
@@ -253,6 +257,11 @@ header ul li {
   gap: 10px;
 }
 
+.fxspc {
+  display: flex;
+  justify-content: space-between;
+}
+
 .single-desc {
   height: 130px;
 }
@@ -268,12 +277,14 @@ main {
   position: relative;
   display: flex;
   justify-content: center;
+  border-radius: 15px;
 }
 
 .main-banner-img {
   width: 100%;
   max-width: 1700px;
   display: block;
+  border-radius: 15px;
 }
 
 .main-banner-buttons {
@@ -314,6 +325,7 @@ main {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   width: 300px;
   background-color: white;
+  border-radius: 15px;
 }
 
 .element-img {
@@ -333,6 +345,7 @@ main {
 .product-img {
   height: 200px;
   max-width: 270px;
+  border-radius: 15px;
 }
 
 .element-bottom {
@@ -362,10 +375,11 @@ main {
   grid-template-columns: 3fr 2fr;
   margin-top: 140px;
   margin-bottom: 300px;
-  min-height: 650px;
+  min-height: 600px;
   height: fit-content;
-  width: 1100px;
+  width: 1000px;
   background-color: white;
+  border-radius: 20px;
 }
 
 .container-login-left {
@@ -388,7 +402,15 @@ main {
   align-items: flex-start;
   color: white;
   padding: 170px 0 0 40px;
-  font-size: 120%;
+  font-size: 110%;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.container-login-right h3,
+.container-login-right h4,
+.container-login-right h5 {
+  color: #eeecec;
 }
 
 .payment {
@@ -417,8 +439,13 @@ main {
   gap: 2px;
 }
 
-.container-login img {
+.container-login-left img {
   max-width: 250px;
+}
+
+.container-login-right img {
+  max-height: 300px;
+  transform: translate(-65%, 5%);
 }
 
 .container-login label {
@@ -564,7 +591,6 @@ li.active-user {
 }
 
 .container-search-left {
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
   width: 300px;
   height: fit-content;
   padding: 40px 0 60px 30px;
@@ -572,11 +598,16 @@ li.active-user {
   flex-direction: column;
   gap: 30px;
   background-color: white;
+  border-radius: 15px;
 }
 
 .container-search-left input {
   width: 80px;
   padding: 0 8px;
+}
+
+.container-search-left input:focus {
+  background-color: white;
 }
 
 .search-left-element {
@@ -593,9 +624,8 @@ li.active-user {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   padding: 20px 0;
-  background-color: white;
 }
 
 .container-user-offers {
@@ -608,13 +638,14 @@ li.active-user {
 }
 
 .container-search-element {
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
   width: 100%;
   height: 200px;
   display: grid;
   grid-template-columns: 1fr 3fr;
   justify-items: center;
   align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
 }
 
 .container-search-element img {
@@ -631,6 +662,7 @@ li.active-user {
   width: 90%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 5px 20px;
+  border-radius: 15px;
 }
 
 .element-right-top {
@@ -646,6 +678,7 @@ li.active-user {
   width: 1300px;
   height: fit-content;
   margin: 100px 0 200px 0;
+  border-radius: 15px;
 }
 
 .container-single-admin {
@@ -656,6 +689,7 @@ li.active-user {
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
+  border-radius: 15px;
 }
 
 .container-single-main {
@@ -668,6 +702,7 @@ li.active-user {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: white;
+  border-radius: 15px;
 }
 
 .single-top,
@@ -675,6 +710,7 @@ li.active-user {
 .single-bottom {
   border: 1px solid rgba(0, 0, 0, 0.3);
   width: 95%;
+  border-radius: 15px;
 }
 
 .single-top {
@@ -694,6 +730,7 @@ li.active-user {
   justify-content: start;
   align-items: start;
   gap: 25px;
+  border-radius: 15px;
 }
 
 .single-top-right {
@@ -711,6 +748,7 @@ li.active-user {
 .single-bottom img {
   max-height: 400px;
   max-width: 495px;
+  border-radius: 15px;
 }
 
 .single-middle,
@@ -730,7 +768,7 @@ li.active-user {
 }
 
 .single-button {
-  padding: 0 35px;
+  padding: 0 80px;
   height: 50px;
   font-size: medium;
   font-weight: bold;
@@ -755,6 +793,7 @@ li.active-user {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: white;
+  border-radius: 15px;
 }
 
 #changepwd {

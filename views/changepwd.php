@@ -1,9 +1,7 @@
 <?php 
 require 'inc/header.php';
 require 'inc/notauthorized.php';
-?>
 
-<?php 
 $object = new Login;
 $object->changePwd();
                 
@@ -36,9 +34,11 @@ $object->changePwd();
             </div>
             </div>
             <div class="container-login-right">
-                <h2>Dołącz do nas już dzisiaj</h2>
-                <h4>Sprzedawaj i kupuj używany</h4>
-                <h4>sprzęt AGD</h4>
+                <h2>Zasady bezpiecznego hasła:</h2>
+                <h4>-conajmniej 8 znaków</h4>
+                <h4>-unikaj używania wyrazów słownikowych</h4>
+                <h4>-korzystaj ze znaków specjalnych</h4>
+                <img src="app/public/img/logos.png" id="login-logo">
             </div>
             </div>
         </div>
