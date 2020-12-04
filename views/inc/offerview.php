@@ -52,6 +52,27 @@ class OfferView {
 
     }
 
+    public static function showOrders($results) {
+        //displays offers
+        foreach ($results as $result) { 
+            echo '
+            <div class="container-search-element">
+                <img src="'.$result['ImgOrders'].'" alt="">
+                <div class="search-element-right">
+                    <div class="element-right-top">
+                        <div><h3>'.$result['TitleOrders'].'</h3></div>
+                        <div><p>'.$result['DateOrders'].'<p></div>
+                    </div>
+                    <div class="element-right-desc"><h5>Kupujący: '.$result['BuyerOrders'].'</h5><h5>Sprzedający: '.$result['SellerOrders'].'</h5><h5>Numer zamówienia: '.$result['Id'].'</h5></div>
+                    <div><h4><span>'.$result['AmountOrders'].'</span> zł</h4></div>
+                </div>
+            </div>
+            ';
+            
+        }
+
+    }
+
     public static function showPagination() {
         // pagination
                     echo '<div class="fxver">';

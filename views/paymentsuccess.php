@@ -34,12 +34,17 @@ class GetOrder
     $addressPost = $address->postal_code;
 
     $addressWhole = $addressLine.', '.$addressAdmin.', '.$addressPost;
-    $object = new \submitOffer();
-    $object->getOrderInfo($orderID, $_GET['offerID'], $_SESSION['email'], $seller, $amount, $addressWhole);
-    
-    $sold = new \submitOffer();
-    $sold->changeToSold($_GET['offerID']);
+    $date = date("H:i j/m/y");
 
+    $offer = new \Offers();
+    $results = $offer->showOffersParam('UniqueOffers', $_GET['offerID']);
+
+    $object = new \submitOffer();
+    $object->getOrderInfo($orderID, $_GET['offerID'], $_SESSION['email'], $seller, $amount, $addressWhole, $results[0]['TitleOffers'], $results[0]['DescOffers'], $results[0]['CondOffers'], $results[0]['CategoryOffers'], $results[0]['ImgOffers'], $date);
+
+    $delete = new \Offers();
+    $delete->deleteOffer($_GET['offerID'], $seller);
+    
     header("Location: user?success=true");
     
   }

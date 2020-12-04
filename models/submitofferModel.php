@@ -9,17 +9,10 @@ class SubmitOfferModel extends Dbh {
         $stmt->execute([$uniqueId, $title, $description, $condition, $category, $image , $price, $uploader, $date]);
     }
 
-    protected function ChangeToSoldDb($uniqueId) {
-        $sql = "UPDATE offers SET IsSoldOffers = 1 WHERE UniqueOffers = '". $uniqueId ."' ";
+    protected function submitOrderInfo($paypalId, $uniqueId, $buyer, $seller, $amount, $address, $title, $description, $condition, $category, $image, $date) {
+        $sql = "INSERT INTO orders (IdOrders, UniqueOrders, BuyerOrders, SellerOrders, AmountOrders, AddressOrders, TitleOrders, DescOrders, CondOrders, CategoryOrders, ImgOrders, DateOrders) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->connect()->prepare($sql);
-        $date = date("H:i j/m/y");
-        $stmt->execute([$uniqueId, $title, $description, $condition, $category, $image , $price, $uploader, $date]);
-    }
-
-    protected function submitOrderInfo($paypalId, $uniqueId, $buyer, $seller, $amount, $address) {
-        $sql = "INSERT INTO orders (IdOrders, UniqueOrders, BuyerOrders, SellerOrders, AmountOrders, AddressOrders) values(?, ?, ?, ?, ?, ?)";
-        $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$paypalId, $uniqueId, $buyer, $seller, $amount, $address]);
+        $stmt->execute([$paypalId, $uniqueId, $buyer, $seller, $amount, $address, $title, $description, $condition, $category, $image, $date]);
     }
 
 }

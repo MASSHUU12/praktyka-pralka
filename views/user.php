@@ -66,30 +66,16 @@ $result = $object->showUser($_SESSION['email']);
                             <div id="sold" data-tab-content>
                                 <div class="container-search-right container-user-offers">
                                 <?php 
-                                    $soldCheck = $object->showOrdersSold('SellerOrders', $_SESSION['email']);
-                                    $show = new Offers; 
-                                    foreach ($soldCheck as $offer) {
-                                        $toShow = $show->showOffersParam('UniqueOffers', $offer['UniqueOrders']);
-                                        echo 'Kupujący: '.$offer['BuyerOrders'].'<br>';
-                                        echo ' Tytuł: '.$toShow[0]['TitleOffers'];
-                                        echo '<br> Adres do wysyłki: '.$offer['AddressOrders'];
-                                        echo '<br> numer zamówienia: '.$offer['Id'];
-                                        echo '<br>';
-                                        echo '<br>';
+                                    $resultsSold = $object->showOrdersSold('SellerOrders', $_SESSION['email']);
+                                                        
+                                    if (count($resultsSold) > 0) {
+                                    
+    
+                                    OfferView::showOrders($resultsSold);
+    
+                                    
                                     }
                                     
-                                    
-                                        
-                                    
-
-                                    //if ($soldCheck>0)
-                                        //echo 'numer zamówienia '.$soldCheck[0]['Id'];
-
-                                    //OfferView::limitOffers($sold);
-                    
-                                    //OfferView::showOffers($sold);
-
-                                    //OfferView::showPagination();
                                     ?>
                                 </div>
                                     
@@ -98,19 +84,17 @@ $result = $object->showUser($_SESSION['email']);
                             <div id="orders" data-tab-content>
                             <div class="container-search-right container-user-offers">
                                 <?php 
-                                    $bought = new Offers();
-                                    $boughtCheck = $bought->showOrdersSold('BuyerOrders', $_SESSION['email']);
-                                    $showBought = new Offers; 
-                                    foreach ($boughtCheck as $offer) {
-                                        $toShow = $show->showOffersParam('UniqueOffers', $offer['UniqueOrders']);
-                                        echo 'Sprzedający: '.$offer['SellerOrders'].'<br>';
-                                        echo ' Tytuł: '.$toShow[0]['TitleOffers'];
-                                        echo '<br> zapłaciłes: '.$offer['AmountOrders'];
-                                        echo '<br> numer zamówienia: '.$offer['Id'];
-                                        echo '<br>';
-                                        echo '<br>';
-                                    }
-                                    ?>
+            
+                                $resultsOrders = $object->showOrdersSold('BuyerOrders', $_SESSION['email']);
+                                                        
+                                if (count($resultsSold) > 0) {
+                                
+
+                                OfferView::showOrders($resultsOrders);
+
+                                
+                                }
+                                ?>
                                     
                             </div>
 
