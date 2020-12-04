@@ -49,8 +49,8 @@
                                             </div>
                                             <h5>Stan: '.$results[0]['CondOffers'].'</h5>
                                             <div class="">
-                                                <h3><span>'.$results[0]['PriceOffers'].'</span> Koron</h3>
-                                                <button class="single-button">KUP TERAZ</button>
+                                                <h3><span>'.$results[0]['PriceOffers'].'</span> zł</h3>
+                                                <a href="payment?id='.$results[0]['UniqueOffers'].'"><button class="single-button">KUP TERAZ</button></a>
                                             </div>
                                         </div>
                                     </div>

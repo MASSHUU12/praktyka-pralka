@@ -53,4 +53,12 @@ class SubmitOffer extends SubmitOfferModel {
         }
     }
 
+    public function ChangeToSold($uniqueId) {
+        $this->ChangeToSoldDb($uniqueId);
+    }
+
+    public function getOrderInfo($paypalId, $uniqueId, $buyer, $seller, $amount, $address) {
+        $this->submitOrderInfo($paypalId, $uniqueId, $buyer, $seller, $amount, $address);
+    }
+
 }

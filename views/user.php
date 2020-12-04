@@ -25,45 +25,80 @@ $result = $object->showUser($_SESSION['email']);
                     <button onclick="location.href='change'" id="changepwd"><h4>zmień dane</h4></button>
                 </div>
                 <div class="container-user-bottom">
-                    <h1>Twoje ogłoszenia</h1> 
-                    <div class="container-offers">
-                        <?php 
-                            $object = new Offers;
-                            $results = $object->showOffersParam('UploaderOffers', $_SESSION['email']);
-                            $number = 0;
-                            foreach ($results as $result) {
-                                    echo '
-                                    <div class="container-offers-element">
-                                        <div class="element-img body-img-hover-zoom">
-                                            <a href="offer?id='.$result['UniqueOffers'].'"><img class="product-img" src="'.$result['ImgOffers'].'"></a>
+                    <ul class="user-tabs">
+                        <li data-tab-target="#offers" class="active-user">Twoje ogłoszenia</li>
+                        <li data-tab-target="#sold">Sprzedane</li>
+                        <li data-tab-target="#orders">Zamówienia</li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="offers" class="active-user" data-tab-content>
+                            <div class="container-search-right container-user-offers">
+
+                                <?php 
+                                    $object = new Offers;
+                                    $results = $object->showOffersParam('UploaderOffers', $_SESSION['email']);
+                                    $resultCount = count($results);
+
+                                    OfferView::limitOffers($results);
+                    
+                                    OfferView::showOffers($results);
+
+                                    OfferView::showPagination();
+                                    
+                                    echo '</div>';
+                                    if ($resultCount == 0) {
+                                        echo '
+                                        <div class="fxcol">
+                                            <h1>Troche tu pusto, chyba czas to zmienić</h1>
+                                            <h2>Dodaj swoje pierwsze ogłoszenie</h2>
+                                            <a href="newoffer"><button><h4>dodaj</h4></button></a>
                                         </div>
-                                        <div class="element-bottom">
-                                                <div class="element-title"><a href="offer?id='.$result['UniqueOffers'].'"><h3>'.$result['TitleOffers'].'</h3></a></div>
-                                            <div class="element-desc"><p>Stan: '.$result['CondOffers'].'</p></div>
-                                        </div>
-                                        <div class="element-price">
-                                            <h2>'.$result['PriceOffers'].' koron</h2>
-                                        </div>
-                                    </div>
-                                    ';
-                                    $number++;
-                            }
-                            echo '</div>';
-                            if ($number == 0) {
-                                echo '
-                                <div class="fxcol">
-                                    <h1>Troche tu pusto, chyba czas to zmienić</h1>
-                                    <h2>Dodaj swoje pierwsze ogłoszenie</h2>
-                                    <a href="newoffer"><button><h4>dodaj</h4></button></a>
+                                        ';
+                                    
+                                    }
+                                        
+                                ?>
+
+                            </div>
+
+                            <div id="sold" data-tab-content>
+                                <div class="container-search-right container-user-offers">
+                                <?php 
+                                    $soldCheck = $object->showOrdersSold('SellerOrders', $_SESSION['email']);
+                                    $show = new Offers; 
+                                    foreach ($soldCheck as $offer) {
+                                        $toShow = $show->showOffersParam('UniqueOffers', $offer['UniqueOrders']);
+                                        echo 'Kupujący: '.$offer['BuyerOrders'].'<br>';
+                                        echo ' Tytuł: '.$toShow[0]['TitleOffers'];
+                                        echo '<br> Adres do wysyłki: '.$offer['AddressOrders'];
+                                        echo '<br>';
+                                        echo '<br>';
+                                    }
+                                    
+                                    
+                                        
+                                    
+
+                                    //if ($soldCheck>0)
+                                        //echo 'numer zamówienia '.$soldCheck[0]['Id'];
+
+                                    //OfferView::limitOffers($sold);
+                    
+                                    //OfferView::showOffers($sold);
+
+                                    //OfferView::showPagination();
+                                    ?>
                                 </div>
-                                ';
-                            
-                            }
-                                
-                        ?>
-                        
-                </div>
-            </div>  
+                                    
+                            </div>
+
+                            <div id="orders" data-tab-content>
+                                    <h2>orders</h2>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>  
         </div>
     </main>
 <?php require 'inc/footer.php'; ?>

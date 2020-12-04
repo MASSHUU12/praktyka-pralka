@@ -35,4 +35,10 @@ class Offers extends OffersModel {
         else 
             header('Location: /?error=true');
     }
+
+    public function showOrdersSold($column, $value) {
+        $results = $this->getOrdersSold($column, $value);
+        $results = array_reverse($results);
+        return $results;
+    } 
 }

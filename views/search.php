@@ -35,7 +35,6 @@
                     <?php 
                     $object = new Offers();
                     //how many can be displayed
-                    $limit = 5;
                     if (isset($_GET['search']) && $_GET['search'] !== '') {
                         if (!isset($_GET['cond'])) {
                             $_GET['cond'] = '';
@@ -51,77 +50,16 @@
                     }
                     else
                         $results = $object->showOffers();
-                    //limiting per page
-                        $resultCount = count($results);
-                        if ($resultCount > 0) 
-                            echo '<h3>Liczba znalezionych ogłoszeń: '.$resultCount.'</h3>';
-                        
-                        if ($limit != 0) 
-                            $num = ceil($resultCount/$limit);
-                        else
-                            $num = 0;
 
-                        if (!isset($_GET['page']) || $_GET['page'] == 1) {
-                            $start = 0;
-                            if ($resultCount < $limit)
-                                $limit = $resultCount;
-                        }
-                        else {
-                            if ($_GET['page'] > $num)
-                                $_GET['page'] = 1;
+                    if (count($results) > 0) 
+                        echo '<h3>Liczba znalezionych ogłoszeń: '.count($results).'</h3>';
+                    
+                    OfferView::limitOffers($results);
+                    
+                    OfferView::showOffers($results);
 
-                            $start = ($_GET['page']-1)*$limit;
-                            if ($_GET['page']==$num) {
-                                    $limit = $resultCount%$limit;
-                                }
-                        }
-                    //displays offers
-                    for ($i=$start; $i < $start+$limit; $i++) { 
-                        echo '
-                        <div class="container-search-element">
-                            <a href="offer?id='.$results[$i]['UniqueOffers'].'"><img src="'.$results[$i]['ImgOffers'].'" alt=""></a>
-                            <div class="search-element-right">
-                                <div class="element-right-top">
-                                    <div><a href="offer?id='.$results[$i]['UniqueOffers'].'"><h3>'.$results[$i]['TitleOffers'].'</h3></a></div>
-                                    <div><p>'.$results[$i]['DateOffers'].'<p></div>
-                                </div>
-                                <div class="element-right-desc"><h5>Stan: '.$results[$i]['CondOffers'].'</h5></div>
-                                <div><h4><span>'.$results[$i]['PriceOffers'].'</span> Koron</h4></div>
-                            </div>
-                        </div>
-                        ';
-                        
-                    }
+                    OfferView::showPagination();
                     ?>
-
-                    <!-- pagination -->
-                    <div class="fxver">
-                        <?php 
-
-                        if (isset($_GET['search'])) 
-                            $search = $_GET['search'];
-                        else 
-                            $search = '';
-
-                        for ($page=1; $page < $num+1; $page++) {
-                            if (!isset($_GET['page']) && $page == 1) {
-                                echo '<a href="search?search='. $search .'&page='.$page.'"><span><h3>'. $page .'</h3><span></a>';
-                            }
-                            else {
-                                if (!isset($_GET['page'])) 
-                                    $active = 1;
-                                else 
-                                    $active = $_GET['page'];
-                                
-                                if ($page == $active) 
-                                    echo '<a href="search?search='. $search .'&page='.$page.'"><span><h3>'. $page .'</h3><span></a>';
-                                
-                                else
-                                    echo '<a href="search?search='. $search .'&page='.$page.'"><h3>'. $page .'</h3></a>';
-                            }
-                        }
-                        ?>
-                    </div>
                 </div>
            </div>
         </div>

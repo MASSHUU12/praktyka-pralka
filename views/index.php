@@ -26,7 +26,7 @@
                                     <div class="element-desc"><p>Stan: '.$results[$num]['CondOffers'].'</p></div>
                                 </div>
                                 <div class="element-price">
-                                    <h2>'.$results[$num]['PriceOffers'].' koron</h2>
+                                    <h2>'.$results[$num]['PriceOffers'].' zł</h2>
                                 </div>
                             </div>
                     ';

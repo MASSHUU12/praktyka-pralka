@@ -18,6 +18,7 @@
     <script src="/app/public/js/header.js"></script>
     <script src="/app/public/js/hamburgerdropdown.js"></script>
     <script src="/app/public/js/headerCategories.js"></script>
+    <script src="/app/public/js/userTabs.js" defer></script>
     <!-- php config -->
     <?php require_once '../config/config.php'; ?> 
 
@@ -64,9 +65,8 @@
             <i class="fas fa-bars fa-lg" onclick="headerHamburger()" id="header-hamburger-dropdown-button"></i>
             <div id="header-hamburger-dropdown-id" class="header-hamburger-dropdown-content">
                 <p>Profil</p>
+                <p>Sprzedaż</p>
                 <p>Zamówienia</p>
-                <p>Menu</p>
-                <p>Kontakt</p>
             </div>
         </div>
         </div>

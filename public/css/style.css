@@ -375,6 +375,11 @@ main {
   padding-top: 50px;
 }
 
+#price {
+  color: green;
+  font-size: 150%;
+}
+
 .container-login input {
   width: 250px;
 }
@@ -444,7 +449,43 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding-top: 20px;
+}
+
+.user-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  list-style: none;
+}
+
+.user-tabs li {
+  cursor: pointer;
+  padding: 15px 50px;
+}
+
+.user-tabs li:hover,
+li.active-user {
+  border-bottom: 2px solid rgb(43, 120, 151);
+}
+
+.tab-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+[data-tab-content] {
+  display: none;
+  background-color: white;
+  color: black;
+  width: 100%;
+}
+
+.active-user[data-tab-content] {
+  display: flex;
+  justify-content: center;
 }
 
 .container-search {
@@ -487,6 +528,10 @@ main {
   gap: 20px;
   padding: 20px 0;
   background-color: white;
+}
+
+.container-user-offers {
+  width: 1300px;
 }
 
 .fxver a span {

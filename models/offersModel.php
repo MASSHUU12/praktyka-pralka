@@ -20,7 +20,7 @@ class OffersModel extends Dbh {
     }
 
     protected function searchOffersDb($value, $cond) {
-        $sql = "SELECT * FROM offers WHERE titleOffers LIKE '%". $value ."%' AND CondOffers LIKE '%". $cond ."%'";
+        $sql = "SELECT * FROM offers WHERE titleOffers LIKE '%". $value ."%' AND CondOffers LIKE '%". $cond ."%' AND IsSoldOffers <> 1";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute();
 
@@ -32,5 +32,14 @@ class OffersModel extends Dbh {
         $sql = "DELETE FROM offers WHERE UniqueOffers = ". $uniqueId ." ";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute();
+    }
+
+    protected function getOrdersSold($column, $value) {
+        $sql = "SELECT * FROM orders WHERE ". $column ."= '". $value ."' ";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+
+        $results = $stmt->fetchAll();
+        return $results;
     }
 }
