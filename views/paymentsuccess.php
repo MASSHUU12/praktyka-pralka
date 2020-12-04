@@ -35,11 +35,11 @@ class GetOrder
 
     $addressWhole = $addressLine.', '.$addressAdmin.', '.$addressPost;
     $object = new \submitOffer();
-    $object->getOrderInfo($orderID, $_GET['offerID'], $email, $seller, $amount, $addressWhole);
+    $object->getOrderInfo($orderID, $_GET['offerID'], $_SESSION['email'], $seller, $amount, $addressWhole);
     
     $sold = new \submitOffer();
     $sold->changeToSold($_GET['offerID']);
-    
+
     header("Location: user?success=true");
     
   }

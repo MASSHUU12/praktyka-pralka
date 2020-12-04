@@ -4,6 +4,10 @@ $value = $_GET['id'];
 $object = new Offers();
 $results = $object->showOffersParam($column, $value);
 
+if (!isset($_SESSION['email'])) {
+    header("Location: login");
+}
+
 ?>
 
     <main>
