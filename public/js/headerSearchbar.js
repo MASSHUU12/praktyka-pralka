@@ -27,7 +27,7 @@ searchbarInput.onkeyup = (e)=>{
       });
       searchArray = searchArray.map((data)=> {
         num++;
-        return data = '<p id="data' + num + '">'+ data +'</p>';
+        return data = '<p id="data' + num + '" onclick="completeSearch('+ num +')">'+ data +'</p>';
       });
       console.log(searchArray);
       searchbarResults.classList.add("header-searchbar-dropdown-show");
@@ -47,54 +47,10 @@ function showSuggestions(list){
   completeSearch();
 }
 
-function completeSearch()
+function completeSearch(num)
 {
   var searchbar = document.getElementById("header-searchbar-dropdown-button");
 
-  var r1 = document.getElementById("data1");
-  var r2 = document.getElementById("data2");
-  var r3 = document.getElementById("data3");
-  var r4 = document.getElementById("data4");
-  var r5 = document.getElementById("data5");
-  var r6 = document.getElementById("data6");
-  var r7 = document.getElementById("data7");
-  var r8 = document.getElementById("data8");
-  var r9 = document.getElementById("data9");
-
-  r1.onclick = function() {
-    searchbar.value = r1.innerHTML;
-    document.getElementById("header-searchbar-dropdown-id").style.display = "none" //super to nie dziala ale innego pomyslu nie mam aktualnie
-  }
-  r2.onclick = function() {
-    searchbar.value = r2.innerHTML;
-    document.getElementById("header-searchbar-dropdown-id").style.display = "none";
-  }
-  r3.onclick = function() {
-    searchbar.value = r3.innerHTML;
-    document.getElementById("header-searchbar-dropdown-id").style.display = "none";
-  }
-  r4.onclick = function() {
-    searchbar.value = r4.innerHTML;
-    document.getElementById("header-searchbar-dropdown-id").style.display = "none";
-  }
-  r5.onclick = function() {
-    searchbar.value = r5.innerHTML;
-    document.getElementById("header-searchbar-dropdown-id").style.display = "none";
-  }
-  r6.onclick = function() {
-    searchbar.value = r6.innerHTML;
-    document.getElementById("header-searchbar-dropdown-id").style.display = "none";
-  }
-  r7.onclick = function() {
-    searchbar.value = r7.innerHTML;
-    document.getElementById("header-searchbar-dropdown-id").style.display = "none";
-  }
-  r8.onclick = function() {
-    searchbar.value = r8.innerHTML;
-    document.getElementById("header-searchbar-dropdown-id").style.display = "none";
-  }
-  r9.onclick = function() {
-    searchbar.value = r9.innerHTML;
-    document.getElementById("header-searchbar-dropdown-id").style.display = "none";
-  }
+  searchbar.value = document.getElementById("data"+ num).innerHTML;
+  document.getElementById("header-searchbar-dropdown-id").style.display = "none";
 }
