@@ -1,13 +1,19 @@
 const suggestions = [
-  'Pralka',
-  'Suszarka',
-  'Lodówka',
-  'Kuchenka',
-  'Zmywarka',
-  'Czajnik',
-  'Ekspres do kawy',
-  'Odkurzacz',
-  'Żelazko',
+  'Pralki',
+  'Suszarki do włosów',
+  'Lodówki',
+  'Kuchenki mikrofalowe',
+  'Zmywarki',
+  'Czajniki',
+  'Ekspresy do kawy',
+  'Odkurzacze',
+  'Żelazka',
+  'Zamrażarki',
+  'Okapy kuchenne',
+  'Suszarki do ubrań',
+  'Kuchenki przenośne',
+  'Akcesoria do pralek i suszarek',
+  'Akcesoria do zmywarek',
 ];
 
 const container = document.querySelector(".header-search-container");
