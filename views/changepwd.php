@@ -35,9 +35,9 @@ $object->changePwd();
             </div>
             <div class="container-login-right">
                 <h2>Zasady bezpiecznego hasła:</h2>
-                <h4>-conajmniej 8 znaków</h4>
-                <h4>-unikaj używania wyrazów słownikowych</h4>
-                <h4>-korzystaj ze znaków specjalnych</h4>
+                <h4>- co najmniej 8 znaków</h4>
+                <h4>- nie używaj wyrazów słownikowych</h4>
+                <h4>- korzystaj ze znaków specjalnych</h4>
                 <img src="app/public/img/hash1.png" id="pwd-logo">
             </div>
             </div>
