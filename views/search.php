@@ -22,14 +22,14 @@
                     </div>
                     <div class="search-left-element">
                         <h3>Stan</h3>
-                        <a href=""><p>jak nowy</p></a>
-                        <a href=""><p>bardzo dobry</p></a>
-                        <a href=""><p>dobry</p></a>
-                        <a href=""><p> przeciętny</p></a>
+                        <a href="" onclick='byCondition("jak%20nowy")'><p>Jak nowy</p></a>
+                        <a href="" onclick='byCondition("bardzo%20dobry")'><p>Bardzo dobry</p></a>
+                        <a href="" onclick='byCondition("dobry")'><p>Dobry</p></a>
+                        <a href="" onclick='byCondition("przeci%C4%99tny")'><p>Przeciętny</p></a>
+                        <br />
+                        <a href="" onclick='reset()'><p>Wyczyść filtrowanie</p></a>
                     </div>
                     
-                    
-
                 </div>
                 <div class="container-search-right">
                     <?php 
@@ -46,7 +46,6 @@
                             $limit = 0;
                             echo '<h1>Nie znaleziono rezultatów dla &#39;'.$_GET['search'].'&#39; </h1>';
                         }
-                        
                     }
                     else
                         $results = $object->showOffers();
