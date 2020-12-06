@@ -13,9 +13,9 @@
         $city = 'miasto';
         $region = 'powiat';
     }
-
+        $email = $result[0]['emailUsers'];
         $object = new Login();
-        $object->updateUser();
+        $object->updateUser($email);
 ?>
 
     <main>
@@ -45,7 +45,7 @@
                         <input type="submit" name="change-submit" value="Zaakceptuj zmiany">
                     </div>
                 </form>
-                <h3><?php echo Signup::$message;?></h3>
+                <h3><?php echo Login::$message;?></h3>
             </div>
             </div>
             <div class="container-login-right">

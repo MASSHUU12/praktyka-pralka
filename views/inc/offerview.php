@@ -42,7 +42,7 @@ class OfferView {
                         <div><a href="offer?id='.$results[$i]['UniqueOffers'].'"><h3>'.$results[$i]['TitleOffers'].'</h3></a></div>
                         <div><p>'.$results[$i]['DateOffers'].'<p></div>
                     </div>
-                    <div class="element-right-desc"><h5>Stan: '.$results[$i]['CondOffers'].'</h5></div>
+                    <div class="element-right-desc"><p>Stan: '.$results[$i]['CondOffers'].'</p></div>
                     <div><h4><span>'.$results[$i]['PriceOffers'].'</span> zł</h4></div>
                 </div>
             </div>

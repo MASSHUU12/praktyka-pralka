@@ -35,9 +35,8 @@ class Login extends SignupLoginModel {
         return $results;
     }
 
-    public function updateUser() {
+    public function updateUser($email) {
         if (isset($_POST['change-submit'])) {
-                $email = $result[0]['emailUsers'];
                 $username = $_POST['username'];
                 $number = $_POST['number'];
                 $city = $_POST['city'];
@@ -50,7 +49,6 @@ class Login extends SignupLoginModel {
                 $this->updateUserDb($email, 'numberUsers', $number);
             if ($user[0]['addressUsers'] != $address) 
                 $this->updateUserDb($email, 'addressUsers', $address);
-
             header("Location: user");
         }
     }
