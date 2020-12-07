@@ -21,6 +21,11 @@ class Offers extends OffersModel {
         else
             $sort = '';
 
+        if ($cond == '') 
+            $cond = '';
+        else
+            $cond = "AND CondOffers = '". $cond ."'";
+
         $results = $this->searchOffersDb($value, $cond, $sort);
         $results = array_reverse($results);
         return $results;

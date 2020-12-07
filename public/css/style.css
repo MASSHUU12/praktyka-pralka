@@ -459,6 +459,7 @@ img#standard-logo {
   max-height: 320px;
   transform: translate(-55%, 35%);
 }
+
 img#login-logo {
   max-height: 320px;
   transform: translate(0, 2%);
@@ -470,7 +471,7 @@ img#payment-logo {
 }
 
 img#pwd-logo {
-  max-height: 300px;
+  max-height: 200px;
   transform: translate(0, 7%);
 }
 
@@ -777,7 +778,7 @@ li.active-user {
 }
 
 .single-main-img-large {
-  width: 700px;
+  width: 710px;
   height: 450px;
 }
 
