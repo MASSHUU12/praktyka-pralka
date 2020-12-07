@@ -763,7 +763,7 @@ li.active-user {
 }
 
 .container-single-main span {
-  font-size: 150%;
+  font-size: 140%;
   color: green;
 }
 
@@ -777,8 +777,8 @@ li.active-user {
 }
 
 .single-main-img-large {
-  width: 650px;
-  height: 550px;
+  width: 700px;
+  height: 450px;
 }
 
 .single-img-small {
@@ -788,8 +788,8 @@ li.active-user {
 }
 
 .single-img-small img {
-  width: 220px;
-  height: 176px;
+  width: 170px;
+  height: 143px;
 }
 
 .single-main-desc {
