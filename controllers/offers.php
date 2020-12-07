@@ -13,8 +13,15 @@ class Offers extends OffersModel {
         return $results;
     }
 
-    public function searchOffers($value, $cond) {
-        $results = $this->searchOffersDb($value, $cond);
+    public function searchOffers($value, $cond, $sort) {
+        if ($sort == 'asc') 
+            $sort = 'ORDER BY PriceOffers DESC';
+        else if ($sort == 'desc')
+            $sort = 'ORDER BY PriceOffers ASC';
+        else
+            $sort = '';
+
+        $results = $this->searchOffersDb($value, $cond, $sort);
         $results = array_reverse($results);
         return $results;
     }

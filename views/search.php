@@ -32,14 +32,20 @@
                     
                 </div>
                 <div class="container-search-right">
+                    <div class="search-right-ad">
+                        <img src="app/public/img/place.png" alt="">
+                    </div>
                     <?php 
                     $object = new Offers();
                     //how many can be displayed
                     if (isset($_GET['search']) && $_GET['search'] !== '') {
-                        if (!isset($_GET['cond'])) {
+                        if (!isset($_GET['cond'])) 
                             $_GET['cond'] = '';
-                        }
-                        $results = $object->searchOffers($_GET['search'], $_GET['cond']);
+                        
+                        if (!isset($_GET['sort'])) 
+                            $_GET['sort'] = '';
+                        
+                        $results = $object->searchOffers($_GET['search'], $_GET['cond'], $_GET['sort']);
                         
                         if (empty($results)) {
                             $start = 0;
@@ -50,8 +56,22 @@
                     else
                         $results = $object->showOffers();
 
-                    if (count($results) > 0) 
-                        echo '<h3>Liczba znalezionych ogłoszeń: '.count($results).'</h3>';
+                    if (count($results) > 0) {
+                        echo '
+                        <div class="search-right-sort-found">
+                                <h3>Liczba znalezionych ogłoszeń: '.count($results).'</h3>
+                        </div>
+                        <div class="search-right-sort">
+                            <p>Sortuj według:</p> 
+                            <select name="" id="">
+                                <option value="">od najnowszych</option>
+                                <option value="asc">cena rosnąco</option>
+                                <option value="desc">cena malejąco</option>
+                            </select>
+                        </div>
+                        
+                        ';
+                    }
                     
                     OfferView::limitOffers($results);
                     

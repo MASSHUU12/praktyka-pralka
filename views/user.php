@@ -68,12 +68,8 @@ $result = $object->showUser($_SESSION['email']);
                                 <?php 
                                     $resultsSold = $object->showOrdersSold('SellerOrders', $_SESSION['email']);
                                                         
-                                    if (count($resultsSold) > 0) {
-                                    
-    
+                                    if (count($resultsSold) > 0) {  
                                     OfferView::showOrders($resultsSold);
-    
-                                    
                                     }
                                     
                                     ?>
