@@ -1,4 +1,16 @@
-<?php require 'inc/header.php'; ?>
+<?php 
+require 'inc/header.php'; 
+if (!isset($_GET['from']))
+    $from = 'od';
+else
+    $from = $_GET['from'];
+
+if (!isset($_GET['to']))
+    $to = 'do';
+else
+    $to = $_GET['to'];
+
+?>
 
     <main>
         <div class="main-container">
@@ -15,9 +27,9 @@
                     <div class="search-left-element">
                         <h3>Cena</h3>
                         <div class="price">
-                            <input type="number" placeholder="od">
-                            <input type="number" placeholder="od">
-                            <input type="submit" value="szukaj">
+                            <input type="number" id="from"  placeholder = "od" value=<?php echo $from ?>>
+                            <input type="number" id="to" placeholder="do" value=<?php echo $to ?>>
+                            <input type="submit" onclick="priceUrl()" value="szukaj">
                         </div>
                     </div>
                     <div class="search-left-element">
@@ -63,7 +75,7 @@
                         </div>
                         <div class="search-right-sort">
                             <p>Sortuj według:</p> 
-                            <select name="" id="selectBox" onchange="byBox()">
+                            <select name="selectbox" id="selectbox" onchange="createUrl()">
                                 <option id="opt1" value="">od najnowszych</option>
                                 <option id="opt2" value="asc">cena rosnąco</option>
                                 <option id="opt3" value="desc">cena malejąco</option>
@@ -82,6 +94,7 @@
                 </div>
            </div>
         </div>
+        <script src="/app/public/js/filterBy.js"></script>
         <script src="/app/public/js/filteringTheResults.js"></script>
     </main>
 <?php require 'inc/footer.php'; ?>
