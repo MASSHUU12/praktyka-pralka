@@ -14,8 +14,8 @@ session_destroy();
                     </div>
                 </div>
                 <div class="container-login-right">
-                    <h2>Żegnaj</h2>
-                    <h4>Mamy nadzieje do niedługo</h4>
+                    <h2>Do zobaczenia!</h2>
+                    <h4>Mamy nadzieje, że niedługo</h4>
                     <h4>do nas wrócisz</h4>
                     <img src="app/public/img/logos.png" id="standard-logo">
                 </div>

@@ -14,13 +14,13 @@ $object->getSignupInfo();
                 <h1>Rejestracja</h1>
                 <form method="POST">
                     <div class="container-login">
-                        <input type="text" minlength="3" name="username" placeholder="nazwa konta">
-                        <input type="email" name="email" placeholder="email">
-                        <input type="password" minlength="8" name="password" placeholder="haslo">
-                        <input type="password" name="password-repeat" placeholder="powtórz hasło">
+                        <input type="text" minlength="3" name="username" placeholder="Nazwa konta">
+                        <input type="email" name="email" placeholder="E-mail">
+                        <input type="password" minlength="8" name="password" placeholder="Hasło">
+                        <input type="password" name="password-repeat" placeholder="Powtórz hasło">
                         <div class="checkbox">
                         <input type="checkbox" required='required' name="agree">
-                        <label for="agree">Wyrażam zgode na przetwarzanie moich danych osobowych oraz akceptuje regulamin serwisu. Zdaję sobie sprawę, że serwis pralka jest tylko projektem edukacyjnym.</label>
+                        <label for="agree">Wyrażam zgode na przetwarzanie moich danych osobowych, oraz akceptuje regulamin serwisu. Zdaję sobie sprawę, że serwis pralka jest tylko projektem edukacyjnym.</label>
                         </div>
                         <input type="submit" name="signup-submit" value="Zarejestruj się">
                     </div>
@@ -29,7 +29,7 @@ $object->getSignupInfo();
             </div>
             </div>
             <div class="container-login-right">
-                <h2>Dołącz do nas już dzisiaj</h2>
+                <h2>Dołącz do nas już dzisiaj!</h2>
                 <h4>Sprzedawaj i kupuj używany</h4>
                 <h4>sprzęt AGD</h4>
                 <img src="app/public/img/logos.png" id="standard-logo">

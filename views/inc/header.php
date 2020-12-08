@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sklep internetowy pralka</title>
+    <title>Sklep internetowy Pralka</title>
     <!-- bar graphic -->
     <link rel="shortcut icon" href="app/public/img/barxd.png" width="80%" height="90%">
     <link rel="stylesheet" href="app/public/css/style.css">
@@ -47,7 +47,7 @@
             <ul>
                 <?php if (isset($_SESSION['username'])) {
                     echo '
-                    <a href="newoffer"><li class="header-links">Dodaj ogloszenie</li></a>
+                    <a href="newoffer"><li class="header-links">Dodaj ogłoszenie</li></a>
                     <a href="user"><li class="header-links">'.$_SESSION['username'].'</li></a>
                     <a href="logout"><li class="header-links">Wyloguj się</li></a>
                     ';

@@ -18,28 +18,28 @@ require 'inc/notauthorized.php';
                                 <textarea name="description" cols="30" rows="5" maxlength="255" placeholder="Opis"></textarea>
                             </div>
                             <select name="condition">
-                                <option value="Nie podano">wybierz stan</option>
-                                <option value="jak nowy">jak nowy</option>
-                                <option value="bardzo dobry">bardzo dobry</option>
-                                <option value="dobry">dobry</option>
-                                <option value="przeciętny">przeciętny</option>
+                                <option value="Nie podano">Wybierz stan</option>
+                                <option value="jak nowy">Jak nowy</option>
+                                <option value="bardzo dobry">Bardzo dobry</option>
+                                <option value="dobry">Dobry</option>
+                                <option value="przeciętny">Przeciętny</option>
                             </select>
                             <select name="category">
-                                <option value="inne">wybierz kategorie</option>
+                                <option value="inne">Wybierz kategorię</option>
                                 <optgroup label="AGD">
-                                <option value="kuchenki i piekarniki">kuchenki i piekarniki</option>
-                                <option value="lodówki i zamrażarki">lodówki i zamrażarki</option>
-                                <option value="pralki i suszarki">pralki i suszarki</option>
-                                <option value="zmywarki">zmywarki</option>
+                                <option value="kuchenki i piekarniki">Kuchenki i piekarniki</option>
+                                <option value="lodówki i zamrażarki">Lodówki i zamrażarki</option>
+                                <option value="pralki i suszarki">Pralki i suszarki</option>
+                                <option value="zmywarki">Zmywarki</option>
                                 <optgroup label="Małe agd">
-                                <option value="czajniki">czajniki</option>
-                                <option value="ekspresy do kawy i akcesoria">ekspresy do kawy i akcesoria</option>
-                                <option value="miksery i blendery">miksery i blendery</option>
-                                <option value="odkurzacze">odkurzacze</option>
-                                <option value="roboty kuchenne">roboty kuchenne</option>
-                                <option value="sprzęt myjący">sprzęt myjący</option>
-                                <option value="żelazka">żelazka</option>
-                                <option value="inne">inne</option>
+                                <option value="czajniki">Czajniki</option>
+                                <option value="ekspresy do kawy i akcesoria">Ekspresy do kawy i akcesoria</option>
+                                <option value="miksery i blendery">Miksery i blendery</option>
+                                <option value="odkurzacze">Odkurzacze</option>
+                                <option value="roboty kuchenne">Roboty kuchenne</option>
+                                <option value="sprzęt myjący">Sprzęt myjący</option>
+                                <option value="żelazka">Żelazka</option>
+                                <option value="inne">Inne</option>
                             </select>
                             <div>
                                 <input type="number" name="price" min="1" max="99999" step="any" placeholder="cena">

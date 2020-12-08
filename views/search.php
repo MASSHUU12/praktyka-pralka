@@ -64,9 +64,9 @@
                         <div class="search-right-sort">
                             <p>Sortuj według:</p> 
                             <select name="" id="selectBox" onchange="byBox()">
-                                <option id="opt1" value="">od najnowszych</option>
-                                <option id="opt2" value="asc">cena rosnąco</option>
-                                <option id="opt3" value="desc">cena malejąco</option>
+                                <option id="opt1" value="">Od najnowszych</option>
+                                <option id="opt2" value="asc">Cena rosnąco</option>
+                                <option id="opt3" value="desc">Cena malejąco</option>
                             </select>
                         </div>
                         
