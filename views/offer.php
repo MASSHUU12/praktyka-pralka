@@ -21,7 +21,6 @@
 
                                 if (isset($_SESSION['email'])) {
                                     if ($_SESSION['email'] == $results[0]['UploaderOffers']) {
-                                        echo $results[0]['UploaderOffers'];
                                     echo '
                                         <div class="container-single-admin">
                                         <h2>Ta oferta należy do ciebie</h2>                                           

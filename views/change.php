@@ -7,11 +7,11 @@
     if (!empty($result[0]['addressUsers'])) {       
         $seperate = explode(', ', $result[0]['addressUsers']);
         $city = reset($seperate);
-        $region = end($seperate);
+        $zip = end($seperate);
     }
     else {
-        $city = 'miasto';
-        $region = 'powiat';
+        $city = '';
+        $zip = '';
     }
         $email = $result[0]['emailUsers'];
         $object = new Login();
@@ -39,8 +39,8 @@
                         <input type="text" minlength="2" maxlength="30" name="city" value="<?php echo $city ?>">
                         </div>
                         <div class="container-login-element">
-                        <label for="region">powiat</label>
-                        <input type="text" minlength="2" maxlength="30" name="region" value="<?php echo $region ?>">
+                        <label for="region">kod pocztowy</label>
+                        <input type="text" minlength="6" maxlength="6" name="zip" value="<?php echo $zip ?>">
                         </div>
                         <input type="submit" name="change-submit" value="Zaakceptuj zmiany">
                     </div>

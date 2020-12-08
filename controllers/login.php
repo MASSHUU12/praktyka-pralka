@@ -37,20 +37,62 @@ class Login extends SignupLoginModel {
 
     public function updateUser($email) {
         if (isset($_POST['change-submit'])) {
+            echo '<br><br><br><br>';
                 $username = $_POST['username'];
                 $number = $_POST['number'];
                 $city = $_POST['city'];
-                $region = $_POST['region'];
-                $address = $city. ', ' .$region;
-            $user = $this->showUser($email);
-            if ($user[0]['usernameUsers'] != $username)
-                $this->updateUserDb($email, 'usernameUsers', $username);
-            if ($user[0]['numberUsers'] != $number) 
-                $this->updateUserDb($email, 'numberUsers', $number);
-            if ($user[0]['addressUsers'] != $address) 
-                $this->updateUserDb($email, 'addressUsers', $address);
-            header("Location: user");
+                $zip = $_POST['zip'];
+                $address = $city.', '.$zip;
+                    
+                $user = $this->showUser($email);
+                if ($user[0]['usernameUsers'] != $username)
+                    $this->updateUserDb($email, 'usernameUsers', $username);
+                if ($user[0]['numberUsers'] != $number) 
+                    $this->updateUserDb($email, 'numberUsers', $number);
+                if ($user[0]['addressUsers'] != $address) {
+                    $zipCheck = $this->zipApi($zip);
+                    if (!in_array($city, $zipCheck)) 
+                        self::$message = 'Kod pocztowy nie zgadza się z miastem';
+                    else 
+                        $this->updateUserDb($email, 'addressUsers', $address);
+                }
+                header("Location: user");
+                
         }
+    }
+
+    public function zipApi($code) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        
+        $data = [
+        "codes" => $code,
+        "country" => "PL"
+        ];
+        
+        curl_setopt($ch, CURLOPT_URL, "https://app.zipcodebase.com/api/v1/search?" . http_build_query($data));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            "Content-Type: application/json",
+            "apikey: f050b6b0-34a3-11eb-845c-0d6a445ac681",  
+        ));
+        
+        $response = curl_exec($ch);
+        curl_close($ch);
+        
+        $json = json_decode($response, true);
+        $cities = array();
+
+        if (empty($json['results']))
+            return $cities;
+
+        $results = $json['results'][$code];
+
+        foreach ($results as $result) 
+            array_push($cities, $result['city']);
+        
+        return $cities;
+
     }
 
     public function changePwd() {
