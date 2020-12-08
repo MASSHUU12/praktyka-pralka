@@ -62,11 +62,11 @@
                                 <div class="container-single-right">
                                     <div class="single-right-top">
                                         <div>
-                                            <h3>opcje dostawy:</h3>
+                                            <h3>Opcje dostawy:</h3>
                                             <div>
-                                                <p>odbiór osobisty</p>
-                                                <p>przesyłka kurierska</p>
-                                                <p>paczka pocztowa</p>
+                                                <p>Odbiór osobisty</p>
+                                                <p>Przesyłka kurierska</p>
+                                                <p>Paczka pocztowa</p>
                                             </div>
                                         </div>
                                         <div>

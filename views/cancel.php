@@ -10,7 +10,7 @@
 <body>
     <main id="cart-main">
         <div class="site-title text-center">
-            <h1 class="font-title">platnosc nieudana</h1>
+            <h1 class="font-title">Płatność zakończona niepowodzeniem.</h1>
         </div>
     </main>
 </body>

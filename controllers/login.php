@@ -37,7 +37,6 @@ class Login extends SignupLoginModel {
 
     public function updateUser($email) {
         if (isset($_POST['change-submit'])) {
-            echo '<br><br><br><br>';
                 $username = $_POST['username'];
                 $number = $_POST['number'];
                 $city = $_POST['city'];
@@ -45,18 +44,24 @@ class Login extends SignupLoginModel {
                 $address = $city.', '.$zip;
                     
                 $user = $this->showUser($email);
-                if ($user[0]['usernameUsers'] != $username)
+                if ($user[0]['usernameUsers'] != $username) {
                     $this->updateUserDb($email, 'usernameUsers', $username);
-                if ($user[0]['numberUsers'] != $number) 
+                    header("Location: user");
+                }
+                if ($user[0]['numberUsers'] != $number) {
                     $this->updateUserDb($email, 'numberUsers', $number);
+                    header("Location: user");
+                }
                 if ($user[0]['addressUsers'] != $address) {
                     $zipCheck = $this->zipApi($zip);
                     if (!in_array($city, $zipCheck)) 
                         self::$message = 'Kod pocztowy nie zgadza się z miastem';
-                    else 
+                    else {
                         $this->updateUserDb($email, 'addressUsers', $address);
+                        header("Location: user");
+                    }   
                 }
-                header("Location: user");
+                
                 
         }
     }

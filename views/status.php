@@ -19,7 +19,7 @@
                             }
                             else if ($_GET['success'] == 'false') {
                                 echo '<h1>Płatność nieudana</h1>';
-                                $one = 'Ups coś poszło nie tak';
+                                $one = 'Ups, coś poszło nie tak';
                                 $two = 'Możesz spróbować jeszcze raz';
                                 $three = 'Pomoc';
                                 $logo = "app/public/img/x.png";

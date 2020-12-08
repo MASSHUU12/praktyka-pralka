@@ -23,19 +23,19 @@
             <div class="container-login-whole">
             <div class="container-login-left">
                 <div class="container-login-left-inner">
-                <h1>Zmeń dane</h1>
+                <h1>Zmień dane</h1>
                 <form method="POST">
                     <div class="container-login">
                     <div class="container-login-element">
-                        <label for="username">nazwa konta</label>
+                        <label for="username">Nazwa konta</label>
                         <input type="text" minlength="3" maxlength="10" name="username" value="<?php echo $result[0]['usernameUsers']; ?>">
                         </div>
                         <div class="container-login-element">
-                        <label for="number">numer telefonu</label>
+                        <label for="number">Numer telefonu</label>
                         <input type="number" minlength="9" maxlength="12" name="number" value="<?php echo $result[0]['numberUsers']; ?>">
                         </div>
                         <div class="container-login-element">
-                        <label for="city">miasto</label>
+                        <label for="city">Miasto</label>
                         <input type="text" minlength="2" maxlength="30" name="city" value="<?php echo $city ?>">
                         </div>
                         <div class="container-login-element">

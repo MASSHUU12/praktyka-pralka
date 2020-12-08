@@ -15,11 +15,11 @@ $object->getUser();
                 <form action="#" method="POST">
                     <div class="container-login">
                         <div class="container-login-element">
-                        <label for="email">email</label>
+                        <label for="email">E-mail</label>
                         <input type="email" name="email">
                         </div>
                         <div class="container-login-element">
-                        <label for="password">hasło</label>
+                        <label for="password">Hasło</label>
                         <input type="password" name="password">
                         </div>
                         <input type="submit" name="login-submit" value="Zaloguj się">
@@ -29,7 +29,7 @@ $object->getUser();
                 </div>
             </div>
             <div class="container-login-right">
-                <h2>Miło cię znowu widzieć</h2>
+                <h2>Miło Cię znowu widzieć!</h2>
                 <h4>Nie masz jeszcze konta?</h4>
                 <a href="signup"><h5>Zarejestruj się</h5></a>
                 <img src="app/public/img/password1.png" id="login-logo">

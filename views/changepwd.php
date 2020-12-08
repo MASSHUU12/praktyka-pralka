@@ -16,15 +16,15 @@ $object->changePwd();
                 <form method="POST">
                     <div class="container-login">
                     <div class="container-login-element">
-                        <label for="old-password">obecne hasło</label>
+                        <label for="old-password">Obecne hasło</label>
                         <input type="password" name="old-password">
                         </div>
                         <div class="container-login-element">
-                        <label for="new-password">nowe hasło</label>
+                        <label for="new-password">Nowe hasło</label>
                         <input type="password" minlength="8" name="new-password">
                         </div>
                         <div class="container-login-element">
-                        <label for="new-password-repeat">powtórz nowe hasło</label>
+                        <label for="new-password-repeat">Powtórz nowe hasło</label>
                         <input type="password" minlength="8" name="new-password-repeat">
                         </div>
                         <input type="submit" name="signup-submit" value="Zmień hasło">
