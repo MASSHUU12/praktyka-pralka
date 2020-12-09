@@ -66,11 +66,11 @@
             <div id="header-hamburger-dropdown-id" class="header-hamburger-dropdown-content">
                 <div class="header-messages-whole">           
                     <?php 
-                    $object = new Offers;
-                    $resultsSold = $object->showOrdersSold('SellerOrders', $_SESSION['email']);                         
-                    if (count($resultsSold) > 0) {  
-                    OfferView::showNotif($resultsSold);
-
+                    if (isset($_SESSION['email'])) {
+                        $object = new Offers;
+                        $resultsSold = $object->showOrdersSold('SellerOrders', $_SESSION['email']);                         
+                        if (count($resultsSold) > 0) 
+                        OfferView::showNotif($resultsSold);
                     }
                     ?>
                 </div>
