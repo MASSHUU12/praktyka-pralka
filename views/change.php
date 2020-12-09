@@ -32,7 +32,7 @@
                         </div>
                         <div class="container-login-element">
                         <label for="number">Numer telefonu</label>
-                        <input type="number" minlength="9" maxlength="12" name="number" value="<?php echo $result[0]['numberUsers']; ?>">
+                        <input type="number" minlength="9" maxlength="9" name="number" value="<?php echo $result[0]['numberUsers']; ?>">
                         </div>
                         <div class="container-login-element">
                         <label for="city">Miasto</label>

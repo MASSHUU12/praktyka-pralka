@@ -879,6 +879,49 @@ li.active-user {
   bottom: 40px;
 }
 
+.container-main-article {
+  width: 1300px;
+  height: fit-content;
+  padding-bottom: 70px;
+  margin: 100px 0 200px 0;
+  background-color: white;
+  border-radius: 15px;
+}
+
+#article-main-img {
+  width: 1300px;
+  min-height: 300px;
+}
+
+.container-main-article input[type="text"],
+.container-main-article textarea {
+  width: 100%;
+}
+
+.container-main-article textarea {
+  height: 300px;
+}
+
+.article-title {
+  font-size: 110%;
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 50px;
+  line-height: 30px;
+  font-size: 120%;
+}
+
+.article-small-img {
+  width: 587px;
+  min-height: 200px;
+}
+
 .background {
   background-image: url("../img/background.png");
   background-size: cover;

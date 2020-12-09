@@ -13,7 +13,7 @@ class Offers extends OffersModel {
         return $results;
     }
 
-    public function searchOffers($value, $cond, $sort) {
+    public function searchOffers($value, $cond, $from, $to, $sort) {
         if ($sort == 'asc') 
             $sort = 'ORDER BY PriceOffers DESC';
         else if ($sort == 'desc')
@@ -26,7 +26,13 @@ class Offers extends OffersModel {
         else
             $cond = "AND CondOffers = '". $cond ."'";
 
-        $results = $this->searchOffersDb($value, $cond, $sort);
+        if ($from !== '') 
+            $from = "AND PriceOffers >= $from";
+
+        if ($to !== '') 
+            $to = "AND PriceOffers <= $to";
+
+        $results = $this->searchOffersDb($value, $cond, $from, $to, $sort);
         $results = array_reverse($results);
         return $results;
     }

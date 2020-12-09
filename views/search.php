@@ -50,23 +50,29 @@ else
                     <?php 
                     $object = new Offers();
                     //how many can be displayed
-                    if (isset($_GET['search']) && $_GET['search'] !== '') {
+
+                        if (!isset($_GET['search'])) 
+                            $_GET['search'] = '';
+                    
                         if (!isset($_GET['cond'])) 
                             $_GET['cond'] = '';
                         
                         if (!isset($_GET['sort'])) 
                             $_GET['sort'] = '';
+
+                        if (!isset($_GET['from'])) 
+                            $_GET['from'] = '';
+
+                        if (!isset($_GET['to'])) 
+                            $_GET['to'] = '';
                         
-                        $results = $object->searchOffers($_GET['search'], $_GET['cond'], $_GET['sort']);
+                        $results = $object->searchOffers($_GET['search'], $_GET['cond'], $_GET['from'], $_GET['to'], $_GET['sort']);
                         
                         if (empty($results)) {
                             $start = 0;
                             $limit = 0;
                             echo '<h1>Nie znaleziono rezultatów dla &#39;'.$_GET['search'].'&#39; </h1>';
                         }
-                    }
-                    else
-                        $results = $object->showOffers();
 
                     if (count($results) > 0) {
                         echo '

@@ -48,6 +48,12 @@ switch ($actualRequest) {
     case '/status' :
         require __DIR__ . '/../views/status.php';
         break;
+    case '/article' :
+        require __DIR__ . '/../views/article.php';
+        break;
+    case '/newarticle' :
+        require __DIR__ . '/../views/newarticle.php';
+        break;
     default:
         http_response_code(404);
         require __DIR__ . '/../views/404.php';
