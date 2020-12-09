@@ -4,7 +4,7 @@ require 'inc/notauthorized.php';
 $object = new SubmitArticle();
 $object->getArticleInfo();
 
-if ($_SESSION['email'] !== 'remixtro@gmail.com') {
+if ($_SESSION['email'] == 'remixtro@gmail.com') {
     echo '<br><br><br><br><h1>Nie wyglądasz mi na przystojnego Michała</h1>';
     exit();
 }

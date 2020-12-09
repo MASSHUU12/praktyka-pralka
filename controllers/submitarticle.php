@@ -56,12 +56,10 @@ class SubmitArticle extends SubmitArticleModel {
             }
             else {
                 $count = count($image['name']);
-                echo $count;
                 if ($count != 3) 
                     self::$message = 'Oj Michale, Umawialismy się na trzy zdjęcia';
                 else {
-                    $dirName = preg_replace('/\s+/', '_', $title);
-                    $dirName = $dirName.mt_rand();
+                    $dirName = 'article'.mt_rand();
                     mkdir('articles/'.$dirName);
                     $images = $this->ImgCheck($image, $dirName);
                         if (isset($images)) {
