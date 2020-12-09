@@ -11,7 +11,6 @@ const conditions = document.querySelectorAll('.search-left-element > p');
 
         console.log(conditionValue);
         if (urlParams.get('cond').includes(conditionValue)) {
-            //console.log(condition.innerHTML);
             condition.classList.add('active-condition');
         }
         else 

@@ -62,11 +62,18 @@
             </ul>
         </div>
         <div class="header-hamburger-dropdown">
-            <i class="fas fa-bars fa-lg" onclick="headerHamburger()" id="header-hamburger-dropdown-button"></i>
+            <i class="fas fa-comment fa-lg" onclick="headerHamburger()" id="header-hamburger-dropdown-button"></i>
             <div id="header-hamburger-dropdown-id" class="header-hamburger-dropdown-content">
-                <p>Profil</p>
-                <p>Sprzedaż</p>
-                <p>Zamówienia</p>
+                <div class="header-messages-whole">           
+                    <?php 
+                    $object = new Offers;
+                    $resultsSold = $object->showOrdersSold('SellerOrders', $_SESSION['email']);                         
+                    if (count($resultsSold) > 0) {  
+                    OfferView::showNotif($resultsSold);
+
+                    }
+                    ?>
+                </div>
             </div>
         </div>
         </div>

@@ -103,4 +103,19 @@ class OfferView {
                         
                     echo '</div>';
     }
+
+    public static function showNotif($results) {
+        //displays offers
+        foreach ($results as $result) { 
+            echo '
+                <div class="header-messages-element">
+                    <h5>sprzedałes przedmiot:</h5>
+                    <p>'.$result['TitleOrders'].'</p>
+                    <p>'.$result['DateOrders'].'</p>
+                </div>
+            ';
+            
+        }
+
+    }
 }
