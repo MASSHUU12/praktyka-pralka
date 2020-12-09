@@ -1,7 +1,7 @@
     <footer>
         <section class="footer-container">
             <div class="footer-element">
-                <h4>Witaj w projekcie edukacyjnym sklepu internetowego pralka.pl! Możesz cieszyć się niskimi cenami i odpowiednim doborem sprzętu AGD, gdzie tysiące innych użytkowników wystawia swoje oferty na tablicy naszej głównej strony! Strona została wykonana jako projekt edukacyjny, nie jest to prawdzwy sklep internetowy.</h4>
+                <h4>Witaj w projekcie edukacyjnym sklepu internetowego Pralka.pl! Możesz cieszyć się niskimi cenami i odpowiednim doborem sprzętu AGD, gdzie tysiące innych użytkowników wystawia swoje oferty na tablicy naszej głównej strony! Strona została wykonana jako projekt edukacyjny, nie jest to prawdzwy sklep internetowy.</h4>
             </div>
             <div class="footer-element">
                 <h4>Główne linki</h4>
