@@ -51,7 +51,7 @@ if (!isset($_SESSION['email']))
                 <div class="container-login-right">
                     <h2>Już prawie gotowe!</h2>
                     <h4>Wybierz jedną z opcji płatności</h4>
-                    <h5>Pomoc</h5>
+                    <a href="https://www.paypal.com/pl/smarthelp/topic/TRANSACTIONS" target="_blank"><h5>Potrzebujesz pomocy?</h5></a>
                     <img src="app/public/img/credit1.png" id="payment-logo">
                 </div>
             </div>  

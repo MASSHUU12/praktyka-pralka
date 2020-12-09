@@ -421,8 +421,12 @@ main {
 
 .container-login-right h3,
 .container-login-right h4,
-.container-login-right h5 {
+.container-login-right a {
   color: #eeecec;
+}
+
+.container-login-right a:hover {
+  color: #d8d8d8;
 }
 
 .payment {
