@@ -14,6 +14,9 @@ class Offers extends OffersModel {
     }
 
     public function searchOffers($value, $cond, $from, $to, $sort) {
+        if (strpos($cond, 'bardzo') !== false)
+            $cond = str_replace('bardzo', 'bardzo dobry', $cond);
+
         if ($sort == 'asc') 
             $sort = 'ORDER BY PriceOffers DESC';
         else if ($sort == 'desc')
@@ -23,8 +26,23 @@ class Offers extends OffersModel {
 
         if ($cond == '') 
             $cond = '';
-        else
-            $cond = "AND CondOffers = '". $cond ."'";
+        else {
+            if (strpos($cond, ',') == false) 
+                $cond = "AND CondOffers = '". $cond ."'";
+            else {
+            
+                $cond = explode(',', $cond);
+                $condCount = count($cond)-1;
+                for ($i=0; $i <= $condCount; $i++) { 
+                    if ($i == 0)
+                        $condQuery = "AND CondOffers = '". $cond[$i] ."'";
+                    else
+                        $condQuery = $condQuery." OR CondOffers = '". $cond[$i] ."'";
+                }
+                $cond = $condQuery;
+            }
+        }
+
 
         if ($from !== '') 
             $from = "AND PriceOffers >= $from";

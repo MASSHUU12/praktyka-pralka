@@ -649,6 +649,15 @@ li.active-user {
   gap: 5px;
 }
 
+.search-left-element p {
+  cursor: pointer;
+}
+
+.active-condition {
+  font-weight: bolder;
+  color: #468796;
+}
+
 .container-search-right {
   width: 1000px;
   min-height: 200px;

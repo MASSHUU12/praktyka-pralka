@@ -76,11 +76,13 @@ class SubmitArticle extends SubmitArticleModel {
 
     public function showArticle($column, $value) {
         $results = $this->getArticle($column, $value);
-        $images = $results[0]['ImageArticles'];
-        $images = explode(', ', $images);
-        self::$imageOne = $images[0];
-        self::$imageTwo = $images[1];
-        self::$imageThree = $images[2];
+        if (!empty($results[0]['ImageArticles'])) {
+            $images = $results[0]['ImageArticles'];
+            $images = explode(', ', $images);
+            self::$imageOne = $images[0];
+            self::$imageTwo = $images[1];
+            self::$imageThree = $images[2];
+        }
         return $results;
     }
 

@@ -34,12 +34,12 @@ else
                     </div>
                     <div class="search-left-element">
                         <h3>Stan</h3>
-                        <a href="" onclick='byCondition("jak%20nowy")'><p>Jak nowy</p></a>
-                        <a href="" onclick='byCondition("bardzo%20dobry")'><p>Bardzo dobry</p></a>
-                        <a href="" onclick='byCondition("dobry")'><p>Dobry</p></a>
-                        <a href="" onclick='byCondition("przeci%C4%99tny")'><p>Przeciętny</p></a>
+                        <p onclick='condUrl("jak nowy")'>Jak nowy</p>
+                        <p onclick='condUrl("bardzo")'>Bardzo dobry</p>
+                        <p onclick='condUrl("dobry")'>Dobry</p>
+                        <p onclick='condUrl("przeciętny")'>Przeciętny</p>
                         <br />
-                        <a href="" onclick='reset()'><p>Wyczyść filtrowanie</p></a>
+                        <p onclick='clearUrl()'>Wyczyść filtrowanie</p>
                     </div>
                     
                 </div>
@@ -101,6 +101,6 @@ else
            </div>
         </div>
         <script src="/app/public/js/filterBy.js"></script>
-        <script src="/app/public/js/filteringTheResults.js"></script>
+        <!-- <script src="/app/public/js/filteringTheResults.js"></script> -->
     </main>
 <?php require 'inc/footer.php'; ?>
