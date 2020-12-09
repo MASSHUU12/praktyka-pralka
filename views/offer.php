@@ -4,7 +4,11 @@
         <div class="main-container">
                 <?php    
                     $column = "UniqueOffers";
-                    $value = $_GET['id'];
+                    if (!isset($_GET['id'])) 
+                        $value = '';
+                    else 
+                        $value = $_GET['id'];
+
                     $object = new Offers();
                     $results = $object->showOffersParam($column, $value);
 

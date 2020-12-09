@@ -9,4 +9,13 @@ class SubmitArticleModel extends Dbh {
         $imagesNew = $images[0].', '.$images[1].', '.$images[2];
         $stmt->execute([$imagesNew, $title, $description, $descriptionTwo, $date]);
     }
+
+    protected function getArticle($column, $value) {
+        $sql = "SELECT * FROM articles WHERE ". $column ."= '". $value ."' ";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+
+        $results = $stmt->fetchAll();
+        return $results;
+    }
 }

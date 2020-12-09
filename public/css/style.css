@@ -891,6 +891,7 @@ li.active-user {
 #article-main-img {
   width: 1300px;
   min-height: 300px;
+  border-radius: 15px 15px 0 0;
 }
 
 .container-main-article input[type="text"],
