@@ -23,8 +23,8 @@ $results = $object->showArticle($column, $value);
                         <div class="article-content">
                             <p>'.$results[0]['DescArticles'].'</p>
                             <div class="fxver">
-                            <img class="article-small-img" src="app/public/articles/washing.jpg">
-                            <img class="article-small-img" src="app/public/articles/washing.jpg">
+                            <img class="article-small-img" src="'.SubmitArticle::$imageTwo.'">
+                            <img class="article-small-img" src="'.SubmitArticle::$imageThree.'">
                             </div>
                             <p>'.$results[0]['DescTwoArticles'].'</p>
                             <h4>Zobacz sprzęt AGD na sprzedaż na pralka.pl</h4>
