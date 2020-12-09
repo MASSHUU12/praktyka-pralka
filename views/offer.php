@@ -26,8 +26,8 @@
                                         <h2>Ta oferta należy do ciebie</h2>                                           
                                             <form method="POST">
                                                 <div class="fxver">
-                                                    <input type="submit" value="edytuj">
-                                                    <input type="submit" name="delete" value="usuń">
+                                                    <input type="submit" value="Edytuj">
+                                                    <input type="submit" name="delete" value="Usuń">
                                                 </div>
                                             </form>
                                         </div>
