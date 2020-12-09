@@ -15,9 +15,16 @@ if ($_SESSION['email'] !== 'remixtro@gmail.com') {
         <form method="POST" enctype="multipart/form-data">
             <div class="container-main-article">
                 <div class="article-title">
-                    <h1>Witaj Michale! Co nam dzisiaj napiszesz?</h1>
+                    <h1>
+                        <?php 
+                            if (!isset(SubmitArticle::$message)) 
+                                echo 'Witaj Michale! Co nam dzisiaj napiszesz?';
+                            else 
+                                echo SubmitArticle::$message;
+                        ?>
+                    </h1>
                 </div>
-                <input type="file" name="main-img" id="article-main-img">
+                <input type="file" name="main-img[]" id="article-main-img" multiple>
                 <div class="article-title">
                     <label for="title">tytuł</label>
                     <input type="text" name="title">
@@ -28,19 +35,14 @@ if ($_SESSION['email'] !== 'remixtro@gmail.com') {
                         <textarea name="first"></textarea>
                     </div>
                     <div class="fxver">
-                    <input type="file" name="img-small-one" class="article-small-img">
-                    <input type="file" name="img-small-two" class="article-small-img">
+                    <img class="article-small-img" src="app/public/img/default.jpg">
+                    <img class="article-small-img" src="app/public/img/default.jpg">
                     </div>
                     <div>
                         <label for="second">druga krótsza część</label>
                         <textarea name="second"></textarea>
                     </div>
-                    <div>
-                        <label for="link">Tutaj podaj nazwe linku</label>
-                        <input type="text" name="link" id="">
-                    </div>
                     <input type="submit" name="article-submit" value="gotowe Michale?">
-                    <?php echo SubmitArticle::$message; ?>
                 </div>
             </div>
         </form>

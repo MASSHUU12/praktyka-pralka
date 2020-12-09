@@ -4,13 +4,14 @@ class SubmitArticle extends SubmitArticleModel {
 
     public static $message;
  
-    protected function ImgCheck($image, $dirName) {       
-            $fileName = $image['name'];
-            $fileTmpName = $image['tmp_name'];
-            $fileSize = $image['size'];
-            $fileError = $image['error'];
-            $fileType = $image['type'];
-        
+    protected function ImgCheck($image, $dirName) {
+        $images = array();
+        for ($i=0; $i <= 2; $i++) {   
+            $fileName = $image['name'][$i];
+            $fileTmpName = $image['tmp_name'][$i];
+            $fileSize = $image['size'][$i];
+            $fileError = $image['error'][$i];
+            $fileType = $image['type'][$i];
             $fileExt = explode('.', $fileName);
             $fileActalExt = strtolower(end($fileExt));
         
@@ -19,25 +20,28 @@ class SubmitArticle extends SubmitArticleModel {
             if (in_array($fileActalExt, $allowed)) {
                 if ($fileError === 0) {
                     if ($fileSize < 10000000) {
-                        $fileNameNew = uniqid('', true).".".$fileActalExt;
+                        
+                        $fileNameNew = $i.'.'.$fileActalExt;
                         $fileDestination = '../public/articles/'. $dirName .'/'.$fileNameNew;
                         move_uploaded_file($fileTmpName, $fileDestination);
                         $fileDestinationActual = 'app/public/articles/'. $dirName .'/'.$fileNameNew;
 
-                        return $fileDestinationActual;
+                        $images[] = $fileDestinationActual;
                     }
                     else {
-                        echo 'Plik jest za duży';
+                        self::$message = 'Plik jest za duży';
                     }
                 }
                 else {
-                    echo 'Błąd przesyłania zdjęcia';
+                    self::$message = 'Błąd przesyłania zdjęcia';
                 }   
             }
             else{
-                echo 'Rozszerzenie pliku jest niepoprawne';
-            }   
-        }
+                self::$message = 'Rozszerzenie pliku jest niepoprawne';
+            }
+        } 
+        return $images;
+    }
 
 
     public function getArticleInfo() {
@@ -45,21 +49,26 @@ class SubmitArticle extends SubmitArticleModel {
             $image = $_FILES['main-img'];
             $title = $_POST['title'];
             $description = $_POST['first'];
-            $imgSmallOne = 'aaa'; //$FILES['img-small-one'];
-            $imgSmallTwo = 'aaa'; //$FILES['img-small-two'];
             $descriptionTwo = $_POST['second'];
 
             if (empty($image) || empty($title) || empty($description) || empty($descriptionTwo)) {
                 self::$message = 'Oj Michale, uzupełni puste pola';
             }
             else {
-                $dirName = preg_replace('/\s+/', '_', $title);
-                mkdir('articles/'.$dirName);
-                $imageDestination = $this->ImgCheck($image, $dirName);
-                    if (isset($imageDestination)) {
-                        $this->submitArticleInfo($imageDestination, $title, $description, $imgSmallOne, $imgSmallTwo, $descriptionTwo);
-                        self::$message = 'Ah Michale, cóż za wspaniały artykuł. Może napiszesz jeszcze jeden?';
-                    }
+                $count = count($image['name']);
+                echo $count;
+                if ($count != 3) 
+                    self::$message = 'Oj Michale, Umawialismy się na trzy zdjęcia';
+                else {
+                    $dirName = preg_replace('/\s+/', '_', $title);
+                    $dirName = $dirName.mt_rand();
+                    mkdir('articles/'.$dirName);
+                    $images = $this->ImgCheck($image, $dirName);
+                        if (isset($images)) {
+                            $this->submitArticleInfo($images, $title, $description, $descriptionTwo);
+                            self::$message = 'Ah Michale, cóż za wspaniały artykuł. Może napiszesz jeszcze jeden?';
+                        }
+                }
             }
         }
 

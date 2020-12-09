@@ -2,10 +2,11 @@
 
 class SubmitArticleModel extends Dbh {
 
-    protected function submitArticleInfo($image, $title, $description, $imgSmallOne, $imgSmallTwo, $descriptionTwo) {
-        $sql = "INSERT INTO articles (ImageArticles, TitleArticles, DescArticles, ImgSmallOneArticles, ImgSmallTwoArticles, DescTwoArticles, DateArticles) values(?, ?, ?, ?, ?, ?, ?)";
+    protected function submitArticleInfo($images, $title, $description, $descriptionTwo) {
+        $sql = "INSERT INTO articles (ImageArticles, TitleArticles, DescArticles, DescTwoArticles, DateArticles) values(?, ?, ?, ?, ?)";
         $stmt = $this->connect()->prepare($sql);
         $date = date("H:i j/m/y");
-        $stmt->execute([$image, $title, $description, $imgSmallOne, $imgSmallTwo, $descriptionTwo, $date]);
+        $imagesNew = $images[0].', '.$images[1].', '.$images[2];
+        $stmt->execute([$imagesNew, $title, $description, $descriptionTwo, $date]);
     }
 }
