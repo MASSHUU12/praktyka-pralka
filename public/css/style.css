@@ -435,6 +435,7 @@ main {
 
 #paypal-payment-button {
   width: 400px;
+  z-index: 1;
 }
 
 .container-login {
