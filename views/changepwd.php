@@ -13,19 +13,30 @@ $object->changePwd();
             <div class="container-login-left">
                 <div class="container-login-left-inner">
                 <h1>Zmień hasło</h1>
-                <form method="POST">
+                <form method="POST" id="form">
                     <div class="container-login">
-                    <div class="container-login-element">
-                        <label for="old-password">Obecne hasło</label>
-                        <input type="password" name="old-password">
+                        <div class="container-login-element">
+                            <label for="old-password">Obecne hasło</label>
+                            <input type="password" name="old-password">
                         </div>
                         <div class="container-login-element">
-                        <label for="new-password">Nowe hasło</label>
-                        <input type="password" minlength="8" name="new-password">
+                            <label for="new-password">Nowe hasło</label>
+                            <input type="password" minlength="8" name="new-password" id="password">
+                            <div class="pwd-indicators">
+                            <span id="weak"></span>
+                            <span id="medium"></span>
+                            <span id="strong"></span>
+                            </div>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>error</small>
                         </div>
                         <div class="container-login-element">
-                        <label for="new-password-repeat">Powtórz nowe hasło</label>
-                        <input type="password" minlength="8" name="new-password-repeat">
+                            <label for="new-password-repeat">Powtórz nowe hasło</label>
+                            <input type="password" minlength="8" name="new-password-repeat" id="password-repeat">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>error</small>
                         </div>
                         <input type="submit" name="signup-submit" value="Zmień hasło">
                     </div>
@@ -43,4 +54,5 @@ $object->changePwd();
             </div>
         </div>
     </main>
+<script src="/app/public/js/pwdValidation.js" defer></script>
 <?php require 'inc/footer.php'; ?>

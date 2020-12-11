@@ -49,7 +49,6 @@ select {
   outline: none;
   padding: 0 20px;
   border-radius: 15px;
-  transition: all 0.3s ease-out;
 }
 
 button,
@@ -189,7 +188,7 @@ header ul li {
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
   z-index: 10;
   border-radius: 8px;
-  transform: translate(-25%, 15%);
+  transform: translate(-15%, 6%);
 }
 
 .categories-dropdown:hover .header-categories-dropdown-content {
@@ -922,6 +921,7 @@ li.active-user {
 
 .single-main-img img {
   cursor: pointer;
+  object-fit: cover;
 }
 
 .single-main-img-large {

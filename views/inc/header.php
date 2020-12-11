@@ -26,13 +26,20 @@
         <div>
             <a class="header-links" href="/"><img  class="logo" src="app/public/img/logo.png" alt=""></a></div>
             <div class="categories-dropdown">
-            <i class="header-links" id="header-categories-dropdown-button">Kategorie</i>
+                <i class="header-links" id="header-categories-dropdown-button">Kategorie</i>
                 <div class="header-categories-dropdown-content">
-                    <p>Kuchenki mikrofalowe</p>
-                    <p>Lodówki i zamrażarki</p>  
-                    <p>Pralki i suszarki</p>  
-                    <p>Roboty kuchenne</p>       
-                    <p>Zmywarki</p>                                     
+                    <p>Kuchenki i pierkaniki</p>
+                    <p>Lodówki i zamrażalki</p>
+                    <p>Pralki i suszarki</p>
+                    <p>Zmywarki</p>
+                    <p>Czajniki</p>
+                    <p>Ekspresy do kawy i akcesoria</p>
+                    <p>Miksery i blendery</p>
+                    <p>Odkurzacze</p>
+                    <p>Roboty kuchenne</p>
+                    <p>Sprzet myjący</p>
+                    <p>Żelazka</p>
+                    <p>Inne</p>                               
                 </div>
             </div>
         <div class="header-search-container">
@@ -41,7 +48,6 @@
             <button type="submit" class="searchbar-button"><i class="fas fa-search"></i></button>
             </form>
             <div id="header-searchbar-dropdown-id" class="header-searchbar-dropdown-content">
-
             </div>
         </div>
         <div class="header-text fxver">

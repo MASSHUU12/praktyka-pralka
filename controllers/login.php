@@ -46,11 +46,11 @@ class Login extends SignupLoginModel {
                 $user = $this->showUser($email);
                 if ($user[0]['usernameUsers'] != $username) {
                     $this->updateUserDb($email, 'usernameUsers', $username);
-                    header("Location: user");
+                    header("Location: /user");
                 }
                 if ($user[0]['numberUsers'] != $number) {
                     $this->updateUserDb($email, 'numberUsers', $number);
-                    header("Location: user");
+                    header("Location: /user");
                 }
                 if ($user[0]['addressUsers'] != $address) {
                     $zipCheck = $this->zipApi($zip);
@@ -58,7 +58,7 @@ class Login extends SignupLoginModel {
                         self::$message = 'Kod pocztowy nie zgadza się z miastem';
                     else {
                         $this->updateUserDb($email, 'addressUsers', $address);
-                        header("Location: user");
+                        header("Location: /user");
                     }   
                 }     
         }

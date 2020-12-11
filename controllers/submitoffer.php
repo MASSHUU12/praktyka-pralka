@@ -1,6 +1,8 @@
 <?php
 
 class SubmitOffer extends SubmitOfferModel {
+
+    public static $message;
  
     protected function ImgCheck($image, $uniqueId) {       
             $fileName = $image['name'];
@@ -26,30 +28,40 @@ class SubmitOffer extends SubmitOfferModel {
                         return $fileDestinationActual;
                     }
                     else {
-                        echo 'Plik jest za duży';
+                        self::$message = 'Plik jest za duży';
                     }
                 }
                 else {
-                    echo 'Błąd przesyłania zdjęcia';
+                    self::$message = 'Błąd przesyłania zdjęcia';
                 }   
             }
             else{
-                echo 'Rozszerzenie pliku jest niepoprawne';
+                self::$message = 'Rozszerzenie pliku jest niepoprawne';
             }   
         }
 
 
-    public function getOfferInfo($title, $description, $condition, $category, $image, $price, $uploader) {
-        if (empty($title) || empty($description) || empty($condition) || empty($category) || empty($image || empty($price))) {
-            echo 'Uzupełni puste pola';
-        }
-        else {
-            $uniqueId = mt_rand().mt_rand();
-            $imageDestination = $this->ImgCheck($image, $uniqueId);
-                if (isset($imageDestination)) {
-                    $this->submitOfferInfo($uniqueId, $title, $description, $condition, $category, $imageDestination, $price, $uploader);
-                     echo '<h3 class="success">Dodanie aukcji przebiegło pomyślnie. Jeśli chcesz możesz dodać kolejną</h3>';
-                }
+    public function getOfferInfo() {
+        if (isset($_POST['offer-submit'])) {
+            $image = $_FILES['image'];
+            $title = $_POST['title'];
+            $description = $_POST['description'];
+            $condition = $_POST['condition'];
+            $category = $_POST['category'];
+            $price = $_POST['price'];
+            $uploader = $_SESSION['email'];
+
+            if (empty($title) || empty($description) || empty($condition) || empty($category) || empty($image || empty($price))) {
+                self::$message = 'Uzupełni puste pola';
+            }
+            else {
+                $uniqueId = mt_rand().mt_rand();
+                $imageDestination = $this->ImgCheck($image, $uniqueId);
+                    if (isset($imageDestination)) {
+                        $this->submitOfferInfo($uniqueId, $title, $description, $condition, $category, $imageDestination, $price, $uploader);
+                        self::$message = 'Dodano pomyśnie';
+                    }
+            }
         }
     }
 

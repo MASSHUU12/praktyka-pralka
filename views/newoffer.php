@@ -1,6 +1,9 @@
 <?php 
 require 'inc/header.php';
-require 'inc/notauthorized.php';
+//require 'inc/notauthorized.php';
+
+$object = new SubmitOffer();
+$object->getOfferInfo();
 ?>
 
     <main>
@@ -15,7 +18,6 @@ require 'inc/notauthorized.php';
                             <i class="fas fa-exclamation-circle"></i>
                             <small>error</small>
                         </div>
-                        
                         <input type="number" name="price" id="newoffer-price" min="1" max="99999" step="any" placeholder="cena">
                     </div>
                     <div class="single-main-img">
@@ -83,6 +85,7 @@ require 'inc/notauthorized.php';
                             <input type="submit" name="offer-submit" value="Dodaj">
                         </div>
                     </div>
+                    <h3><?php echo SubmitOffer::$message;?></h3>
                     </form>
                 </div>
             </div>
@@ -90,17 +93,3 @@ require 'inc/notauthorized.php';
     </main>
     <script src="/app/public/js/offerValidation.js" defer></script>
 <?php require 'inc/footer.php'; ?>
-<?php 
-            if (isset($_POST['offer-submit'])) {
-                $image = $_FILES['image'];
-                $title = $_POST['title'];
-                $description = $_POST['description'];
-                $condition = $_POST['condition'];
-                $category = $_POST['category'];
-                $price = $_POST['price'];
-                $uploader = $_SESSION['email'];
-
-                $object = new SubmitOffer();
-                $object->getOfferInfo($title, $description, $condition, $category, $image, $price, $uploader);
-            }
-        ?>

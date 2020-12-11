@@ -32,9 +32,9 @@ $object->getSignupInfo();
                             <label for="password">Hasło</label>
                             <input type="password" minlength="8" name="password" id="password">
                             <div class="pwd-indicators">
-                            <span id="weak"></span>
-                            <span id="medium"></span>
-                            <span id="strong"></span>
+                                <span id="weak"></span>
+                                <span id="medium"></span>
+                                <span id="strong"></span>
                             </div>
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
@@ -47,7 +47,6 @@ $object->getSignupInfo();
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>error</small>
-                            
                         </div>
                         <div class="checkbox">
                         <input type="checkbox" required='required' name="agree">
