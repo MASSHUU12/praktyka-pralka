@@ -5,7 +5,6 @@ const desc = document.getElementById('newoffer-desc');
 var canGoTitle = new Boolean(false);
 var canGoDesc = new Boolean(false);
 
-
 form.addEventListener('submit', (e) => {
     if (canGoTitle === false || canGoDesc === false) {
         e.preventDefault();

@@ -8,10 +8,10 @@ var canGoEmail = new Boolean(false);
 var canGoPassword = new Boolean(false);
 var canGoPasswordCheck = new Boolean(false);
 
-canGoUser = false;
-canGoEmail = false;
-canGoPassword = false;
-canGoPasswordCheck = false;
+// canGoUser = false;
+// canGoEmail = false;
+// canGoPassword = false;
+// canGoPasswordCheck = false;
 
 form.addEventListener('submit', (e) => {
     if (canGoUser === false || canGoEmail === false || canGoPassword === false || canGoPasswordCheck === false) {

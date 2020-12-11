@@ -59,12 +59,12 @@ class Offers extends OffersModel {
         $column = 'UniqueOffers';
         $check = $this->showOffersParam($column, $uniqueId);
         if ($check[0]['UploaderOffers'] == $email) {
-            $path = explode('s/',$check[0]['ImgOffers']);
-            $img = end($path);
-            unlink('../public/offers/'.$img);
-            $path = explode('/',$img);
-            $dir = reset($path);
-            rmdir('../public/offers/'.$dir);
+            // $path = explode('s/',$check[0]['ImgOffers']);
+            // $img = end($path);
+            // unlink('../public/offers/'.$img);
+            // $path = explode('/',$img);
+            // $dir = reset($path);
+            // rmdir('../public/offers/'.$dir);
             $this->deleteOfferDb($uniqueId);
             echo '<h3 class="success">Zlecono usunięcie oferty</h3>';
         }
