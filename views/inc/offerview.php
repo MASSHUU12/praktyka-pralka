@@ -9,7 +9,7 @@ class OfferView {
     public static function limitOffers($results) {
         //limiting per page
         $resultCount = count($results);
-        
+            //round value up so that if it's 2.1 then it's 3
         if (self::$limit != 0) 
             self::$num = ceil($resultCount/self::$limit);
         else
@@ -17,22 +17,28 @@ class OfferView {
 
         if (!isset($_GET['page']) || $_GET['page'] == 1) {
             self::$start = 0;
+            //if there are less results than 5 on a page then lower the limit
             if ($resultCount < self::$limit)
                 self::$limit = $resultCount;
         }
         else {
+            // if someone enters a page than doesn't exist then set the page back to 1
             if ($_GET['page'] > self::$num)
                 $_GET['page'] = 1;
 
                 self::$start = ($_GET['page']-1)*self::$limit;
-            if ($_GET['page']==self::$num) {
-                    self::$limit = $resultCount%self::$limit;
-                }
+            if ($_GET['page'] == self::$num) {
+                    if ($resultCount%self::$limit == 0) 
+                        self::$limit = 5;
+                    else
+                        self::$limit = $resultCount%self::$limit;
+            }
         }
     }
 
     public static function showOffers($results) {
         //displays offers
+        
         for ($i=self::$start; $i < self::$start+self::$limit; $i++) { 
             echo '
             <div class="container-search-element">

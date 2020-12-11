@@ -3,30 +3,19 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
 const conditions = document.querySelectorAll('.search-left-element > p');
-
+if (urlParams.has('cond')) {
     conditions.forEach(condition => {     
         var conditionValue = condition.innerHTML.toLowerCase();
         if (conditionValue.includes('bardzo')) 
             conditionValue = 'bardzo';
-
-        console.log(conditionValue);
+    
         if (urlParams.get('cond').includes(conditionValue)) {
             condition.classList.add('active-condition');
         }
         else 
             condition.classList.remove('active-condition');
     });
-
-Array.prototype.remove = function() {
-    var what, a = arguments, L = a.length, ax;
-    while (L && this.length) {
-        what = a[--L];
-        while ((ax = this.indexOf(what)) !== -1) {
-            this.splice(ax, 1);
-        }
-    }
-    return this;
-};
+}
 
 function createUrl() {
     const selectValue = document.getElementById("selectbox").value;

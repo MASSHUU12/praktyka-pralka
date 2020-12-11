@@ -3,11 +3,25 @@ const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const passwordRepeat = document.getElementById('password-repeat');
+var canGoUser = new Boolean(false);
+var canGoEmail = new Boolean(false);
+var canGoPassword = new Boolean(false);
+var canGoPasswordCheck = new Boolean(false);
 
+canGoUser = false;
+canGoEmail = false;
+canGoPassword = false;
+canGoPasswordCheck = false;
+
+form.addEventListener('submit', (e) => {
+    if (canGoUser === false || canGoEmail === false || canGoPassword === false || canGoPasswordCheck === false) {
+        e.preventDefault();
+    }  
+});
 
 username.addEventListener('focusout', (e) => {
-    e.preventDefault();
     const usernameValue = username.value.trim();
+    canGoUser = false;
 
     if(usernameValue === '') {
         setErrorFor(username, 'Uzupełni nazwe konta');
@@ -17,12 +31,13 @@ username.addEventListener('focusout', (e) => {
     }
     else {
         setSuccessFor(username);
+        canGoUser = true;
     }
 });
 
 email.addEventListener('focusout', (e) => {
-    e.preventDefault();
     const emailValue = email.value.trim();
+    canGoDesc = false;
 
     if(emailValue === '') {
         setErrorFor(email, 'Uzupełni e-mail');
@@ -32,15 +47,17 @@ email.addEventListener('focusout', (e) => {
     }
     else {
         setSuccessFor(email);
+        canGoDesc = true;
     }
 });
 
 password.addEventListener('keyup', (e) => { 
     const passwordValue = password.value.trim();
-    
     const weak = document.getElementById('weak');
     const medium = document.getElementById('medium');
     const strong = document.getElementById('strong');
+
+    canGoPassword = false;
 
     valueMedium = /((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,}))/;
     valueStrong = /((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[-!$%^&*()_+|~=`{}\[\]:";'<>?,.\/])(?=.{12,}))/;
@@ -48,8 +65,10 @@ password.addEventListener('keyup', (e) => {
         setErrorFor(password, '');
         weak.classList.add('weak');
     }
-    else
+    else {
         setSuccessFor(password);
+        canGoPassword = true;
+    }
 
     if(passwordValue.length == 0) 
         weak.classList.remove('weak');
@@ -68,15 +87,16 @@ password.addEventListener('keyup', (e) => {
 });
 
 passwordRepeat.addEventListener('focusout', (e) => {
-    e.preventDefault();
     const passwordRepeatValue = passwordRepeat.value.trim();
     const passwordValue = password.value.trim();
+    canGoPassword = false;
 
     if(passwordRepeatValue !== passwordValue || passwordRepeatValue.length == 0) {
         setErrorFor(passwordRepeat, 'hasła nie zgadzają się');
     }
     else {
         setSuccessFor(passwordRepeat);
+        canGoPassword = true;
     }
 });
 

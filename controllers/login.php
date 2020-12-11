@@ -60,13 +60,11 @@ class Login extends SignupLoginModel {
                         $this->updateUserDb($email, 'addressUsers', $address);
                         header("Location: user");
                     }   
-                }
-                
-                
+                }     
         }
     }
 
-    public function zipApi($code) {
+    private function zipApi($code) {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HEADER, false);

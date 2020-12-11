@@ -24,23 +24,35 @@
             <div class="container-login-left">
                 <div class="container-login-left-inner">
                 <h1>Zmień dane</h1>
-                <form method="POST">
+                <form method="POST" id="form">
                     <div class="container-login">
-                    <div class="container-login-element">
-                        <label for="username">Nazwa konta</label>
-                        <input type="text" minlength="3" maxlength="10" name="username" value="<?php echo $result[0]['usernameUsers']; ?>">
+                        <div class="container-login-element">
+                            <label for="username">Nazwa konta</label>
+                            <input type="text" id="username" minlength="3" maxlength="10" name="username" value="<?php echo $result[0]['usernameUsers']; ?>">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>error</small>
                         </div>
                         <div class="container-login-element">
-                        <label for="number">Numer telefonu</label>
-                        <input type="number" minlength="9" maxlength="9" name="number" value="<?php echo $result[0]['numberUsers']; ?>">
+                            <label for="number">Numer telefonu</label>
+                            <input type="number" id="number" minlength="9" maxlength="9" name="number" value="<?php echo $result[0]['numberUsers']; ?>">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>error</small>
                         </div>
                         <div class="container-login-element">
-                        <label for="city">Miasto</label>
-                        <input type="text" minlength="2" maxlength="30" name="city" value="<?php echo $city ?>">
+                            <label for="city">Miasto</label>
+                            <input type="text" id="city" minlength="2" maxlength="30" name="city" value="<?php echo $city ?>">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>error</small>
                         </div>
                         <div class="container-login-element">
-                        <label for="region">kod pocztowy</label>
-                        <input type="text" minlength="6" maxlength="6" name="zip" value="<?php echo $zip ?>">
+                            <label for="region">kod pocztowy</label>
+                            <input type="text" name="zip" minlength="6" maxlength="6" id="zip" value="<?php echo $zip ?>">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>error</small>
                         </div>
                         <input type="submit" name="change-submit" value="Zaakceptuj zmiany">
                     </div>
@@ -57,4 +69,5 @@
             </div>
         </div>
     </main>
+    <script src="/app/public/js/changeValidation.js" defer></script>
 <?php require 'inc/footer.php'; ?>

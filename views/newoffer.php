@@ -4,20 +4,30 @@ require 'inc/notauthorized.php';
 ?>
 
     <main>
+    <form action="#" method="POST" id="form" enctype="multipart/form-data">
         <div class="main-container"> 
-            <form action="#" method="POST" enctype="multipart/form-data">
             <div class="container-single">
                 <div class="container-single-main">
-                    <div class="single-top">
-                        <div class="single-top-left"><input type="file" name="image"></div>
-                        <div class="single-top-right">
-                            <div id="single-title">
-                                <input type="text" name="title" minlength="5" maxlength="50" placeholder="Tytuł">
-                            </div>
-                            <div class="single-desc">
-                                <textarea name="description" cols="30" rows="5" maxlength="255" placeholder="Opis"></textarea>
-                            </div>
-                            <select name="condition">
+                    <div class="fxcol alignstart">
+                        <div class="container-newoffer-element">
+                            <input type="text" name="title" id="newoffer-title" minlength="5" maxlength="50" placeholder="Tytuł">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>error</small>
+                        </div>
+                        
+                        <input type="number" name="price" id="newoffer-price" min="1" max="99999" step="any" placeholder="cena">
+                    </div>
+                    <div class="single-main-img">
+                        <input type="file" name="image" class="single-main-img-large"> 
+                        <div class="single-img-small">
+                            <img src="app/public/img/default.jpg">
+                            <img src="app/public/img/default.jpg">
+                            <img src="app/public/img/default.jpg">
+                        </div>
+                    </div>
+                    <div class="single-main-cond">
+                        <select name="condition">
                                 <option value="Nie podano">Wybierz stan</option>
                                 <option value="jak nowy">Jak nowy</option>
                                 <option value="bardzo dobry">Bardzo dobry</option>
@@ -41,37 +51,56 @@ require 'inc/notauthorized.php';
                                 <option value="żelazka">Żelazka</option>
                                 <option value="inne">Inne</option>
                             </select>
-                            <div>
-                                <input type="number" name="price" min="1" max="99999" step="any" placeholder="cena">
-                                <input type="submit" name="offer-submit" class="single-button" value="Dodaj">
-                            </div>
+                    </div>
+                    <div class="single-main-desc">
+                        <div class="container-newoffer-element">
+                        <textarea name="description" id="newoffer-desc" cols="30" rows="5" maxlength="255" placeholder="Opis"></textarea>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>error</small>
                         </div>
                     </div>
-                    <div class="single-middle">
-                        <?php 
-                            if (isset($_POST['offer-submit'])) {
-                                $image = $_FILES['image'];
-                                $title = $_POST['title'];
-                                $description = $_POST['description'];
-                                $condition = $_POST['condition'];
-                                $category = $_POST['category'];
-                                $price = $_POST['price'];
-                                $uploader = $_SESSION['email'];
-
-                                $object = new SubmitOffer();
-                                $object->getOfferInfo($title, $description, $condition, $category, $image, $price, $uploader);
-                            }
-                        ?>
-                    </div>
-                    <div class="single-bottom">
-                        <img src="app/public/img/default.jpg" class="lightbox-hover-shadow preview" alt="">
-                        <img src="app/public/img/default.jpg" class="lightbox-hover-shadow preview" alt="">
-                        <img src="app/public/img/default.jpg" class="lightbox-hover-shadow preview" alt="">
-                    </div>
                 </div>
-                <div class="container-single-alike"></div>
+                <div class="container-single-right">
+                    <div class="single-right-top">
+                        <div>
+                            <h3>Dodaj opcje dostawy:</h3>
+                            <div>
+                                <div class="fxcol smallgap alignstart">
+                                    <div class="fxver smallgap">
+                                        <input type="checkbox" name="" id=""><p>Odbiór osobisty</p>
+                                    </div>
+                                    <div class="fxver smallgap">
+                                        <input type="checkbox" name="" id=""><p>Przesyłka kurierska</p>
+                                    </div>
+                                    <div class="fxver smallgap">
+                                        <input type="checkbox" name="" id=""><p>Paczka pocztowa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="submit" name="offer-submit" value="Dodaj">
+                        </div>
+                    </div>
+                    </form>
+                </div>
             </div>
-            </form>
         </div>
     </main>
+    <script src="/app/public/js/offerValidation.js" defer></script>
 <?php require 'inc/footer.php'; ?>
+<?php 
+            if (isset($_POST['offer-submit'])) {
+                $image = $_FILES['image'];
+                $title = $_POST['title'];
+                $description = $_POST['description'];
+                $condition = $_POST['condition'];
+                $category = $_POST['category'];
+                $price = $_POST['price'];
+                $uploader = $_SESSION['email'];
+
+                $object = new SubmitOffer();
+                $object->getOfferInfo($title, $description, $condition, $category, $image, $price, $uploader);
+            }
+        ?>

@@ -17,7 +17,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/app/public/js/header.js"></script>
     <script src="/app/public/js/userTabs.js" defer></script>
-    <script src="/app/public/js/inputValidation.js" defer></script>
     <!-- php config -->
     <?php require_once '../config/config.php'; ?> 
 
@@ -66,7 +65,8 @@
             <div class="header-hamburger-dropdown">
                 <i class="fas fa-comment fa-lg" id="header-hamburger-dropdown-button"></i>
                 <div class="header-hamburger-dropdown-content">
-                    <div class="header-messages-whole">           
+                    <div class="header-messages-whole">
+                        <h4>Centrum Wiadomości</h4> 
                         <?php 
                         if (isset($_SESSION['email'])) {
                             $object = new Offers;

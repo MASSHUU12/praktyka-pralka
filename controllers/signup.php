@@ -18,9 +18,6 @@ class Signup extends SignupLoginModel {
             else if ($password !== $passwordRepeat) {
                 self::$message = 'Hasła nie zgadzają się';
             }
-            else if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-                self::$message = 'Nazwa zawiera niedozwolone znaki';
-            }
             else if (!empty($emailCheck)) {
                 self::$message = 'Ten email już jest w użyciu';
             }

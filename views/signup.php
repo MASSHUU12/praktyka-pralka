@@ -68,4 +68,5 @@ $object->getSignupInfo();
             </div>
         </div>
     </main>
+    <script src="/app/public/js/inputValidation.js" defer></script>
 <?php require 'inc/footer.php'; ?>

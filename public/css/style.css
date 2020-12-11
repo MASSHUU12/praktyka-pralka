@@ -45,7 +45,6 @@ button,
 textarea,
 select {
   height: 40px;
-  //background-color: rgb(240, 240, 240);
   border: 1px solid rgba(136, 136, 136, 0.5);
   outline: none;
   padding: 0 20px;
@@ -70,13 +69,16 @@ button:hover {
 textarea,
 select {
   outline: none;
-  width: 700px;
   font-size: medium;
 }
 
 textarea {
   resize: none;
   height: 150px;
+}
+
+select {
+  width: 300px;
 }
 
 /* hides number step */
@@ -160,11 +162,15 @@ header ul li {
   font-size: 80%;
 }
 
+.header-messages-whole h4 {
+  margin-bottom: 20px;
+}
+
 .header-messages-element {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid rgb(219, 219, 219);
-  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .header-messages-element button {
@@ -235,7 +241,7 @@ header ul li {
   color: white;
 }
 
-.fas {
+header .fas {
   cursor: pointer;
 }
 
@@ -277,6 +283,10 @@ header ul li {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+}
+
+.alignstart {
+  align-items: flex-start;
 }
 
 .smallgap {
@@ -471,7 +481,7 @@ main {
   position: relative;
 }
 
-.container-login i {
+.container-login-element i {
   visibility: hidden;
   position: absolute;
   top: 35px;
@@ -803,9 +813,10 @@ li.active-user {
 }
 
 .search-right-sort select {
-  padding-left: 15px;
+  margin-left: 4px;
+  padding-left: 8px;
   font-size: 90%;
-  width: 160px;
+  width: 155px;
 }
 
 .container-user-offers {
@@ -819,6 +830,10 @@ li.active-user {
 
 .text-min {
   font-size: 50%;
+}
+
+.green {
+  color: green;
 }
 
 .container-search-element {
@@ -892,6 +907,7 @@ li.active-user {
   border-radius: 15px;
   padding: 20px;
   padding-bottom: 70px;
+  position: relative;
 }
 
 .container-single-main span {
@@ -937,6 +953,67 @@ li.active-user {
   margin-top: 50px;
 }
 
+.container-newoffer-element {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.container-newoffer-element i {
+  visibility: hidden;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+
+.container-newoffer-element small {
+  position: absolute;
+  visibility: hidden;
+  top: 38px;
+  left: 10px;
+}
+
+.single-main-desc i {
+  visibility: hidden;
+  position: absolute;
+  top: 12px;
+  right: 30px;
+}
+
+.single-main-desc small {
+  position: absolute;
+  visibility: hidden;
+  top: 370px;
+  left: 20px;
+}
+
+.container-newoffer-element.success input,
+.container-newoffer-element.success textarea {
+  border: 2px solid rgb(0, 102, 0);
+}
+
+.container-newoffer-element.error input,
+.container-newoffer-element.error textarea {
+  border: 2px solid rgb(155, 0, 0);
+}
+
+.container-newoffer-element.error small {
+  visibility: visible;
+  color: rgb(155, 0, 0);
+}
+
+.container-newoffer-element.success i.fa-check-circle {
+  visibility: visible;
+  color: rgb(0, 102, 0);
+}
+
+.container-newoffer-element.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: rgb(155, 0, 0);
+}
+
 .container-single-right {
   display: flex;
   flex-direction: column;
@@ -961,7 +1038,7 @@ li.active-user {
 }
 
 .single-right-top div div {
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .single-right-bottom i {
@@ -982,14 +1059,16 @@ li.active-user {
   min-height: 80px;
 }
 
-.single-right-top button {
+.single-right-top button,
+.single-right-top input[type="submit"] {
   height: 50px;
   width: 300px;
   background-color: rgb(43, 120, 151);
   color: white;
 }
 
-.single-right-top button:hover {
+.single-right-top button:hover,
+.single-right-top input[type="submit"]:hover {
   background-color: rgb(29, 81, 102);
 }
 
@@ -1002,6 +1081,15 @@ li.active-user {
 .single-right-date span {
   font-size: 95%;
   font-weight: 500;
+}
+
+#newoffer-title {
+  width: 870px;
+}
+
+.container-single-main textarea {
+  width: 870px;
+  height: 400px;
 }
 
 #changepwd {
@@ -1077,6 +1165,20 @@ li.active-user {
 .fourofour img {
   width: 600px;
   transform: translateY(-20px);
+}
+
+.offerstatus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 140px;
+  margin-bottom: 200px;
+  padding-top: 100px;
+  min-height: 700px;
+  max-height: fit-content;
+  width: 1000px;
+  background-color: white;
+  border-radius: 20px;
 }
 
 footer {
