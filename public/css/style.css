@@ -45,29 +45,25 @@ button,
 textarea,
 select {
   height: 40px;
-  background-color: rgb(240, 240, 240);
-  border: none;
+  //background-color: rgb(240, 240, 240);
+  border: 1px solid rgba(136, 136, 136, 0.5);
   outline: none;
   padding: 0 20px;
   border-radius: 15px;
-  transition: 0.3s all ease-out;
-}
-
-input:focus {
-  background-color: rgb(219, 219, 219);
+  transition: all 0.3s ease-out;
 }
 
 button,
 input[type="submit"] {
   width: fit-content;
   transition: all 0.3s ease-out;
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(43, 120, 151);
+  color: white;
 }
 
 input[type="submit"]:hover,
 button:hover {
-  background-color: rgb(43, 120, 151);
-  color: white;
+  background-color: rgb(36, 85, 104);
   cursor: pointer;
 }
 
@@ -124,6 +120,11 @@ header ul li {
   cursor: pointer;
 }
 
+#header-categories-dropdown-button,
+#header-hamburger-dropdown-button {
+  padding: 25px;
+}
+
 #header-searchbar-dropdown-button {
   cursor: auto;
 }
@@ -138,12 +139,17 @@ header ul li {
 .header-hamburger-dropdown-content {
   display: none;
   position: absolute;
-  transform: translate(-35%, 2%);
+  transform: translate(-35%, 0);
   background-color: #ffffff;
   min-width: 240px;
+  min-height: 150px;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   z-index: 10;
+}
+
+.header-hamburger-dropdown:hover .header-hamburger-dropdown-content {
+  display: block;
 }
 
 .header-messages-whole {
@@ -155,8 +161,15 @@ header ul li {
 }
 
 .header-messages-element {
+  display: flex;
+  flex-direction: column;
   border-bottom: 1px solid rgb(219, 219, 219);
   margin-bottom: 10px;
+}
+
+.header-messages-element button {
+  margin-top: 10px;
+  width: 180px;
 }
 
 .header-categories-dropdown-content {
@@ -170,8 +183,13 @@ header ul li {
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
   z-index: 10;
   border-radius: 8px;
-  top: 80px;
-  transform: translateX(-50%);
+  transform: translate(-25%, 15%);
+}
+
+.categories-dropdown:hover .header-categories-dropdown-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  z-index: 11;
 }
 
 .header-searchbar-dropdown-content {
@@ -204,15 +222,8 @@ header ul li {
 }
 
 /* Show the dropdown menu via JS */
-.header-hamburger-dropdown-show,
 .header-searchbar-dropdown-show {
   display: block;
-  z-index: 11;
-}
-
-.header-categories-dropdown-show {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   z-index: 11;
 }
 
@@ -242,6 +253,7 @@ header ul li {
   border-radius: 0 15px 15px 0;
   width: 50px;
   background-color: white;
+  color: black;
   border: none;
   border-radius: 0 15px 15px 0;
   outline: none;
@@ -265,6 +277,10 @@ header ul li {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+}
+
+.smallgap {
+  gap: 4px;
 }
 
 .fxspc {
@@ -397,7 +413,7 @@ main {
   grid-template-columns: 3fr 2fr;
   margin-top: 140px;
   margin-bottom: 200px;
-  min-height: 600px;
+  min-height: 700px;
   max-height: fit-content;
   width: 1000px;
   background-color: white;
@@ -408,7 +424,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 120px 0 100px 0;
+  padding: 110px 0 50px 0;
 }
 
 .container-login-left-inner {
@@ -423,7 +439,7 @@ main {
   flex-direction: column;
   align-items: flex-start;
   color: white;
-  padding: 150px 0 0 40px;
+  padding: 140px 0 0 40px;
   font-size: 110%;
   overflow: hidden;
   border-radius: 15px;
@@ -451,14 +467,102 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 15px;
+  gap: 25px;
+  position: relative;
+}
+
+.container-login i {
+  visibility: hidden;
+  position: absolute;
+  top: 35px;
+  right: 15px;
+}
+
+.container-login-element small {
+  position: absolute;
+  visibility: hidden;
+  top: 64px;
+  left: 10px;
 }
 
 .container-login-element {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 2px;
+}
+
+.container-login-element input {
+  transition: none;
+}
+
+.container-login-element.success input {
+  border: 2px solid rgb(0, 102, 0);
+}
+
+.container-login-element.error input {
+  border: 2px solid rgb(155, 0, 0);
+}
+
+.container-login-element.error small {
+  visibility: visible;
+  color: rgb(155, 0, 0);
+}
+
+.container-login-element.success i.fa-check-circle {
+  visibility: visible;
+  color: rgb(0, 102, 0);
+}
+
+.container-login-element.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: rgb(155, 0, 0);
+}
+
+.container-login-element label {
+  font-size: 90%;
+}
+
+.pwd-indicators {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 70px;
+  left: 5px;
+  width: 440px;
+  height: 10px;
+  gap: 3px;
+}
+
+.pwd-indicators span {
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgb(189, 189, 189);
+}
+
+.pwd-indicators .weak {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 121, 0, 1) 100%
+  );
+}
+
+.pwd-indicators .medium {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 121, 0, 1) 0%,
+    rgba(255, 246, 0, 1) 100%
+  );
+}
+
+.pwd-indicators .strong {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 246, 0, 1) 0%,
+    rgba(37, 217, 2, 1) 100%
+  );
 }
 
 .container-login-left img {
@@ -467,12 +571,12 @@ main {
 
 img#standard-logo {
   max-height: 320px;
-  transform: translate(-55%, 35%);
+  transform: translate(-55%, 50%);
 }
 
 img#login-logo {
   max-height: 320px;
-  transform: translate(0, 2%);
+  transform: translate(0, 18%);
 }
 
 img#payment-logo {
@@ -481,7 +585,7 @@ img#payment-logo {
 }
 
 img#pwd-logo {
-  max-height: 200px;
+  max-height: 310px;
   transform: translate(0, 7%);
 }
 
@@ -713,6 +817,10 @@ li.active-user {
   font-size: 120%;
 }
 
+.text-min {
+  font-size: 50%;
+}
+
 .container-search-element {
   width: 100%;
   height: 200px;
@@ -745,6 +853,10 @@ li.active-user {
   display: flex;
   justify-content: space-between;
   padding-right: 10px;
+}
+
+.element-right-desc p {
+  font-size: 80%;
 }
 
 .container-single {
@@ -965,10 +1077,6 @@ li.active-user {
 .fourofour img {
   width: 600px;
   transform: translateY(-20px);
-}
-
-.success {
-  color: green;
 }
 
 footer {

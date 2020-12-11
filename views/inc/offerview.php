@@ -52,9 +52,14 @@ class OfferView {
 
     }
 
-    public static function showOrders($results) {
+    public static function showOrders($results, $buyerSeller) {
         //displays offers
         foreach ($results as $result) { 
+            if ($buyerSeller == 'buyer') 
+                $buyerSellerShow = '<p>Sprzedający: '.$result['SellerOrders'].'</p>';
+            else
+                $buyerSellerShow = '<p>Kupujący: '.$result['BuyerOrders'].'</p>';
+            
             echo '
             <div class="container-search-element">
                 <img src="'.$result['ImgOrders'].'" alt="">
@@ -63,8 +68,12 @@ class OfferView {
                         <div><h3>'.$result['TitleOrders'].'</h3></div>
                         <div><p>'.$result['DateOrders'].'<p></div>
                     </div>
-                    <div class="element-right-desc"><h5>Kupujący: '.$result['BuyerOrders'].'</h5><h5>Sprzedający: '.$result['SellerOrders'].'</h5><h5>Numer zamówienia: '.$result['Id'].'</h5></div>
-                    <div><h4><span>'.$result['AmountOrders'].'</span> zł</h4></div>
+                    <div class="element-right-desc">
+                        '. $buyerSellerShow .'
+                        <p>Numer zamówienia: '.$result['Id'].'</p>
+                        <p>Adres do wysyłki: '.$result['AddressOrders'].'</p>
+                    </div>
+                    <div><h4>'.$result['AmountOrders'].' zł</h4></div>
                 </div>
             </div>
             ';
@@ -117,5 +126,16 @@ class OfferView {
             
         }
 
+    }
+
+    public static function showNotifNotLogged() {
+            echo '
+                <div class="header-messages-element fxcol smallgap">
+                    <h5>Aby zobaczyć powiadomienia</h5>
+                    <a href="login"><button>Zaloguj się</button></a>
+                    <p class="text-min">lub</p>
+                    <div><a href="signup"><p>Zarejestruj się</p></a></div>
+                </div>
+            ';
     }
 }

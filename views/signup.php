@@ -12,12 +12,43 @@ $object->getSignupInfo();
             <div class="container-login-left">
                 <div class="container-login-left-inner">
                 <h1>Rejestracja</h1>
-                <form method="POST">
+                <form method="POST" id="form">
                     <div class="container-login">
-                        <input type="text" minlength="3" name="username" placeholder="Nazwa konta">
-                        <input type="email" name="email" placeholder="E-mail">
-                        <input type="password" minlength="8" name="password" placeholder="Hasło">
-                        <input type="password" name="password-repeat" placeholder="Powtórz hasło">
+                        <div class="container-login-element">
+                            <label for="username">Nazwa konta</label>
+                            <input type="text" minlength="3" name="username" id="username">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>error</small>
+                        </div>
+                        <div class="container-login-element">
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" id="email">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>error</small>
+                        </div>
+                        <div class="container-login-element">
+                            <label for="password">Hasło</label>
+                            <input type="password" minlength="8" name="password" id="password">
+                            <div class="pwd-indicators">
+                            <span id="weak"></span>
+                            <span id="medium"></span>
+                            <span id="strong"></span>
+                            </div>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>error</small>
+                            
+                        </div>
+                        <div class="container-login-element">
+                            <label for="password-repeat">Powtórz hasło</label>
+                            <input type="password" name="password-repeat" id="password-repeat">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>error</small>
+                            
+                        </div>
                         <div class="checkbox">
                         <input type="checkbox" required='required' name="agree">
                         <label for="agree">Wyrażam zgode na przetwarzanie moich danych osobowych, oraz akceptuje regulamin serwisu. Zdaję sobie sprawę, że serwis pralka jest tylko projektem edukacyjnym.</label>

@@ -16,24 +16,26 @@
     <script src="/app/public/js/banner.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/app/public/js/header.js"></script>
-    <script src="/app/public/js/hamburgerdropdown.js"></script>
-    <script src="/app/public/js/headerCategories.js"></script>
     <script src="/app/public/js/userTabs.js" defer></script>
+    <script src="/app/public/js/inputValidation.js" defer></script>
     <!-- php config -->
     <?php require_once '../config/config.php'; ?> 
 
 </head>
 <body onload="changeSlide()">
     <header class="header" id="header">
-        <div><a class="header-links" href="/"><img  class="logo" src="app/public/img/logo.png" alt=""></a></div>
-        <i class="header-links" id="header-categories-dropdown-button" onclick="headerCategories()">Kategorie</i>
-        <div id="header-categories-dropdown-id" class="header-categories-dropdown-content">
-            <p>Kuchenki mikrofalowe</p>
-            <p>Lodówki i zamrażarki</p>  
-            <p>Pralki i suszarki</p>  
-            <p>Roboty kuchenne</p>       
-            <p>Zmywarki</p>                                     
-        </div>
+        <div>
+            <a class="header-links" href="/"><img  class="logo" src="app/public/img/logo.png" alt=""></a></div>
+            <div class="categories-dropdown">
+            <i class="header-links" id="header-categories-dropdown-button">Kategorie</i>
+                <div class="header-categories-dropdown-content">
+                    <p>Kuchenki mikrofalowe</p>
+                    <p>Lodówki i zamrażarki</p>  
+                    <p>Pralki i suszarki</p>  
+                    <p>Roboty kuchenne</p>       
+                    <p>Zmywarki</p>                                     
+                </div>
+            </div>
         <div class="header-search-container">
             <form action="search" method="GET" autocomplete="off">
             <input class="searchbar" id="header-searchbar-dropdown-button" type="text" name="search" placeholder="Czego dzisiaj szukasz?" onclick="headerSearchbar()">
@@ -61,21 +63,23 @@
                 ?>     
             </ul>
         </div>
-        <div class="header-hamburger-dropdown">
-            <i class="fas fa-comment fa-lg" onclick="headerHamburger()" id="header-hamburger-dropdown-button"></i>
-            <div id="header-hamburger-dropdown-id" class="header-hamburger-dropdown-content">
-                <div class="header-messages-whole">           
-                    <?php 
-                    if (isset($_SESSION['email'])) {
-                        $object = new Offers;
-                        $resultsSold = $object->showOrdersSold('SellerOrders', $_SESSION['email']);                         
-                        if (count($resultsSold) > 0) 
-                        OfferView::showNotif($resultsSold);
-                    }
-                    ?>
+            <div class="header-hamburger-dropdown">
+                <i class="fas fa-comment fa-lg" id="header-hamburger-dropdown-button"></i>
+                <div class="header-hamburger-dropdown-content">
+                    <div class="header-messages-whole">           
+                        <?php 
+                        if (isset($_SESSION['email'])) {
+                            $object = new Offers;
+                            $resultsSold = $object->showOrdersSold('SellerOrders', $_SESSION['email']);                         
+                            if (count($resultsSold) > 0) 
+                            OfferView::showNotif($resultsSold);
+                        }
+                        else
+                            OfferView::showNotifNotLogged();
+                        ?>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
         <!-- searchbar live search -->
         <script src="/app/public/js/headerSearchbar.js"></script>

@@ -69,12 +69,11 @@ $result = $object->showUser($_SESSION['email']);
                                     $resultsSold = $object->showOrdersSold('SellerOrders', $_SESSION['email']);
                                                         
                                     if (count($resultsSold) > 0) {  
-                                    OfferView::showOrders($resultsSold);
+                                    OfferView::showOrders($resultsSold, 'seller');
                                     }
                                     
                                     ?>
-                                </div>
-                                    
+                                </div> 
                             </div>
 
                             <div id="orders" data-tab-content>
@@ -84,16 +83,11 @@ $result = $object->showUser($_SESSION['email']);
                                 $resultsOrders = $object->showOrdersSold('BuyerOrders', $_SESSION['email']);
                                                         
                                 if (count($resultsSold) > 0) {
-                                
-
-                                OfferView::showOrders($resultsOrders);
-
-                                
+                                OfferView::showOrders($resultsOrders, 'buyer');
                                 }
                                 ?>
                                     
                             </div>
-
                         </div>
                     </div>
                 </div>  
