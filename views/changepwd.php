@@ -23,9 +23,9 @@ $object->changePwd();
                             <label for="new-password">Nowe hasło</label>
                             <input type="password" minlength="8" name="new-password" id="password">
                             <div class="pwd-indicators">
-                            <span id="weak"></span>
-                            <span id="medium"></span>
-                            <span id="strong"></span>
+                                <span id="weak"></span>
+                                <span id="medium"></span>
+                                <span id="strong"></span>
                             </div>
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>

@@ -54,7 +54,6 @@ switch ($actualRequest) {
     case '/newarticle' :
         require __DIR__ . '/../views/newarticle.php';
         break;
-    default:
     case '/offerstatus' :
         require __DIR__ . '/../views/offerstatus.php';
         break;
