@@ -33,6 +33,25 @@
                     }
                 ?>
             </div>
+            <?php 
+            if (!isset($_SESSION['username'])) {
+                echo '
+                    <div class="main-container-new">
+                    <h2>Dołącz do sklepu Pralka już dzisiaj!</h2>
+                    <h5>Sprzedawaj i kupuj używany sprzęt AGD</h5>
+                    <a href="signup"><button><h3>Rejestracja</h3></button></a>
+                ';
+            }
+            else {
+                echo '
+                    <div class="main-container-new">
+                    <h2>Dodaj ogłoszenie,</h2>
+                    <h5>a pojawi się ono tutaj</h5>
+                    <a href="signup"><button><h3>Dodaj ogłoszenie</h3></button></a>
+                ';
+            }
+            ?>
+        </div>
         </div>
     </main>
 <?php require 'inc/footer.php'; ?>

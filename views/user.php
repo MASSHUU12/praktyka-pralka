@@ -15,14 +15,14 @@ $result = $object->showUser($_SESSION['email']);
                             <img src="app/public/img/user.jpg">
                         </div>
                     <h3><?php echo $result[0]['usernameUsers']; ?></h3>
-                    <button onclick="location.href='changepwd'"><h4>zmień hasło</h4></button>
+                    <button onclick="location.href='changepwd'"><h4>Zmień hasło</h4></button>
                     </div>
                     <div class="container-user-top-right">
                     <div class="fxver"><i class="fas fa-envelope fa-lg"></i><h3><?php echo $result[0]['emailUsers']; ?></h3></div>
                     <div class="fxver"><i class="fas fa-mobile-alt fa-lg"></i><h3><?php echo $result[0]['numberUsers']; ?></h3></div>
                     <div class="fxver"><i class="fas fa-map-marker fa-lg"></i><h3><?php echo $result[0]['addressUsers']; ?></h3></div>
                     </div>
-                    <button onclick="location.href='change'" id="changepwd"><h4>zmień dane</h4></button>
+                    <button onclick="location.href='change'" id="changepwd"><h4>Zmień dane</h4></button>
                 </div>
                 <div class="container-user-bottom">
                     <ul class="user-tabs">
@@ -50,7 +50,7 @@ $result = $object->showUser($_SESSION['email']);
                                         <div class="fxcol">
                                             <h1>Troche tu pusto, chyba czas to zmienić</h1>
                                             <h2>Dodaj swoje pierwsze ogłoszenie</h2>
-                                            <a href="newoffer"><button><h4>dodaj</h4></button></a>
+                                            <a href="newoffer"><button><h4>Dodaj</h4></button></a>
                                         </div>
                                         ';
                                     
@@ -68,17 +68,12 @@ $result = $object->showUser($_SESSION['email']);
                                 <?php 
                                     $resultsSold = $object->showOrdersSold('SellerOrders', $_SESSION['email']);
                                                         
-                                    if (count($resultsSold) > 0) {
-                                    
-    
-                                    OfferView::showOrders($resultsSold);
-    
-                                    
+                                    if (count($resultsSold) > 0) {  
+                                    OfferView::showOrders($resultsSold, 'seller');
                                     }
                                     
                                     ?>
-                                </div>
-                                    
+                                </div> 
                             </div>
 
                             <div id="orders" data-tab-content>
@@ -88,16 +83,11 @@ $result = $object->showUser($_SESSION['email']);
                                 $resultsOrders = $object->showOrdersSold('BuyerOrders', $_SESSION['email']);
                                                         
                                 if (count($resultsSold) > 0) {
-                                
-
-                                OfferView::showOrders($resultsOrders);
-
-                                
+                                OfferView::showOrders($resultsOrders, 'buyer');
                                 }
                                 ?>
                                     
                             </div>
-
                         </div>
                     </div>
                 </div>  
