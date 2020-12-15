@@ -21,10 +21,10 @@ class GetOrder
     $client = PayPalClient::client();
     $response = $client->execute(new OrdersGetRequest($orderId));
 	
-	// 4. Specify which information you want from the transaction details. For example:
-	$orderID = $response->result->id;
-	$email = $response->result->payer->email_address;
-	$name = $response->result->purchase_units[0]->shipping->name->full_name;
+	  // 4. Specify which information you want from the transaction details. For example:
+	  $orderID = $response->result->id;
+	  $email = $response->result->payer->email_address;
+	  $name = $response->result->purchase_units[0]->shipping->name->full_name;
     $address = $response->result->purchase_units[0]->shipping->address;
     $amount = $response->result->purchase_units[0]->payments->captures[0]->amount->value;
     $seller = $response->result->purchase_units[0]->description;

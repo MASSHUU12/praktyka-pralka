@@ -15,30 +15,46 @@ if (!isset($_SESSION['email']))
 ?>
 
     <main>
-        <div class="main-container">
-            <div class="container-login-whole payment">
-                <div class="container-login payment-inner">
-                    <h1>Potwierdzenie zakupu</h1>
-                    <h3>Dla oferty: <span id="offer"><?php echo $results[0]['UniqueOffers']; ?></span></h3>
-                    <h3>Kupujesz: <?php echo $results[0]['TitleOffers']; ?></h3>
-                    <h3>Sprzedawca: <span id="seller"><?php echo $results[0]['UploaderOffers']; ?></span></h3>
-                        <ul>
+    <div class="main-container">
+            <div class="container-login-whole">
+                <div class="container-login-left">
+                    <div class="container-login-left-inner">
+                    <div>
+                        <h1>Potwierdzenie zakupu</h1>
+                        <h3>Dla oferty: <span id="offer"><?php echo $results[0]['UniqueOffers']; ?></span></h3>
+                        <h3>Kupujesz: <?php echo $results[0]['TitleOffers']; ?></h3>
+                        <h3>Sprzedawca: <span id="seller"><?php echo $results[0]['UploaderOffers']; ?></span></h3>
+                    </div>
+                    <ul>
                             <li>
+                                <div class="fxspc">
                                 <label for="price">Cena przedmiotu: </label>
-                                <span><?php echo $results[0]['PriceOffers'].' zł'; ?></span>
+                                    <span><?php echo $results[0]['PriceOffers'].' zł'; ?></span>
+                                </div>
                             </li>
                             <li>
+                                <div class="fxspc">
                                 <label for="price">Wysyłka: </label>
-                                <span>Darmowa</span>
+                                    <span>Darmowa</span>
+                                </div>
                             </li>
                             <hr>
                             <li>
-                                <h4><label for="price">Do zapłaty </label><span id="price"><?php echo $results[0]['PriceOffers']; ?></span>zł</h4>
+                                <div class="fxspc">
+                                    <h4><label for="price">Do zapłaty </label></h4><h4><span id="price"><?php echo $results[0]['PriceOffers']; ?></span>zł</h4>
+                                </div>
                             </li>
                         </ul>
-                        <div id="paypal-payment-button"></div>
+                    <div id="paypal-payment-button"></div>
+                    </div>
                 </div>
-            </div>
+                <div class="container-login-right">
+                    <h2>Już prawie gotowe!</h2>
+                    <h4>Wybierz jedną z opcji płatności</h4>
+                    <h5>Pomoc</h5>
+                    <img src="app/public/img/credit1.png" id="payment-logo">
+                </div>
+            </div>  
         </div>
     </main>
     <script src="https://www.paypal.com/sdk/js?client-id=AVuofnixX4Lk6JpyecCndKdMtg_eNsm_stcnHbDtrdE0eKRLi95uZ8WZP9IXi2XYsvKMWXFLpTnHeRHD&currency=PLN"></script>

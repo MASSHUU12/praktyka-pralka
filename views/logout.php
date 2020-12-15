@@ -8,10 +8,18 @@ session_destroy();
     <main>
         <div class="main-container">
             <div class="container-login-whole">
-                <div class="container-login">
-                    <h1>Zostaleś wylogowany</h1>
+                <div class="container-login-left">
+                    <div class="container-login-left-inner">
+                    <h1>Zostałeś wylogowany</h1>
+                    </div>
                 </div>
-            </div>
+                <div class="container-login-right">
+                    <h2>Do zobaczenia!</h2>
+                    <h4>Mamy nadzieje, że niedługo</h4>
+                    <h4>do nas wrócisz</h4>
+                    <img src="app/public/img/logos.png" id="standard-logo">
+                </div>
+            </div>  
         </div>
     </main>
 <?php require 'inc/footer.php'; ?>

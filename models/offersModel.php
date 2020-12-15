@@ -19,8 +19,8 @@ class OffersModel extends Dbh {
         return $results;
     }
 
-    protected function searchOffersDb($value, $cond) {
-        $sql = "SELECT * FROM offers WHERE titleOffers LIKE '%". $value ."%' AND CondOffers LIKE '%". $cond ."%'";
+    protected function searchOffersDb($value, $cond, $from, $to, $sort) {
+        $sql = "SELECT * FROM offers WHERE TitleOffers LIKE '%". $value ."%' ". $cond ." ". $from ." ". $to ." ". $sort ." ";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute();
 
