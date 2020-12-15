@@ -781,6 +781,13 @@ li.active-user {
   color: green;
 }
 
+#footer-scroll-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  color: black;
+}
+
 .container-search-right {
   width: 1000px;
   min-height: 200px;
