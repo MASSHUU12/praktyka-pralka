@@ -24,8 +24,9 @@
 </head>
 <body onload="changeSlide()">
     <header class="header" id="header">
-        <div>
-            <a class="header-links" href="/"><img  class="logo" src="app/public/img/logo.png" alt=""></a></div>
+            <div>
+                <a class="header-links" href="/"><img  class="logo" src="app/public/img/logo.png" alt=""></a>
+            </div>
             <div class="categories-dropdown">
                 <i class="header-links" id="header-categories-dropdown-button">Kategorie</i>
                 <div class="header-categories-dropdown-content">
