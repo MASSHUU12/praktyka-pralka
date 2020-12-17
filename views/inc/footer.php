@@ -7,12 +7,11 @@
                 <h4>Główne linki</h4>
                 <a href="signup"><h5>Rejestracja</h5></a>
                 <a href="login"><h5>Logowanie</h5></a>
-                <a href="/"><h5>Informacje o projekcie</h5></a>
-                <a href="/"><h5>O nas</h5></a>
+                <a href="/app/public/pdf/aboutProject.pdf" target="_blank"><h5>Informacje o projekcie</h5></a>
+                <a href="/app/public/pdf/aboutProject.pdf" target="_blank"><h5>O nas</h5></a>
             </div>
             <div class="footer-element">
-                <h4>Lorem ipsum dolor sit.</h4>
-                <h5>Lorem ipsum is dolore rem eveniet minus quasi aspernatur iure quam natus. Beatae, alias?</h5>
+                <a href="/app/public/pdf/regulations.pdf" target="_blank"><h4>Regulamin</h4></a>
                 <h5>Pralka.pl</h5>
             </div>
             <div class="footer-element">
