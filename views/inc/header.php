@@ -17,6 +17,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/app/public/js/header.js"></script>
     <script src="/app/public/js/userTabs.js" defer></script>
+    <script src="/app/public/js/scrollToTop.js"></script>
     <!-- php config -->
     <?php require_once '../config/config.php'; ?> 
 
