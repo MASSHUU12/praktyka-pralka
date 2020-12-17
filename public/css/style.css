@@ -650,7 +650,7 @@ input[type="checkbox"] {
 
 .container-user-top {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 3fr 1fr;
   background-color: rgb(250, 250, 250);
   width: 100%;
   height: 240px;
@@ -692,6 +692,12 @@ input[type="checkbox"] {
   width: 50px;
   padding: 17px 0;
   text-align: center;
+}
+
+.container-user-funds {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container-user-bottom {
@@ -1094,8 +1100,8 @@ li.active-user {
 
 #changepwd {
   position: absolute;
-  right: 50px;
-  bottom: 40px;
+  right: 600px;
+  bottom: 35px;
 }
 
 .container-main-article {

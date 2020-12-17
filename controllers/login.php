@@ -134,4 +134,8 @@ class Login extends SignupLoginModel {
         
     }
 
+    public function addFunds($email, $amount) {
+        $this->updateUserDb($email, 'fundsUsers', $amount);
+    }
+
 }
