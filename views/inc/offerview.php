@@ -100,7 +100,7 @@ class OfferView {
 
                         for ($page=1; $page < self::$num+1; $page++) {
                             if (!isset($_GET['page']) && $page == 1) {
-                                echo '<a href="'.getUrl().'?search='. $search .'&page='.$page.'"><span><h3>'. $page .'</h3><span></a>';
+                                echo '<span class="page"><h3 class="pointer" onclick=paginationUrl('.$page.')>'. $page .'</h3></span>';
                             }
                             else {
                                 if (!isset($_GET['page'])) 
@@ -109,10 +109,10 @@ class OfferView {
                                     $active = $_GET['page'];
                                 
                                 if ($page == $active) 
-                                    echo '<a href="'.getUrl().'?search='. $search .'&page='.$page.'"><span><h3>'. $page .'</h3><span></a>';
+                                    echo '<span class="page"><h3 class="pointer" onclick=paginationUrl('.$page.')>'. $page .'</h3></span>';
                                 
                                 else
-                                    echo '<a href="'.getUrl().'?search='. $search .'&page='.$page.'"><h3>'. $page .'</h3></a>';
+                                    echo '<h3 class="pointer" onclick=paginationUrl('.$page.')>'. $page .'</h3>';
                             }
                         }
                         

@@ -828,9 +828,13 @@ li.active-user {
   width: 1300px;
 }
 
-.fxver a span {
+.page {
   color: green;
   font-size: 120%;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .text-min {
