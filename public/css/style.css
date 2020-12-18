@@ -130,6 +130,10 @@ header ul li {
   cursor: auto;
 }
 
+#header-hamburger-dropdown-button-2 {
+  display: none;
+}
+
 /* The container needed to position the dropdown content */
 .dropdown {
   position: relative;
@@ -1405,5 +1409,140 @@ footer a {
   .footer-container {
     grid-template-columns: 1fr;
     padding: 20px 0;
+  }
+
+  #header-hamburger-dropdown-button-2 {
+    display: inline-block;
+  }
+
+  .header-hamburger-dropdown-links {
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .header-hamburger-dropdown-links:hover {
+    background-color: #ececec;
+  }
+
+  .container-login-whole {
+    grid-template-columns: 1fr;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-height: fit-content;
+    width: 80%;
+  }
+
+  .container-user {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    width: 90%;
+    max-width: fit-content;
+    height: fit-content;
+  }
+  
+  .container-user-top {
+    width: 100%;
+    height: 80%;
+    grid-template-columns: 1fr;
+  }
+  
+  .user-tabs li {
+    padding: 5px 25px;
+  }
+
+  .background-user {
+    width: 100%;
+    height: 100px;
+  }
+
+  .container-user-funds {
+    padding: 30px;
+  }
+
+  #changepwd {
+    right: 10px;
+    bottom: 50px;
+  }
+
+  .container-search-left {
+    width: 30%;
+    padding: 10px;
+    gap: 25px;
+  }
+
+  .container-search-right {
+    width: 70%;
+    min-height: 200px;
+    padding: 0px;
+  }
+  
+  .search-right-ad,
+  .search-right-ad img {
+    width: 100%;
+  }
+  
+  .search-right-sort-found {
+    position: absolute;
+    transform: translateY(-150%);
+  }
+
+  .container-search {
+    gap: 10px;
+    margin: 50px 0 100px 0;
+  }
+
+  .search-right-sort {
+    width: 100%;
+  }
+
+  .container-single {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+    margin: 50px 0;
+  }
+
+  .container-single-left {
+    gap: 15px;
+  }
+  
+  .container-single-main {
+    padding: 10px;
+    padding-bottom: 40px;
+  }
+  
+  .container-single-main span {
+    font-size: 100%;
+  }
+  
+  .single-main-img-large {
+    width: 510px;
+    height: 429px;
+  }
+  
+  .single-img-small img {
+    width: 170px;
+    height: 143px;
+  }
+
+  .single-right-top,
+  .single-right-bottom,
+  .single-right-date {
+  gap: 25px;
+  width: 100%;
+  padding: 20px;
+  }
+
+  .single-main-desc {
+    padding: 20px;
+  }
+  
+  .single-main-cond {
+    padding: 20px;
+  }
+
+  .container-single-right {
+    gap: 10px;
+    height: 100%;
   }
 }

@@ -71,6 +71,13 @@
             </ul>
         </div>
             <div class="header-hamburger-dropdown">
+                <i class="fas fa-bars fa-2x" id="header-hamburger-dropdown-button-2"></i>
+                <div class="header-hamburger-dropdown-content">
+                    <h5 class="header-hamburger-dropdown-links">Logowanie</h5>
+                    <h5 class="header-hamburger-dropdown-links">Rejestracja</h5>
+                </div>
+            </div>
+            <div class="header-hamburger-dropdown">
                 <i class="fas fa-comment fa-lg" id="header-hamburger-dropdown-button"></i>
                 <div class="header-hamburger-dropdown-content">
                     <div class="header-messages-whole">
