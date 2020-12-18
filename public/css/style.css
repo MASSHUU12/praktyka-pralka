@@ -130,6 +130,10 @@ header ul li {
   cursor: auto;
 }
 
+#header-hamburger-dropdown-button-2 {
+  display: none;
+}
+
 /* The container needed to position the dropdown content */
 .dropdown {
   position: relative;
@@ -1405,5 +1409,18 @@ footer a {
   .footer-container {
     grid-template-columns: 1fr;
     padding: 20px 0;
+  }
+
+  #header-hamburger-dropdown-button-2 {
+    display: inline-block;
+  }
+
+  .header-hamburger-dropdown-links {
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .header-hamburger-dropdown-links:hover {
+    background-color: #ececec;
   }
 }
