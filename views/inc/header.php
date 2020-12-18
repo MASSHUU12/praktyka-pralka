@@ -17,31 +17,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/app/public/js/header.js"></script>
     <script src="/app/public/js/userTabs.js" defer></script>
-    <script src="/app/public/js/scrollToTop.js"></script>
     <!-- php config -->
     <?php require_once '../config/config.php'; ?> 
 
 </head>
 <body onload="changeSlide()">
     <header class="header" id="header">
-            <div>
-                <a class="header-links" href="/"><img  class="logo" src="app/public/img/logo.png" alt=""></a>
-            </div>
+        <div>
+            <a class="header-links" href="/"><img  class="logo" src="app/public/img/logo.png" alt=""></a></div>
             <div class="categories-dropdown">
-                <i class="header-links" id="header-categories-dropdown-button">Kategorie</i>
+            <i class="header-links" id="header-categories-dropdown-button">Kategorie</i>
                 <div class="header-categories-dropdown-content">
-                    <p>Kuchenki i pierkaniki</p>
-                    <p>Lodówki i zamrażalki</p>
-                    <p>Pralki i suszarki</p>
-                    <p>Zmywarki</p>
-                    <p>Czajniki</p>
-                    <p>Ekspresy do kawy i akcesoria</p>
-                    <p>Miksery i blendery</p>
-                    <p>Odkurzacze</p>
-                    <p>Roboty kuchenne</p>
-                    <p>Sprzet myjący</p>
-                    <p>Żelazka</p>
-                    <p>Inne</p>                               
+                    <p>Kuchenki mikrofalowe</p>
+                    <p>Lodówki i zamrażarki</p>  
+                    <p>Pralki i suszarki</p>  
+                    <p>Roboty kuchenne</p>       
+                    <p>Zmywarki</p>                                     
                 </div>
             </div>
         <div class="header-search-container">
@@ -50,6 +41,7 @@
             <button type="submit" class="searchbar-button"><i class="fas fa-search"></i></button>
             </form>
             <div id="header-searchbar-dropdown-id" class="header-searchbar-dropdown-content">
+
             </div>
         </div>
         <div class="header-text fxver">
@@ -70,13 +62,6 @@
                 ?>     
             </ul>
         </div>
-            <div class="header-hamburger-dropdown">
-                <i class="fas fa-bars fa-2x" id="header-hamburger-dropdown-button-2"></i>
-                <div class="header-hamburger-dropdown-content">
-                    <h5 class="header-hamburger-dropdown-links">Logowanie</h5>
-                    <h5 class="header-hamburger-dropdown-links">Rejestracja</h5>
-                </div>
-            </div>
             <div class="header-hamburger-dropdown">
                 <i class="fas fa-comment fa-lg" id="header-hamburger-dropdown-button"></i>
                 <div class="header-hamburger-dropdown-content">

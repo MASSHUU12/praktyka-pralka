@@ -19,6 +19,7 @@ class Login extends SignupLoginModel {
                         $_SESSION['userId'] = $results[0]['Id'];
                         $_SESSION['username'] = $results[0]['usernameUsers'];
                         $_SESSION['email'] = $results[0]['emailUsers'];
+                        self::$message = 'Zalogowano pomyślnie';
                         header("Location: /?login=success");
                     }
                     else 
