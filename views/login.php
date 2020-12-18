@@ -1,10 +1,9 @@
 <?php require 'inc/header.php'; ?>
-
 <?php
 $object = new Login();
-$object->getUser();
-                                
+$object->getUser();                     
 ?> 
+
 
     <main>
         <div class="main-container">

@@ -14,15 +14,20 @@ $result = $object->showUser($_SESSION['email']);
                         <div class="image">
                             <img src="app/public/img/user.jpg">
                         </div>
-                    <h3><?php echo $result[0]['usernameUsers']; ?></h3>
-                    <button onclick="location.href='changepwd'"><h4>Zmień hasło</h4></button>
+                        <h3><?php echo $result[0]['usernameUsers']; ?></h3>
+                        <button onclick="location.href='changepwd'">Zmień hasło</button>
                     </div>
                     <div class="container-user-top-right">
-                    <div class="fxver"><i class="fas fa-envelope fa-lg"></i><h3><?php echo $result[0]['emailUsers']; ?></h3></div>
-                    <div class="fxver"><i class="fas fa-mobile-alt fa-lg"></i><h3><?php echo $result[0]['numberUsers']; ?></h3></div>
-                    <div class="fxver"><i class="fas fa-map-marker fa-lg"></i><h3><?php echo $result[0]['addressUsers']; ?></h3></div>
+                        <div class="fxver"><i class="fas fa-envelope fa-lg"></i><h3><?php echo $result[0]['emailUsers']; ?></h3></div>
+                        <div class="fxver"><i class="fas fa-mobile-alt fa-lg"></i><h3><?php echo $result[0]['numberUsers']; ?></h3></div>
+                        <div class="fxver"><i class="fas fa-map-marker fa-lg"></i><h3><?php echo $result[0]['addressUsers']; ?></h3></div>
+                        <button onclick="location.href='change'" id="changepwd">Zmień dane</button>    
                     </div>
-                    <button onclick="location.href='change'" id="changepwd"><h4>Zmień dane</h4></button>
+                    <div class="container-user-funds">
+                        <h3>Dostępne środki</h3>
+                        <h1><?php echo $result[0]['fundsUsers']; ?> zł</h1>
+                        <button>wypłać</button>
+                    </div>
                 </div>
                 <div class="container-user-bottom">
                     <ul class="user-tabs">

@@ -44,7 +44,17 @@ class GetOrder
 
     $delete = new \Offers();
     $delete->deleteOffer($_GET['offerID'], $seller);
-    
+
+    $showFunds = new \Login;
+    $showFunds = $showFunds->showUser($seller);
+    $funds = $showFunds[0]['fundsUsers'];
+
+    echo $funds.' '.$amount;
+
+    $total = $funds+$amount;
+
+    $addFunds = new \Login();
+    $addFunds->addFunds($seller, $total);
     header("Location: status?success=true");
     
   }
@@ -54,4 +64,3 @@ class GetOrder
 //{
   GetOrder::getOrder($orderID, true);
 //}
-?>
