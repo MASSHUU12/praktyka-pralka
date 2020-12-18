@@ -58,7 +58,6 @@ class Offers extends OffersModel {
     public function deleteOffer($uniqueId, $email) {
         $column = 'UniqueOffers';
         $check = $this->showOffersParam($column, $uniqueId);
-        if ($check[0]['UploaderOffers'] == $email) {
             // $path = explode('s/',$check[0]['ImgOffers']);
             // $img = end($path);
             // unlink('../public/offers/'.$img);
@@ -67,9 +66,6 @@ class Offers extends OffersModel {
             // rmdir('../public/offers/'.$dir);
             $this->deleteOfferDb($uniqueId);
             echo '<h3 class="success">Zlecono usunięcie oferty</h3>';
-        }
-        else 
-            header('Location: /?error=true');
     }
 
     public function showOrdersSold($column, $value) {
