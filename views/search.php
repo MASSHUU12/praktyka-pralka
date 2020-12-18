@@ -16,13 +16,20 @@ else
         <div class="main-container">
             <div class="container-search">
                 <div class="container-search-left">
-                    <div class="search-left-element">
+                <div class="search-left-element">
                         <h3>Kategoria</h3>
-                        <p>Opcja kategoria</p>
-                        <h4>Opcja kategoria</h4>
-                        <h4>Opcja kategoria</h4>
-                        <h4>Opcja kategoria</h4>
-                        <h4>Opcja kategoria</h4>
+                        <p>Kuchenki i piekarniki</p>
+                        <p>Lodówki i zamrażalki</p>
+                        <p>Pralki i suszarki</p>
+                        <p>Zmywarki</p>
+                        <p>Czajniki</p>
+                        <p>Ekspresy do kawy i akcesoria</p>
+                        <p>Miksery i blendery</p>
+                        <p>Odkurzacze</p>
+                        <p>Roboty kuchenne</p>
+                        <p>Sprzęt myjący</p>
+                        <p>Żelazka</p>
+                        <p>Inne</p>
                     </div>
                     <div class="search-left-element">
                         <h3>Cena</h3>
