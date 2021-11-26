@@ -40,6 +40,21 @@
                                             $object->deleteOffer($results[0]['UniqueOffers'], $_SESSION['email']);
                                         }
                                     }
+                                    if ($_SESSION['email'] == 'admin@admin.com') {
+                                        echo '
+                                            <div class="container-single-admin">
+                                            <h2>Jesteś administatorem</h2>                                           
+                                                <form method="POST">
+                                                    <div class="fxver">
+                                                        <input type="submit" name="delete" value="usuń">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            ';
+                                            if (isset($_POST['delete'])) {
+                                                $object->deleteOffer($results[0]['UniqueOffers'], $_SESSION['email']);
+                                            }
+                                        }
                                 }
                             echo '
                                     <div class="container-single-main">

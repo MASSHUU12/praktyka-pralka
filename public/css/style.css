@@ -130,6 +130,10 @@ header ul li {
   cursor: auto;
 }
 
+#header-hamburger-dropdown-button-2 {
+  display: none;
+}
+
 /* The container needed to position the dropdown content */
 .dropdown {
   position: relative;
@@ -308,6 +312,7 @@ main {
 .main-banner {
   min-height: 250px;
   width: 100%;
+  max-width: 100%;
   margin-bottom: 50px;
   position: relative;
   display: flex;
@@ -351,6 +356,7 @@ main {
   gap: 10px;
   color: white;
   width: 1300px;
+  max-width: 100%;
   padding: 40px 0;
   margin-bottom: 50px;
   background-color: rgb(62, 89, 100);
@@ -650,7 +656,7 @@ input[type="checkbox"] {
 
 .container-user-top {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 3fr 1fr;
   background-color: rgb(250, 250, 250);
   width: 100%;
   height: 240px;
@@ -692,6 +698,12 @@ input[type="checkbox"] {
   width: 50px;
   padding: 17px 0;
   text-align: center;
+}
+
+.container-user-funds {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container-user-bottom {
@@ -786,6 +798,7 @@ li.active-user {
   bottom: 100px;
   right: 50px;
   color: black;
+  cursor: pointer;
 }
 
 .container-search-right {
@@ -829,9 +842,13 @@ li.active-user {
   width: 1300px;
 }
 
-.fxver a span {
+.page {
   color: green;
   font-size: 120%;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .text-min {
@@ -1101,8 +1118,8 @@ li.active-user {
 
 #changepwd {
   position: absolute;
-  right: 50px;
-  bottom: 40px;
+  left: 670px;
+  bottom: 30px;
 }
 
 .container-main-article {
@@ -1193,7 +1210,8 @@ footer {
   justify-content: center;
   background-color: rgb(62, 89, 100);
   color: white;
-  height: 350px;
+  height: fit-content;
+  padding: 70px 0;
 }
 
 footer a {
@@ -1339,3 +1357,195 @@ footer a {
 /*
 * end of lightbox
 */
+
+/*
+* mobile
+*/
+
+@media only screen and (max-width: 1300px) {
+  html,
+  body {
+    max-width: 100%;
+  }
+
+  header {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .header-search-container {
+    display: none;
+  }
+
+  .categories-dropdown {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .header-text {
+  }
+
+  .header-categories-dropdown-content {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .main-banner {
+    min-height: 0;
+  }
+
+  .main-banner-buttons {
+    display: none;
+  }
+
+  .container-offers {
+    grid-template-columns: 1fr;
+  }
+
+  .main-container-new {
+    font-size: 90%;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 20px 0;
+  }
+
+  #header-hamburger-dropdown-button-2 {
+    display: inline-block;
+  }
+
+  .header-hamburger-dropdown-links {
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .header-hamburger-dropdown-links:hover {
+    background-color: #ececec;
+  }
+
+  .container-login-whole {
+    grid-template-columns: 1fr;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-height: fit-content;
+    width: 80%;
+  }
+
+  .container-user {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    width: 90%;
+    max-width: fit-content;
+    height: fit-content;
+  }
+
+  .container-user-top {
+    width: 100%;
+    height: 80%;
+    grid-template-columns: 1fr;
+  }
+
+  .user-tabs li {
+    padding: 5px 25px;
+  }
+
+  .background-user {
+    width: 100%;
+    height: 100px;
+  }
+
+  .container-user-funds {
+    padding: 30px;
+  }
+
+  #changepwd {
+    right: 10px;
+    bottom: 50px;
+  }
+
+  .container-search-left {
+    width: 30%;
+    padding: 10px;
+    gap: 25px;
+  }
+
+  .container-search-right {
+    width: 70%;
+    min-height: 200px;
+    padding: 0px;
+  }
+
+  .search-right-ad,
+  .search-right-ad img {
+    width: 100%;
+  }
+
+  .search-right-sort-found {
+    position: absolute;
+    transform: translateY(-150%);
+  }
+
+  .container-search {
+    gap: 10px;
+    margin: 50px 0 100px 0;
+  }
+
+  .search-right-sort {
+    width: 100%;
+  }
+
+  .container-single {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+    margin: 50px 0;
+  }
+
+  .container-single-left {
+    gap: 15px;
+  }
+
+  .container-single-main {
+    padding: 10px;
+    padding-bottom: 40px;
+  }
+
+  .container-single-main span {
+    font-size: 100%;
+  }
+
+  .single-main-img-large {
+    width: 510px;
+    height: 429px;
+  }
+
+  .single-img-small img {
+    width: 170px;
+    height: 143px;
+  }
+
+  .single-right-top,
+  .single-right-bottom,
+  .single-right-date {
+    gap: 25px;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .single-main-desc {
+    padding: 20px;
+  }
+
+  .single-main-cond {
+    padding: 20px;
+  }
+
+  .container-single-right {
+    gap: 10px;
+    height: 100%;
+  }
+}

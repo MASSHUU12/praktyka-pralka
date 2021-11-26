@@ -17,6 +17,13 @@ if (urlParams.has('cond')) {
     });
 }
 
+function paginationUrl(page) {
+    urlParams.set('page', page);
+
+    var urlNew = window.location.href.split('?')[0];
+    window.location.href = urlNew + '?' +  urlParams.toString();
+}
+
 function createUrl() {
     const selectValue = document.getElementById("selectbox").value;
     urlParams.set('sort', selectValue);
